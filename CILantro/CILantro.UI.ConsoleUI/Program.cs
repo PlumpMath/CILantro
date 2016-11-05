@@ -6,7 +6,7 @@ namespace CILantro.UI.ConsoleUI
     {
         static void Main(string[] args)
         {
-            Console.ReadKey();
+            Console.WriteLine(Messages.WelcomeMessage);
         }
     }
 }
