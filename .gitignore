@@ -1,6 +1,8 @@
 *.exe
 
-/CILantro/CILantro.UI.ConsoleUI/bin
-/CILantro/CILantro.UI.ConsoleUI/obj
+/CILantro/CILantro.Engine.Lexer/bin
+/CILantro/CILantro.Engine.Lexer/obj
 /CILantro/CILantro.Helpers/bin
 /CILantro/CILantro.Helpers/obj
+/CILantro/CILantro.UI.ConsoleUI/bin
+/CILantro/CILantro.UI.ConsoleUI/obj
