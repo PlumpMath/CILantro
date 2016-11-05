@@ -1,1 +1,4 @@
 *.exe
+
+/CILantro/CILantro.UI.ConsoleUI/bin
+/CILantro/CILantro.UI.ConsoleUI/obj
