@@ -7,7 +7,7 @@ namespace CILantro.UI.ConsoleUI
 {
     public class Program
     {
-        private static CILantroEngine CILantroEngine { get; set; } = new CILantroEngine();
+        private static readonly CILantroEngine _cilantroEngine = new CILantroEngine();
 
         private static void Main(string[] args)
         {
@@ -24,7 +24,9 @@ namespace CILantro.UI.ConsoleUI
             }
 
             var sourceCode = File.ReadAllText(config.SourceCodeFilePath);
-            CILantroEngine.Process(sourceCode);
+            _cilantroEngine.Process(sourceCode);
+
+            Console.ReadKey();
         }
 
         private static ConsoleUIConfiguration CollectConfiguration(string[] args)

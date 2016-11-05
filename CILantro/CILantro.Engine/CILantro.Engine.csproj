@@ -43,6 +43,12 @@
     <Compile Include="CILantroEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CILantro.Engine.Lexer\CILantro.Engine.Lexer.csproj">
+      <Project>{86F814F6-C0D7-445A-9426-73CF6FF87AF6}</Project>
+      <Name>CILantro.Engine.Lexer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
