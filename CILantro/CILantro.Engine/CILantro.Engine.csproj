@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83671A19-CE28-4BAA-AB05-D8AAA9986BD8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{D77DAE3E-5CB7-4FF0-9EF1-00AA3C76FA8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CILantro.UI.ConsoleUI</RootNamespace>
-    <AssemblyName>CILantro.UI.ConsoleUI</AssemblyName>
+    <RootNamespace>CILantro.Engine</RootNamespace>
+    <AssemblyName>CILantro.Engine</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,23 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleUIConfiguration.cs" />
-    <Compile Include="Messages.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CILantroEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CILantro.Engine\CILantro.Engine.csproj">
-      <Project>{D77DAE3E-5CB7-4FF0-9EF1-00AA3C76FA8D}</Project>
-      <Name>CILantro.Engine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CILantro.Helpers\CILantro.Helpers.csproj">
-      <Project>{F5AB6C5F-7218-4D6A-8D3F-69EE00498D7D}</Project>
-      <Name>CILantro.Helpers</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

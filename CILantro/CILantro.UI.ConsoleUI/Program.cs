@@ -1,4 +1,5 @@
-﻿using CILantro.Helpers;
+﻿using CILantro.Engine;
+using CILantro.Helpers;
 using System;
 using System.IO;
 
@@ -6,6 +7,8 @@ namespace CILantro.UI.ConsoleUI
 {
     public class Program
     {
+        private static CILantroEngine CILantroEngine { get; set; } = new CILantroEngine();
+
         private static void Main(string[] args)
         {
             Console.WriteLine(Messages.WelcomeMessage);
@@ -21,6 +24,7 @@ namespace CILantro.UI.ConsoleUI
             }
 
             var sourceCode = File.ReadAllText(config.SourceCodeFilePath);
+            CILantroEngine.Process(sourceCode);
         }
 
         private static ConsoleUIConfiguration CollectConfiguration(string[] args)

@@ -1,5 +1,7 @@
 *.exe
 
+/CILantro/CILantro.Engine/bin
+/CILantro/CILantro.Engine/obj
 /CILantro/CILantro.Engine.Lexer/bin
 /CILantro/CILantro.Engine.Lexer/obj
 /CILantro/CILantro.Helpers/bin
