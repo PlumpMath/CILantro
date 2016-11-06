@@ -11,10 +11,9 @@ namespace CILantro.Engine.Lexer
         public CILTokenRegister()
         {
             RegisterToken(typeof(AssemblyDeclarationToken));
-
             RegisterToken(typeof(ClassDeclarationToken));
-
             RegisterToken(typeof(MethodDeclarationToken));
+            RegisterToken(typeof(EntryPointDeclarationToken));
 
             RegisterToken(typeof(LeftBraceToken));
             RegisterToken(typeof(RightBraceToken));

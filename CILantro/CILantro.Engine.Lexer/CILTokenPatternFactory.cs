@@ -6,10 +6,9 @@ namespace CILantro.Engine.Lexer
     internal class CILTokenPatternFactory
     {
         private readonly string _assemblyDeclarationTokenPattern = @"\.assembly";
-
         private readonly string _classDeclarationTokenPattern = @"\.class";
-
         private readonly string _methodDeclarationTokenPattern = @"\.method";
+        private readonly string _entryPointDeclarationTokenPattern = @"\.entrypoint";
 
         private readonly string _leftBraceTokenPattern = @"\{";
         private readonly string _rightBraceTokenPattern = @"\}";
@@ -23,10 +22,9 @@ namespace CILantro.Engine.Lexer
         public string CreatePattern(Type tokenType)
         {
             if (tokenType == typeof(AssemblyDeclarationToken)) return _assemblyDeclarationTokenPattern;
-
             if (tokenType == typeof(ClassDeclarationToken)) return _classDeclarationTokenPattern;
-
             if (tokenType == typeof(MethodDeclarationToken)) return _methodDeclarationTokenPattern;
+            if (tokenType == typeof(EntryPointDeclarationToken)) return _entryPointDeclarationTokenPattern;
 
             if (tokenType == typeof(LeftBraceToken)) return _leftBraceTokenPattern;
             if (tokenType == typeof(RightBraceToken)) return _rightBraceTokenPattern;

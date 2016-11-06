@@ -50,6 +50,7 @@
     <Compile Include="CILTokens\CILToken.cs" />
     <Compile Include="CILTokens\ClassDeclarationToken.cs" />
     <Compile Include="CILTokens\DotToken.cs" />
+    <Compile Include="CILTokens\EntryPointDeclarationToken.cs" />
     <Compile Include="CILTokens\IdentifierToken.cs" />
     <Compile Include="CILTokens\LeftBraceToken.cs" />
     <Compile Include="CILTokens\LeftParenthesisToken.cs" />

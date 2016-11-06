@@ -8,10 +8,9 @@ namespace CILantro.Engine.Lexer
         public CILToken CreateToken(Type type, string tokenString)
         {
             if (type == typeof(AssemblyDeclarationToken)) return new AssemblyDeclarationToken();
-
             if (type == typeof(ClassDeclarationToken)) return new ClassDeclarationToken();
-
             if (type == typeof(MethodDeclarationToken)) return new MethodDeclarationToken();
+            if (type == typeof(EntryPointDeclarationToken)) return new EntryPointDeclarationToken();
 
             if (type == typeof(LeftBraceToken)) return new LeftBraceToken();
             if (type == typeof(RightBraceToken)) return new RightBraceToken();
