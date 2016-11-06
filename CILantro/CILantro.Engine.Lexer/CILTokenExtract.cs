@@ -1,4 +1,6 @@
-﻿namespace CILantro.Engine.Lexer
+﻿using CILantro.Engine.Lexer.CILTokens;
+
+namespace CILantro.Engine.Lexer
 {
     internal class CILTokenExtract
     {
