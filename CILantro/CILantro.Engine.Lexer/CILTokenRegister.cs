@@ -11,6 +11,8 @@ namespace CILantro.Engine.Lexer
         public CILTokenRegister()
         {
             RegisterToken(typeof(AssemblyDeclarationToken));
+
+            RegisterToken(typeof(IdentifierToken));
         }
 
         public List<Type> GetTokenTypes()

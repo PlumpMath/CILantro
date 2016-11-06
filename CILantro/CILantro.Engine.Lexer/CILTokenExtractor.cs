@@ -7,7 +7,7 @@ namespace CILantro.Engine.Lexer
     internal class CILTokenExtractor
     {
         private CILTokenRegister _cilTokenRegister = new CILTokenRegister();
-        private CILTokenPatternFactory _cilTokenRegexFactory = new CILTokenPatternFactory();
+        private CILTokenPatternFactory _cilTokenPatternFactory = new CILTokenPatternFactory();
         private CILTokenFactory _cilTokenFactory = new CILTokenFactory();
 
         private List<Type> _tokenTypes;
@@ -21,14 +21,14 @@ namespace CILantro.Engine.Lexer
         {
             foreach(var tokenType in _tokenTypes)
             {
-                var tokenPattern = $"^{_cilTokenRegexFactory.CreateRegex(tokenType)}";
+                var tokenPattern = $"^{_cilTokenPatternFactory.CreatePattern(tokenType)}";
                 var tokenRegex = new Regex(tokenPattern);
                 var tokenMatch = tokenRegex.Match(sourceCode);
-                if(tokenMatch.Success)
+                if (tokenMatch.Success)
                 {
                     return new CILTokenExtract
                     {
-                        Token = _cilTokenFactory.CreateToken(tokenType),
+                        Token = _cilTokenFactory.CreateToken(tokenType, tokenMatch.Value),
                         Rest = sourceCode.Substring(tokenMatch.Length)
                     };
                 }

@@ -5,12 +5,17 @@ namespace CILantro.Engine.Lexer
 {
     internal class CILTokenPatternFactory
     {
-        private readonly string _assemblyDeclarationTokenRegex = @"\.assembly";
+        private readonly string _assemblyDeclarationTokenPattern = @"\.assembly";
 
-        public string CreateRegex(Type tokenType)
+        private readonly string _identifierTokenPattern = @"[a-zA-Z_]{1}[a-zA-Z0-9]*";
+
+        public string CreatePattern(Type tokenType)
         {
-            if (tokenType == typeof(AssemblyDeclarationToken)) return _assemblyDeclarationTokenRegex;
-            return null;
+            if (tokenType == typeof(AssemblyDeclarationToken)) return _assemblyDeclarationTokenPattern;
+
+            if (tokenType == typeof(IdentifierToken)) return _identifierTokenPattern;
+
+            throw new ArgumentException($"Cannot find a pattern for type {tokenType.Name}.");
         }
     }
 }

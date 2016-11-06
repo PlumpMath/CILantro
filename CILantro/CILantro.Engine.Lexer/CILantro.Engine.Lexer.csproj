@@ -48,6 +48,7 @@
     <Compile Include="CILTokenRegister.cs" />
     <Compile Include="CILTokens\AssemblyDeclarationToken.cs" />
     <Compile Include="CILTokens\CILToken.cs" />
+    <Compile Include="CILTokens\IdentifierToken.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

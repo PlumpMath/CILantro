@@ -5,10 +5,13 @@ namespace CILantro.Engine.Lexer
 {
     internal class CILTokenFactory
     {
-        public CILToken CreateToken(Type type)
+        public CILToken CreateToken(Type type, string tokenString)
         {
             if (type == typeof(AssemblyDeclarationToken)) return new AssemblyDeclarationToken();
-            return null;
+
+            if (type == typeof(IdentifierToken)) return new IdentifierToken(tokenString);
+
+            throw new ArgumentException($"Cannot create a token for type {type.Name}.");
         }
     }
 }
