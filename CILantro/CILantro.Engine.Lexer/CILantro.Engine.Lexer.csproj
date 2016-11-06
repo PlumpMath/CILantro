@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="CILLexer.cs" />
     <Compile Include="CILToken.cs" />
+    <Compile Include="CILTokenExtract.cs" />
+    <Compile Include="CILTokenExtractor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
