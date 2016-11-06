@@ -7,11 +7,17 @@ namespace CILantro.Engine.Lexer
     {
         private readonly string _assemblyDeclarationTokenPattern = @"\.assembly";
 
+        private readonly string _leftBracePattern = @"\{";
+        private readonly string _rightBracePattern = @"\}";
+
         private readonly string _identifierTokenPattern = @"[a-zA-Z_]{1}[a-zA-Z0-9]*";
 
         public string CreatePattern(Type tokenType)
         {
             if (tokenType == typeof(AssemblyDeclarationToken)) return _assemblyDeclarationTokenPattern;
+
+            if (tokenType == typeof(LeftBraceToken)) return _leftBracePattern;
+            if (tokenType == typeof(RightBraceToken)) return _rightBracePattern;
 
             if (tokenType == typeof(IdentifierToken)) return _identifierTokenPattern;
 
