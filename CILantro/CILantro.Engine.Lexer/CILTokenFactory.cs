@@ -12,6 +12,7 @@ namespace CILantro.Engine.Lexer
             if (type == typeof(MethodDeclarationToken)) return new MethodDeclarationToken();
             if (type == typeof(EntryPointDeclarationToken)) return new EntryPointDeclarationToken();
 
+            if (type == typeof(CILKeywordToken)) return new CILKeywordToken();
             if (type == typeof(StaticKeywordToken)) return new StaticKeywordToken();
             if (type == typeof(VoidKeywordToken)) return new VoidKeywordToken();
 

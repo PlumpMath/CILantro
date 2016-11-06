@@ -10,6 +10,7 @@ namespace CILantro.Engine.Lexer
         private readonly string _methodDeclarationTokenPattern = @"\.method";
         private readonly string _entryPointDeclarationTokenPattern = @"\.entrypoint";
 
+        private readonly string _cilKeywordTokenPattern = @"cil";
         private readonly string _staticKeywordTokenPattern = @"static";
         private readonly string _voidKeywordTokenPattern = @"void";
 
@@ -29,6 +30,7 @@ namespace CILantro.Engine.Lexer
             if (tokenType == typeof(MethodDeclarationToken)) return _methodDeclarationTokenPattern;
             if (tokenType == typeof(EntryPointDeclarationToken)) return _entryPointDeclarationTokenPattern;
 
+            if (tokenType == typeof(CILKeywordToken)) return _cilKeywordTokenPattern;
             if (tokenType == typeof(StaticKeywordToken)) return _staticKeywordTokenPattern;
             if (tokenType == typeof(VoidKeywordToken)) return _voidKeywordTokenPattern;
 
