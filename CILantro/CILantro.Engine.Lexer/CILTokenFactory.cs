@@ -11,6 +11,8 @@ namespace CILantro.Engine.Lexer
 
             if (type == typeof(ClassDeclarationToken)) return new ClassDeclarationToken();
 
+            if (type == typeof(MethodDeclarationToken)) return new MethodDeclarationToken();
+
             if (type == typeof(LeftBraceToken)) return new LeftBraceToken();
             if (type == typeof(RightBraceToken)) return new RightBraceToken();
             if (type == typeof(LeftParenthesisToken)) return new LeftParenthesisToken();
