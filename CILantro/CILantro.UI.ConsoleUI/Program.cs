@@ -23,10 +23,17 @@ namespace CILantro.UI.ConsoleUI
                 return;
             }
 
-            var sourceCode = File.ReadAllText(config.SourceCodeFilePath);
-            _cilantroEngine.Process(sourceCode);
-
-            Console.ReadKey();
+            try
+            {
+                var sourceCode = File.ReadAllText(config.SourceCodeFilePath);
+                _cilantroEngine.Process(sourceCode);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine();
+                Console.WriteLine(Messages.ErrorMessage);
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private static ConsoleUIConfiguration CollectConfiguration(string[] args)

@@ -1,4 +1,5 @@
 ﻿using CILantro.Engine.Lexer.CILTokens;
+using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -22,6 +23,8 @@ namespace CILantro.Engine.Lexer
 
                 tokenExtract = _cilTokenExtractor.ExtractToken(plainSourceCode);
             }
+
+            if (!string.IsNullOrEmpty(plainSourceCode)) throw new ArgumentException("Cannot tokenize source code.");
 
             return result;
         }
