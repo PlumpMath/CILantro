@@ -13,6 +13,7 @@ namespace CILantro.Engine.Lexer
             if (type == typeof(EntryPointDeclarationToken)) return new EntryPointDeclarationToken();
 
             if (type == typeof(StaticKeywordToken)) return new StaticKeywordToken();
+            if (type == typeof(VoidKeywordToken)) return new VoidKeywordToken();
 
             if (type == typeof(LeftBraceToken)) return new LeftBraceToken();
             if (type == typeof(RightBraceToken)) return new RightBraceToken();

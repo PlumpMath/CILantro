@@ -16,6 +16,7 @@ namespace CILantro.Engine.Lexer
             RegisterToken(typeof(EntryPointDeclarationToken));
 
             RegisterToken(typeof(StaticKeywordToken));
+            RegisterToken(typeof(VoidKeywordToken));
 
             RegisterToken(typeof(LeftBraceToken));
             RegisterToken(typeof(RightBraceToken));
