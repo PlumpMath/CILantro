@@ -10,6 +10,8 @@ namespace CILantro.Engine.Lexer
         private readonly string _methodDeclarationTokenPattern = @"\.method";
         private readonly string _entryPointDeclarationTokenPattern = @"\.entrypoint";
 
+        private readonly string _staticKeywordTokenPattern = @"static";
+
         private readonly string _leftBraceTokenPattern = @"\{";
         private readonly string _rightBraceTokenPattern = @"\}";
         private readonly string _leftParenthesisTokenPattern = @"\(";
@@ -25,6 +27,8 @@ namespace CILantro.Engine.Lexer
             if (tokenType == typeof(ClassDeclarationToken)) return _classDeclarationTokenPattern;
             if (tokenType == typeof(MethodDeclarationToken)) return _methodDeclarationTokenPattern;
             if (tokenType == typeof(EntryPointDeclarationToken)) return _entryPointDeclarationTokenPattern;
+
+            if (tokenType == typeof(StaticKeywordToken)) return _staticKeywordTokenPattern;
 
             if (tokenType == typeof(LeftBraceToken)) return _leftBraceTokenPattern;
             if (tokenType == typeof(RightBraceToken)) return _rightBraceTokenPattern;

@@ -57,6 +57,7 @@
     <Compile Include="CILTokens\MethodDeclarationToken.cs" />
     <Compile Include="CILTokens\RightBraceToken.cs" />
     <Compile Include="CILTokens\RightParenthesisToken.cs" />
+    <Compile Include="CILTokens\StaticKeywordToken.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

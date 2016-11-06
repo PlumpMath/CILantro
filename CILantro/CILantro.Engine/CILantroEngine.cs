@@ -8,7 +8,7 @@ namespace CILantro.Engine
 
         public void Process(string sourceCode)
         {
-            var cilTokens = _cilLexer.Tokenize(sourceCode);
+            var tokens = _cilLexer.Tokenize(sourceCode);
         }
     }
 }
