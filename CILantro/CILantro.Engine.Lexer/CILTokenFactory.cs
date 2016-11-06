@@ -13,6 +13,8 @@ namespace CILantro.Engine.Lexer
 
             if (type == typeof(LeftBraceToken)) return new LeftBraceToken();
             if (type == typeof(RightBraceToken)) return new RightBraceToken();
+            if (type == typeof(LeftParenthesisToken)) return new LeftParenthesisToken();
+            if (type == typeof(RightParenthesisToken)) return new RightParenthesisToken();
 
             if (type == typeof(DotToken)) return new DotToken();
 

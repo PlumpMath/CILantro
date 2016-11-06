@@ -11,6 +11,8 @@ namespace CILantro.Engine.Lexer
 
         private readonly string _leftBraceTokenPattern = @"\{";
         private readonly string _rightBraceTokenPattern = @"\}";
+        private readonly string _leftParenthesisTokenPattern = @"\(";
+        private readonly string _rightParenthesisTokenPattern = @"\)";
 
         private readonly string _dotTokenPattern = @"\.";
 
@@ -24,6 +26,8 @@ namespace CILantro.Engine.Lexer
 
             if (tokenType == typeof(LeftBraceToken)) return _leftBraceTokenPattern;
             if (tokenType == typeof(RightBraceToken)) return _rightBraceTokenPattern;
+            if (tokenType == typeof(LeftParenthesisToken)) return _leftParenthesisTokenPattern;
+            if (tokenType == typeof(RightParenthesisToken)) return _rightParenthesisTokenPattern;
 
             if (tokenType == typeof(DotToken)) return _dotTokenPattern;
 
