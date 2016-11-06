@@ -48,6 +48,7 @@
     <Compile Include="CILTokenRegister.cs" />
     <Compile Include="CILTokens\AssemblyDeclarationToken.cs" />
     <Compile Include="CILTokens\CILToken.cs" />
+    <Compile Include="CILTokens\ClassDeclarationToken.cs" />
     <Compile Include="CILTokens\IdentifierToken.cs" />
     <Compile Include="CILTokens\LeftBraceToken.cs" />
     <Compile Include="CILTokens\RightBraceToken.cs" />
