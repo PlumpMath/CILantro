@@ -9,8 +9,10 @@ namespace CILantro.Engine.Lexer
 
         private readonly string _classDeclarationTokenPattern = @"\.class";
 
-        private readonly string _leftBracePattern = @"\{";
-        private readonly string _rightBracePattern = @"\}";
+        private readonly string _leftBraceTokenPattern = @"\{";
+        private readonly string _rightBraceTokenPattern = @"\}";
+
+        private readonly string _dotTokenPattern = @"\.";
 
         private readonly string _identifierTokenPattern = @"[a-zA-Z_]{1}[a-zA-Z0-9]*";
 
@@ -20,8 +22,10 @@ namespace CILantro.Engine.Lexer
 
             if (tokenType == typeof(ClassDeclarationToken)) return _classDeclarationTokenPattern;
 
-            if (tokenType == typeof(LeftBraceToken)) return _leftBracePattern;
-            if (tokenType == typeof(RightBraceToken)) return _rightBracePattern;
+            if (tokenType == typeof(LeftBraceToken)) return _leftBraceTokenPattern;
+            if (tokenType == typeof(RightBraceToken)) return _rightBraceTokenPattern;
+
+            if (tokenType == typeof(DotToken)) return _dotTokenPattern;
 
             if (tokenType == typeof(IdentifierToken)) return _identifierTokenPattern;
 
