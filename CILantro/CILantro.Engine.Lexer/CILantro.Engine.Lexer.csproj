@@ -43,6 +43,10 @@
     <Compile Include="CILLexer.cs" />
     <Compile Include="CILTokenExtract.cs" />
     <Compile Include="CILTokenExtractor.cs" />
+    <Compile Include="CILTokenFactory.cs" />
+    <Compile Include="CILTokenPatternFactory.cs" />
+    <Compile Include="CILTokenRegister.cs" />
+    <Compile Include="CILTokens\AssemblyDeclarationToken.cs" />
     <Compile Include="CILTokens\CILToken.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

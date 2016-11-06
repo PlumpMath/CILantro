@@ -18,7 +18,7 @@ namespace CILantro.Engine.Lexer
             while(tokenExtract != null)
             {
                 result.Add(tokenExtract.Token);
-                plainSourceCode = tokenExtract.Rest;
+                plainSourceCode = tokenExtract.Rest.Trim();
 
                 tokenExtract = _cilTokenExtractor.ExtractToken(plainSourceCode);
             }
