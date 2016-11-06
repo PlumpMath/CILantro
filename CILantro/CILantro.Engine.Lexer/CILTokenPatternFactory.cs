@@ -12,6 +12,7 @@ namespace CILantro.Engine.Lexer
 
         private readonly string _cilKeywordTokenPattern = @"cil";
         private readonly string _managedKeywordTokenPattern = @"managed";
+        private readonly string _retKeywordTokenPattern = @"ret";
         private readonly string _staticKeywordTokenPattern = @"static";
         private readonly string _voidKeywordTokenPattern = @"void";
 
@@ -33,6 +34,7 @@ namespace CILantro.Engine.Lexer
 
             if (tokenType == typeof(CILKeywordToken)) return _cilKeywordTokenPattern;
             if (tokenType == typeof(ManagedKeywordToken)) return _managedKeywordTokenPattern;
+            if (tokenType == typeof(RetKeywordToken)) return _retKeywordTokenPattern;
             if (tokenType == typeof(StaticKeywordToken)) return _staticKeywordTokenPattern;
             if (tokenType == typeof(VoidKeywordToken)) return _voidKeywordTokenPattern;
 

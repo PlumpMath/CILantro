@@ -57,6 +57,7 @@
     <Compile Include="CILTokens\LeftParenthesisToken.cs" />
     <Compile Include="CILTokens\ManagedKeywordToken.cs" />
     <Compile Include="CILTokens\MethodDeclarationToken.cs" />
+    <Compile Include="CILTokens\RetKeywordToken.cs" />
     <Compile Include="CILTokens\RightBraceToken.cs" />
     <Compile Include="CILTokens\RightParenthesisToken.cs" />
     <Compile Include="CILTokens\StaticKeywordToken.cs" />

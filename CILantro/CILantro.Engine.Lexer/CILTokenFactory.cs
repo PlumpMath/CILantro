@@ -14,6 +14,7 @@ namespace CILantro.Engine.Lexer
 
             if (type == typeof(CILKeywordToken)) return new CILKeywordToken();
             if (type == typeof(ManagedKeywordToken)) return new ManagedKeywordToken();
+            if (type == typeof(RetKeywordToken)) return new RetKeywordToken();
             if (type == typeof(StaticKeywordToken)) return new StaticKeywordToken();
             if (type == typeof(VoidKeywordToken)) return new VoidKeywordToken();
 
