@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.UI.ConsoleUI", "CI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Helpers", "CILantro.Helpers\CILantro.Helpers.csproj", "{F5AB6C5F-7218-4D6A-8D3F-69EE00498D7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Lexer", "CILantro.Engine.Lexer\CILantro.Engine.Lexer.csproj", "{86F814F6-C0D7-445A-9426-73CF6FF87AF6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine", "CILantro.Engine\CILantro.Engine.csproj", "{D77DAE3E-5CB7-4FF0-9EF1-00AA3C76FA8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Parser", "CILantro.Engine.Parser\CILantro.Engine.Parser.csproj", "{7635E0B6-4C0D-4BEC-A5AF-DFD2A8F978B5}"
@@ -27,10 +25,6 @@ Global
 		{F5AB6C5F-7218-4D6A-8D3F-69EE00498D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5AB6C5F-7218-4D6A-8D3F-69EE00498D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5AB6C5F-7218-4D6A-8D3F-69EE00498D7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86F814F6-C0D7-445A-9426-73CF6FF87AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86F814F6-C0D7-445A-9426-73CF6FF87AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86F814F6-C0D7-445A-9426-73CF6FF87AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86F814F6-C0D7-445A-9426-73CF6FF87AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D77DAE3E-5CB7-4FF0-9EF1-00AA3C76FA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D77DAE3E-5CB7-4FF0-9EF1-00AA3C76FA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D77DAE3E-5CB7-4FF0-9EF1-00AA3C76FA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
