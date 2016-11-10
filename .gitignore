@@ -3,8 +3,8 @@
 /CILantro/packages
 /CILantro/CILantro.Engine/bin
 /CILantro/CILantro.Engine/obj
-/CILantro/CILantro.Engine.Lexer/bin
-/CILantro/CILantro.Engine.Lexer/obj
+/CILantro/CILantro.Engine.Interpreter/bin
+/CILantro/CILantro.Engine.Interpreter/obj
 /CILantro/CILantro.Engine.Parser/bin
 /CILantro/CILantro.Engine.Parser/obj
 /CILantro/CILantro.Helpers/bin

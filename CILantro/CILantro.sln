@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine", "CILantro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Parser", "CILantro.Engine.Parser\CILantro.Engine.Parser.csproj", "{7635E0B6-4C0D-4BEC-A5AF-DFD2A8F978B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Interpreter", "CILantro.Engine.Interpreter\CILantro.Engine.Interpreter.csproj", "{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7635E0B6-4C0D-4BEC-A5AF-DFD2A8F978B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7635E0B6-4C0D-4BEC-A5AF-DFD2A8F978B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7635E0B6-4C0D-4BEC-A5AF-DFD2A8F978B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
