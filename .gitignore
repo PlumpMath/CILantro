@@ -4,6 +4,8 @@
 /CILantro/CILantro.Engine/obj
 /CILantro/CILantro.Engine.Lexer/bin
 /CILantro/CILantro.Engine.Lexer/obj
+/CILantro/CILantro.Engine.Parser/bin
+/CILantro/CILantro.Engine.Parser/obj
 /CILantro/CILantro.Helpers/bin
 /CILantro/CILantro.Helpers/obj
 /CILantro/CILantro.UI.ConsoleUI/bin
