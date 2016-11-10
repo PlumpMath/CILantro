@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CILAbstractSyntaxTreeBuilder.cs" />
-    <Compile Include="CILAST\CILASTNode.cs" />
-    <Compile Include="CILAST\CILProgramNode.cs" />
+    <Compile Include="CILASTBuilder\CILAbstractSyntaxTreeBuilder.cs" />
+    <Compile Include="CILASTNodes\CILAssembly.cs" />
+    <Compile Include="CILASTNodes\CILASTNode.cs" />
+    <Compile Include="CILASTNodes\CILClass.cs" />
+    <Compile Include="CILASTNodes\CILMethod.cs" />
+    <Compile Include="CILASTNodes\CILProgramRoot.cs" />
     <Compile Include="CILGrammar.cs" />
     <Compile Include="CILParser.cs" />
     <Compile Include="CILProgram.cs" />
