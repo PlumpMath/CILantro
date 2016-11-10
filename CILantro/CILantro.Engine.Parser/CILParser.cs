@@ -1,4 +1,4 @@
-﻿using CILantro.Engine.Parser.ASTNodes;
+﻿using System;
 
 namespace CILantro.Engine.Parser
 {
@@ -11,8 +11,13 @@ namespace CILantro.Engine.Parser
         public CILProgram Parse(string sourceCode)
         {
             var parseTree = _parser.Parse(sourceCode);
-            var result = _astBuilder.BuildTree(parseTree);
-            return result;
+            if(parseTree.Status == Irony.Parsing.ParseTreeStatus.Parsed)
+            {
+                var result = _astBuilder.BuildTree(parseTree);
+                return result;
+            }
+
+            throw new ArgumentException("Cannot parse the source code.");
         }
     }
 }
