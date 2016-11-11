@@ -26,7 +26,13 @@ namespace CILantro.UI.ConsoleUI
             try
             {
                 var sourceCode = File.ReadAllText(config.SourceCodeFilePath);
-                _cilantroEngine.Process(sourceCode);
+
+                var consoleReader = new StreamReader(Console.OpenStandardInput());
+                var consoleWriter = new StreamWriter(Console.OpenStandardOutput());
+
+                Console.WriteLine();
+                _cilantroEngine.Process(sourceCode, consoleReader, consoleWriter);
+                Console.WriteLine();
             }
             catch(Exception ex)
             {
