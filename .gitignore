@@ -1,6 +1,10 @@
 *.exe
 
 /CILantro/packages
+
+/CILantro/CILantro.Engine.Interpreter.Tests/bin
+/CILantro/CILantro.Engine.Interpreter.Tests/obj
+
 /CILantro/CILantro.Engine/bin
 /CILantro/CILantro.Engine/obj
 /CILantro/CILantro.Engine.Interpreter/bin
