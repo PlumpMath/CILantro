@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Irony;
+using System;
+using System.Linq;
 
 namespace CILantro.Engine.Parser
 {
@@ -17,7 +19,14 @@ namespace CILantro.Engine.Parser
                 return result;
             }
 
-            throw new ArgumentException("Cannot parse the source code.");
+            var error = parseTree.ParserMessages.First();
+            var errorMessage = BuildErrorMessage(error);
+            throw new ArgumentException(errorMessage);
+        }
+
+        private string BuildErrorMessage(LogMessage logMessage)
+        {
+            return $"Cannot parse the source code:\n{logMessage.Location}: {logMessage.Message}.";
         }
     }
 }
