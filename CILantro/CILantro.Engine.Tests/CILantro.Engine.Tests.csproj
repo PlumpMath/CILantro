@@ -70,6 +70,9 @@
     <None Include="CILSourceCodes\002_read_key.il">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="CILSourceCodes\003_hello_world.il">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

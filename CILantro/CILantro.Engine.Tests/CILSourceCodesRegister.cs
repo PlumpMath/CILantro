@@ -13,7 +13,8 @@ namespace CILantro.Engine.Tests
         public static List<string> FileNames = new List<string>
         {
             "001_empty.il",
-            "002_read_key.il"
+            "002_read_key.il",
+            "003_hello_world.il"
         };
 
         public static List<string> SourceCodes = FileNames.Select(fn => GetSourceCode(fn)).ToList();
