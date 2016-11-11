@@ -28,7 +28,7 @@ namespace CILantro.Engine.Tests
             var filePath = Path.Combine(assemblyDirPath, SourceCodesDirectoryName, fileName);
             var sourceCode = File.ReadAllText(filePath);
 
-            return "\n" + sourceCode;
+            return sourceCode;
         }
     }
 }
