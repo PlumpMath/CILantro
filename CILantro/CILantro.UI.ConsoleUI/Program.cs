@@ -32,7 +32,6 @@ namespace CILantro.UI.ConsoleUI
 
                 Console.WriteLine();
                 _cilantroEngine.Process(sourceCode, consoleReader, consoleWriter);
-                Console.WriteLine();
             }
             catch(Exception ex)
             {
@@ -40,6 +39,9 @@ namespace CILantro.UI.ConsoleUI
                 Console.WriteLine(Messages.ErrorMessage);
                 Console.WriteLine(ex.Message);
             }
+
+            Console.WriteLine();
+            Console.WriteLine(Messages.ThankYouMessage);
         }
 
         private static ConsoleUIConfiguration CollectConfiguration(string[] args)

@@ -21,6 +21,9 @@ namespace CILantro.Engine.Interpreter
 
         private void Interpret(CILProgram cilProgram, StreamReader reader, StreamWriter writer)
         {
+            writer.WriteLine(CommandPrompt);
+            writer.Flush();
+
             var entryPoint = cilProgram.Root.Class.Method;
             entryPoint.Invoke();
         }
