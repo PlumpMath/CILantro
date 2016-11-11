@@ -12,11 +12,26 @@ namespace CILantro.Engine.Tests
     {
         private CILantroEngine _engine = new CILantroEngine();
 
-        public static List<object[]> SourceCodes = CILSourceCodesRegister.SourceCodes.Select(sc => new object[] { sc }).ToList();
+        public static List<object[]> SourceCodes
+        {
+            get
+            {
+                return CILSourceCodesRegister.FileNames
+                    .Zip(CILSourceCodesRegister.SourceCodes, (fn, sc) =>
+                    new object[]
+                    {
+                        fn,
+                        sc
+                    })
+                    .ToList();
+            }
+        }
 
         [Theory, MemberData(nameof(SourceCodes))]
-        public void ShouldCorrectlyInterpretSourceCodes2(string sourceCode)
+        public void ShouldCorrectlyInterpretSourceCodes(string fileName, string sourceCode)
         {
+            Console.WriteLine(fileName);
+
             var consoleReader = new StreamReader(Console.OpenStandardInput());
             var consoleWriter = new StreamWriter(Console.OpenStandardOutput());
 

@@ -10,10 +10,10 @@ namespace CILantro.Engine.Tests
     {
         private static string SourceCodesDirectoryName = "CILSourceCodes";
 
-        private static List<string> FileNames = new List<string>
+        public static List<string> FileNames = new List<string>
         {
             "001_empty.il",
-            //"002_read_key.il"
+            "002_read_key.il"
         };
 
         public static List<string> SourceCodes = FileNames.Select(fn => GetSourceCode(fn)).ToList();
@@ -27,7 +27,7 @@ namespace CILantro.Engine.Tests
             var filePath = Path.Combine(assemblyDirPath, SourceCodesDirectoryName, fileName);
             var sourceCode = File.ReadAllText(filePath);
 
-            return sourceCode;
+            return "\n" + sourceCode;
         }
     }
 }
