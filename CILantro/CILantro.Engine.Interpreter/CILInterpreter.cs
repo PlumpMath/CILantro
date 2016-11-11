@@ -12,26 +12,17 @@ namespace CILantro.Engine.Interpreter
         {
             var thread = new Thread(() =>
             {
-                Interpret(reader, writer);
+                Interpret(cilProgram, reader, writer);
             });
 
             thread.Start();
             thread.Join();
         }
 
-        private void Interpret(StreamReader reader, StreamWriter writer)
+        private void Interpret(CILProgram cilProgram, StreamReader reader, StreamWriter writer)
         {
-            while (true)
-            {
-                writer.Write(CommandPrompt);
-                writer.Flush();
-
-                var line = reader.ReadLine();
-                if(line == "exit")
-                {
-                    break;
-                }
-            }
+            var entryPoint = cilProgram.Root.Class.Method;
+            entryPoint.Invoke();
         }
     }
 }

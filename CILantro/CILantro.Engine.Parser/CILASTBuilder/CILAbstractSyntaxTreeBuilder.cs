@@ -9,7 +9,7 @@ namespace CILantro.Engine.Parser
     {
         public CILProgram BuildTree(ParseTree parseTree)
         {
-            var rootNode = BuildNode(parseTree.Root);
+            var rootNode = BuildNode(parseTree.Root) as CILProgramRoot;
 
             return new CILProgram
             {

@@ -3,5 +3,10 @@
     public class CILMethod : CILASTNode
     {
         public bool IsEntryPoint { get; set; }
+
+        public void Invoke()
+        {
+
+        }
     }
 }
