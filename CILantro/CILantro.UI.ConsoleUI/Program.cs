@@ -35,12 +35,18 @@ namespace CILantro.UI.ConsoleUI
 
                 Console.WriteLine();
                 Console.WriteLine(Messages.ThankYouMessage);
+                Console.WriteLine(Messages.CloseProgramMessage);
+                Console.ReadKey();
             }
             catch(Exception ex)
             {
                 Console.WriteLine();
                 Console.WriteLine(Messages.ErrorMessage);
                 Console.WriteLine(ex.Message);
+                Console.WriteLine();
+
+                Console.WriteLine(Messages.CloseProgramMessage);
+                Console.ReadKey();
             }
         }
 

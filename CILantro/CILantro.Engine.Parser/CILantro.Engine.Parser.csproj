@@ -45,6 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CILASTBuilder\CILAbstractSyntaxTreeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTAssemblyNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTClassNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTMethodNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTProgramRootNodeBuilder.cs" />
     <Compile Include="CILASTNodes\CILAssembly.cs" />
     <Compile Include="CILASTNodes\CILASTNode.cs" />
     <Compile Include="CILASTNodes\CILClass.cs" />
@@ -53,6 +58,7 @@
     <Compile Include="CILGrammar.cs" />
     <Compile Include="CILParser.cs" />
     <Compile Include="CILProgram.cs" />
+    <Compile Include="ParseTreeNodeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
