@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CILantro.Engine.Parser.CILASTBuilder
 {
-    public class CILASTProgramRootNodeBuilder : CILASTNodeBuilder
+    public class CILASTProgramRootNodeBuilder : ICILASTNodeBuilder<CILProgramRoot>
     {
         private readonly CILASTAssemblyNodeBuilder _assemblyNodeBuilder;
         private readonly CILASTClassNodeBuilder _classNodeBuilder;
@@ -16,7 +16,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             _classNodeBuilder = new CILASTClassNodeBuilder();
         }
 
-        public override CILASTNode BuildNode(ParseTreeNode parseNode)
+        public CILProgramRoot BuildNode(ParseTreeNode parseNode)
         {
             var assemblyDeclarationParseNode = parseNode.ChildNodes.First(cn => cn.IsAssemblyDeclarationNode());
             var assemblyNode = _assemblyNodeBuilder.BuildNode(assemblyDeclarationParseNode) as CILAssembly;

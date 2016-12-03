@@ -2,11 +2,6 @@
 
 namespace CILantro.Engine.Parser
 {
-    public class ABCNode : ParseTreeNode
-    {
-        public ABCNode() : base(new ParserState("fewfw")) { }
-    }
-
     internal class CILGrammar : Grammar
     {
         public CILGrammar()

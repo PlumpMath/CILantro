@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace CILantro.Engine.Parser.CILASTBuilder
 {
-    public class CILASTMethodNodeBuilder : CILASTNodeBuilder
+    public class CILASTMethodNodeBuilder : CILMethod
     {
-        public override CILASTNode BuildNode(ParseTreeNode parseNode)
+        public CILMethod BuildNode(ParseTreeNode parseNode)
         {
             var methodDeclarationBlockParseNode = parseNode.ChildNodes.First(cn => cn.IsMethodDeclarationBlockNode());
 

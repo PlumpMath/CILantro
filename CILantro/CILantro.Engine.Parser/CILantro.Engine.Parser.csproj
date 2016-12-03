@@ -48,7 +48,7 @@
     <Compile Include="CILASTBuilder\CILASTAssemblyNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTClassNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTMethodNodeBuilder.cs" />
-    <Compile Include="CILASTBuilder\CILASTNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\ICILASTNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTProgramRootNodeBuilder.cs" />
     <Compile Include="CILASTNodes\CILAssembly.cs" />
     <Compile Include="CILASTNodes\CILASTNode.cs" />

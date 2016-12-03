@@ -3,9 +3,9 @@ using Irony.Parsing;
 
 namespace CILantro.Engine.Parser.CILASTBuilder
 {
-    public class CILASTAssemblyNodeBuilder : CILASTNodeBuilder
+    public class CILASTAssemblyNodeBuilder : ICILASTNodeBuilder<CILAssembly>
     {
-        public override CILASTNode BuildNode(ParseTreeNode parseNode)
+        public CILAssembly BuildNode(ParseTreeNode parseNode)
         {
             var resultNode = new CILAssembly();
 
