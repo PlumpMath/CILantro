@@ -46,15 +46,23 @@
   <ItemGroup>
     <Compile Include="CILASTBuilder\CILAbstractSyntaxTreeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTAssemblyNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTCallInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTClassNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTMethodNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTPopInstructionNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTRetInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\ICILASTNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTProgramRootNodeBuilder.cs" />
     <Compile Include="CILASTNodes\CILAssembly.cs" />
     <Compile Include="CILASTNodes\CILASTNode.cs" />
+    <Compile Include="CILASTNodes\CILCallInstruction.cs" />
     <Compile Include="CILASTNodes\CILClass.cs" />
+    <Compile Include="CILASTNodes\CILInstruction.cs" />
     <Compile Include="CILASTNodes\CILMethod.cs" />
+    <Compile Include="CILASTNodes\CILPopInstruction.cs" />
     <Compile Include="CILASTNodes\CILProgramRoot.cs" />
+    <Compile Include="CILASTNodes\CILRetInstruction.cs" />
     <Compile Include="CILGrammar.cs" />
     <Compile Include="CILParser.cs" />
     <Compile Include="CILProgram.cs" />

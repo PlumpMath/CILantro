@@ -1,8 +1,10 @@
-﻿namespace CILantro.Engine.Parser.CILAST
+﻿using System.Collections.Generic;
+
+namespace CILantro.Engine.Parser.CILASTNodes
 {
     public class CILProgramRoot : CILASTNode
     {
-        public CILAssembly Assembly { get; set; }
+        public List<CILAssembly> Assemblies { get; set; }
 
         public CILClass Class { get; set; }
     }

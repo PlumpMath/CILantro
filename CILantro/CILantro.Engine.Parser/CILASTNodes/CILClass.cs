@@ -1,4 +1,4 @@
-﻿namespace CILantro.Engine.Parser.CILAST
+﻿namespace CILantro.Engine.Parser.CILASTNodes
 {
     public class CILClass : CILASTNode
     {

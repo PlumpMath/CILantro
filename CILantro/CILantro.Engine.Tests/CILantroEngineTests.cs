@@ -1,10 +1,7 @@
-﻿using CILantro.Engine;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
+using System.Reflection;
 using Xunit;
-using Xunit.Extensions;
 
 namespace CILantro.Engine.Tests
 {
@@ -12,30 +9,63 @@ namespace CILantro.Engine.Tests
     {
         private CILantroEngine _engine = new CILantroEngine();
 
-        public static List<object[]> SourceCodes
+        private readonly string SourceCodeFileExtension = ".il";
+
+        private readonly string InputDataFileExtension = ".in";
+
+        private readonly string OutputDataFileExtension = ".out";
+
+        private readonly string SourceCodesDirectoryName = "CILSourceCodes";
+
+        private readonly string InputDataDirectoryName = "CILInputData";
+
+        private readonly string OutputDataDirectoryName = "CILOutputData";
+
+        private string WorkingDirPath
         {
             get
             {
-                return CILSourceCodesRegister.FileNames
-                    .Zip(CILSourceCodesRegister.SourceCodes, (fn, sc) =>
-                    new object[]
-                    {
-                        fn,
-                        sc
-                    })
-                    .ToList();
+                var codeBase = Assembly.GetExecutingAssembly().CodeBase;
+                var uriBuilder = new UriBuilder(codeBase);
+                var assemblyPath = Uri.UnescapeDataString(uriBuilder.Path);
+                var assemblyDirPath = Path.GetDirectoryName(assemblyPath);
+                return assemblyDirPath;
             }
         }
 
-        [Theory, MemberData(nameof(SourceCodes))]
-        public void ShouldCorrectlyInterpretSourceCodes(string fileName, string sourceCode)
+        private string SourceCodesDirectoryPath
         {
-            Console.WriteLine(fileName);
+            get { return Path.Combine(WorkingDirPath, SourceCodesDirectoryName); }
+        }
 
-            var consoleReader = new StreamReader(Console.OpenStandardInput());
-            var consoleWriter = new StreamWriter(Console.OpenStandardOutput());
+        private string InputDataDirectoryPath
+        {
+            get { return Path.Combine(WorkingDirPath, InputDataDirectoryName); }
+        }
 
-            _engine.Process(sourceCode, consoleReader, consoleWriter);
+        private string OutputDataDirectoryPath
+        {
+            get { return Path.Combine(WorkingDirPath, OutputDataDirectoryName); }
+        }
+
+        [Theory]
+        [InlineData("0001_empty", "0001", "0001")]
+        [InlineData("0002_read_key", "0001", "0001")]
+        public void ShouldCorrectlyInterpretSourceCodes(string programName, string inputDataName, string outputDataName)
+        {
+            Console.WriteLine(programName);
+
+            var sourceCodeFileName = programName + SourceCodeFileExtension;
+            var sourceCodePath = Path.Combine(SourceCodesDirectoryPath, sourceCodeFileName);
+            var sourceCode = File.ReadAllText(sourceCodePath);
+
+            var inputDataFileName = inputDataName + InputDataFileExtension;
+            var inputDataPath = Path.Combine(InputDataDirectoryPath, programName, inputDataFileName);
+
+            using (var inputDataStream = new StreamReader(File.OpenRead(inputDataPath)))
+            {
+                _engine.Process(sourceCode, inputDataStream, new StreamWriter(Console.OpenStandardOutput()));
+            }
         }
     }
 }

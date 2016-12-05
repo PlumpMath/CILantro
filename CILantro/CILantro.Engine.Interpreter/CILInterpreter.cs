@@ -1,31 +1,79 @@
 ﻿using CILantro.Engine.Parser;
+using CILantro.Engine.Parser.CILASTNodes;
+using System;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Threading;
 
 namespace CILantro.Engine.Interpreter
 {
     public class CILInterpreter
     {
-        private static readonly string CommandPrompt = "CILantro >>> ";
+        //private static readonly string CommandPrompt = "CILantro >>> ";
+
+        private CILProgramRoot Program { get; set; }
+
+        private StreamReader StreamReader { get; set; }
+
+        private StreamWriter StreamWriter { get; set; }
 
         public void StartInterpreter(CILProgram cilProgram, StreamReader reader, StreamWriter writer)
         {
+            Program = cilProgram.Root;
+            StreamReader = reader;
+            StreamWriter = writer;
+
             var thread = new Thread(() =>
             {
-                Interpret(cilProgram, reader, writer);
+                Interpret();
             });
 
             thread.Start();
             thread.Join();
         }
 
-        private void Interpret(CILProgram cilProgram, StreamReader reader, StreamWriter writer)
+        private void Interpret()
         {
-            writer.WriteLine(CommandPrompt);
-            writer.Flush();
+            var entryPoint = Program.Class.Method;
+            InvokeMethod(entryPoint);
+        }
 
-            var entryPoint = cilProgram.Root.Class.Method;
-            entryPoint.Invoke();
+        private void InvokeMethod(CILMethod method)
+        {
+            foreach(var instruction in method.Instructions)
+            {
+                InvokeInstruction(instruction);
+            }
+        }
+
+        private void InvokeInstruction(CILInstruction instruction)
+        {
+            if (instruction is CILCallInstruction)
+                InvokeCallInstruction(instruction as CILCallInstruction);
+            else if (instruction is CILPopInstruction)
+                InvokePopInstruction(instruction as CILPopInstruction);
+            else if (instruction is CILRetInstruction)
+                InvokeRetInstruction(instruction as CILRetInstruction);            
+        }
+
+        private void InvokeCallInstruction(CILCallInstruction callInstruction)
+        {
+            var calledAssembly = Program.Assemblies.First(a => a.Name.Equals(callInstruction.MethodAssemblyName));
+            var reflectedAssembly = Assembly.Load(calledAssembly.Name);
+            var reflectedClass = reflectedAssembly.GetType(callInstruction.MethodClassName);
+            var reflectedMethod = reflectedClass.GetMethod(callInstruction.MethodName, new Type[0]);
+            reflectedMethod.Invoke(null, null);
+        }
+
+        private void InvokePopInstruction(CILPopInstruction popInstruction)
+        {
+
+        }
+
+        private void InvokeRetInstruction(CILRetInstruction retInstruction)
+        {
+
         }
     }
 }
