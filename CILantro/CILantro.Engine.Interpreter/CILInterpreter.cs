@@ -35,6 +35,10 @@ namespace CILantro.Engine.Interpreter
 
         private void Interpret()
         {
+            Console.SetIn(StreamReader);
+            Console.SetOut(StreamWriter);
+            StreamWriter.AutoFlush = true;
+
             var entryPoint = Program.Class.Method;
             InvokeMethod(entryPoint);
         }

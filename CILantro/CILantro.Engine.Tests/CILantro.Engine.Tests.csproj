@@ -66,13 +66,7 @@
     <None Include="CILInputData\0001_empty\0001.in">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="CILInputData\0002_read_key\0001.in">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="CILOutputData\0001_empty\0001.out">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="CILOutputData\0002_read_key\0001.out">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="CILSourceCodes\0001_empty.il">

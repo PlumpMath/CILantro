@@ -50,7 +50,6 @@ namespace CILantro.Engine.Tests
 
         [Theory]
         [InlineData("0001_empty", "0001", "0001")]
-        [InlineData("0002_read_key", "0001", "0001")]
         public void ShouldCorrectlyInterpretSourceCodes(string programName, string inputDataName, string outputDataName)
         {
             Console.WriteLine(programName);
@@ -62,7 +61,7 @@ namespace CILantro.Engine.Tests
             var inputDataFileName = inputDataName + InputDataFileExtension;
             var inputDataPath = Path.Combine(InputDataDirectoryPath, programName, inputDataFileName);
 
-            using (var inputDataStream = new StreamReader(File.OpenRead(inputDataPath)))
+            using (var inputDataStream = new StreamReader(inputDataPath))
             {
                 _engine.Process(sourceCode, inputDataStream, new StreamWriter(Console.OpenStandardOutput()));
             }
