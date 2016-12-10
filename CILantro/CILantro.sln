@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Interpreter
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A400AD03-76CE-4FAB-844C-81C180CB16BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Interpreter.Tests", "CILantro.Engine.Interpreter.Tests\CILantro.Engine.Interpreter.Tests.csproj", "{A143FD0F-31C2-4BBE-B01E-9E8B9CFBD48E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CILantro.Engine.Tests", "CILantro.Engine.Tests\CILantro.Engine.Tests.csproj", "{F88CB09C-0313-41A4-83E5-BDF52154ACAF}"
 EndProject
 Global
@@ -45,10 +43,6 @@ Global
 		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A143FD0F-31C2-4BBE-B01E-9E8B9CFBD48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A143FD0F-31C2-4BBE-B01E-9E8B9CFBD48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A143FD0F-31C2-4BBE-B01E-9E8B9CFBD48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A143FD0F-31C2-4BBE-B01E-9E8B9CFBD48E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F88CB09C-0313-41A4-83E5-BDF52154ACAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F88CB09C-0313-41A4-83E5-BDF52154ACAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F88CB09C-0313-41A4-83E5-BDF52154ACAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,7 +52,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A143FD0F-31C2-4BBE-B01E-9E8B9CFBD48E} = {A400AD03-76CE-4FAB-844C-81C180CB16BF}
 		{F88CB09C-0313-41A4-83E5-BDF52154ACAF} = {A400AD03-76CE-4FAB-844C-81C180CB16BF}
 	EndGlobalSection
 EndGlobal

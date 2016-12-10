@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Reflection;
 using Xunit;
 
 namespace CILantro.Engine.Tests
@@ -23,10 +22,8 @@ namespace CILantro.Engine.Tests
 
         [Theory]
         [InlineData("empty", "empty", "empty")]
-        public void ShouldCorrectlyInterpretSourceCodes(string programName, string inputDataName, string outputDataName)
+        public void ShouldReturnCorrectResults(string programName, string inputDataName, string outputDataName)
         {
-            Console.WriteLine(programName);
-
             var sourceCodeFileName = programName + SourceCodeFileExtension;
             var sourceCodePath = Path.Combine(SourceCodesDirectoryPath, programName, sourceCodeFileName);
             var sourceCode = File.ReadAllText(sourceCodePath);
