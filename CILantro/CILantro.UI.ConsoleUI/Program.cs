@@ -34,6 +34,7 @@ namespace CILantro.UI.ConsoleUI
                 _cilantroEngine.Process(sourceCode, consoleReader, consoleWriter);
 
                 Console.WriteLine();
+                Console.WriteLine();
                 Console.WriteLine(Messages.ThankYouMessage);
                 Console.WriteLine(Messages.CloseProgramMessage);
                 Console.ReadKey();
