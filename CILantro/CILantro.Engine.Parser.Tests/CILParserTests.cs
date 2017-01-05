@@ -1,23 +1,27 @@
-﻿using CILantro.Engine.Interpreter;
-using System.IO;
+﻿using System.IO;
+using Xunit;
 
-namespace CILantro.Engine.Interpreter.Tests
+namespace CILantro.Engine.Parser.Tests
 {
-    public class CILInterpreterTests
+    public class CILParserTests
     {
-        private readonly CILInterpreter _interpreter = new CILInterpreter();
+        private CILParser _parser = new CILParser();
 
         private readonly string SourceCodeFileExtension = ".il";
 
         private readonly string SourceCodesDirectoryPath = @"D:\UWr\mgr\semestr IV\CILantro\CILSourceCodes";
 
-        public void ShouldCorrectlyInterpretSourceCodes(string programName)
+        [Theory]
+        [InlineData("empty")]
+        [InlineData("read_key")]
+        [InlineData("hello_world")]
+        public void ShouldParseProgramWithoutErrors(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
             var sourceCodePath = Path.Combine(SourceCodesDirectoryPath, programName, sourceCodeFileName);
             var sourceCode = File.ReadAllText(sourceCodePath);
 
-            _interpreter.StartInterpreter()
+            _parser.Parse(sourceCode);
         }
     }
 }

@@ -2,8 +2,8 @@
 
 /CILantro/packages
 
-/CILantro/CILantro.Engine.Interpreter.Tests/bin
-/CILantro/CILantro.Engine.Interpreter.Tests/obj
+/CILantro/CILantro.Engine.Parser.Tests/bin
+/CILantro/CILantro.Engine.Parser.Tests/obj
 /CILantro/CILantro.Engine.Tests/bin
 /CILantro/CILantro.Engine.Tests/obj
 

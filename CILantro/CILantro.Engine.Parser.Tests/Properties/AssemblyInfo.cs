@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CILantro.Engine.Interpreter.Tests")]
+[assembly: AssemblyTitle("CILantro.Engine.Parser.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CILantro.Engine.Interpreter.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyProduct("CILantro.Engine.Parser.Tests")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a143fd0f-31c2-4bbe-b01e-9e8b9cfbd48e")]
+[assembly: Guid("dd2dc3c3-c559-42f6-9bdb-e47eb79d00f5")]
 
 // Version information for an assembly consists of the following four values:
 //
