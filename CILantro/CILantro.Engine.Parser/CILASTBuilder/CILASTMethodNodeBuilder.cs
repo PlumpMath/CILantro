@@ -26,6 +26,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             {
                 var instructionParseNode = instructionsSequenceParseNode.ChildNodes.First(cn => cn.IsInstructionNode());
                 var instruction = _instructionNodeBuilder.BuildNode(instructionParseNode);
+                instruction.Order = instructions.Count;
                 instructions.Add(instruction);
 
                 instructionsSequenceParseNode = instructionsSequenceParseNode.ChildNodes.FirstOrDefault(cn => cn.IsInstructionsSequenceNode());
@@ -36,6 +37,11 @@ namespace CILantro.Engine.Parser.CILASTBuilder
                 IsEntryPoint = isEntryPoint,
                 Instructions = instructions
             };
+
+            foreach(var instruction in resultNode.Instructions)
+            {
+                instruction.Method = resultNode;
+            }
 
             return resultNode;
         }

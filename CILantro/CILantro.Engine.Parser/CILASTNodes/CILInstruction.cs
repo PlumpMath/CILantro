@@ -2,6 +2,10 @@
 {
     public abstract class CILInstruction : CILASTNode
     {
-        public abstract void Execute(CILProgramRoot program);
+        public CILMethod Method { get; set; }
+
+        public int Order { get; set; }
+
+        public abstract CILInstruction Execute(CILProgramRoot program);
     }
 }

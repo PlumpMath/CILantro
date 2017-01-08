@@ -2,6 +2,7 @@
 using CILantro.Engine.Parser.CILASTNodes;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace CILantro.Engine.Interpreter
 {
@@ -30,7 +31,12 @@ namespace CILantro.Engine.Interpreter
             StreamWriter.AutoFlush = true;
 
             var entryPoint = Program.Class.Method;
-            entryPoint.Invoke(Program);
+            var currentInstruction = entryPoint.Instructions.First();
+
+            while(currentInstruction != null)
+            {
+                currentInstruction = currentInstruction.Execute(Program);
+            }
         }
     }
 }
