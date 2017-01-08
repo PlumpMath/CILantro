@@ -18,6 +18,7 @@ namespace CILantro.Engine.Parser
             var callKeyword = ToTerm("call", "callKeyword");
             var cilKeyword = ToTerm("cil", "cilKeyword");
             var externKeyword = ToTerm("extern", "externKeyword");
+            var ldstrKeyword = ToTerm("ldstr", "ldstrKeyword");
             var managedKeyword = ToTerm("managed", "managedKeyword");
             var popKeyword = ToTerm("pop", "popKeyword");
             var retKeyword = ToTerm("ret", "retKeyword");
@@ -26,12 +27,14 @@ namespace CILantro.Engine.Parser
             var voidKeyword = ToTerm("void", "voidKeyword");
 
             // optional keywords
+
             var optionalExternKeyword = new NonTerminal("optionalExternKeyword");
             optionalExternKeyword.Rule = externKeyword | Empty;
 
             // punctuation
 
             var dot = ToTerm(".");
+            var comma = ToTerm(",");
             var colon = ToTerm(":");
             var leftBrace = ToTerm("{");
             var rightBrace = ToTerm("}");
@@ -39,6 +42,25 @@ namespace CILantro.Engine.Parser
             var rightParenthesis = ToTerm(")");
             var leftBracket = ToTerm("[");
             var rightBracket = ToTerm("]");
+
+            // simple types
+
+            var stringTypeIdentifier = ToTerm("string", "stringTypeIdentifier");
+
+            var simpleTypeIdentifier = new NonTerminal("simpleTypeIdentifier");
+            simpleTypeIdentifier.Rule = stringTypeIdentifier;
+
+            // values
+
+            var stringValue = new StringLiteral("stringValue", "\"");
+
+            // arguments
+
+            var argumentType = new NonTerminal("argumentType");
+            argumentType.Rule = simpleTypeIdentifier;
+
+            var argumentTypes = new NonTerminal("argumentTypes");
+            argumentTypes.Rule = Empty | argumentType | (argumentType + comma + argumentTypes);
 
             // identifiers
 
@@ -51,7 +73,7 @@ namespace CILantro.Engine.Parser
             typeIdentifier.Rule = identifier | (identifier + dot + typeIdentifier);
 
             var methodIdentifier = new NonTerminal("methodIdentifier");
-            methodIdentifier.Rule = typeIdentifier + colon + colon + identifier + leftParenthesis + rightParenthesis;
+            methodIdentifier.Rule = typeIdentifier + colon + colon + identifier + leftParenthesis + argumentTypes + rightParenthesis;
 
             // definitions
 
@@ -64,7 +86,10 @@ namespace CILantro.Engine.Parser
             // instructions
 
             var callInstruction = new NonTerminal("callInstruction");
-            callInstruction.Rule = callKeyword + valuetypeKeyword + returnTypeDefinition + methodDefinition;
+            callInstruction.Rule = callKeyword + ((valuetypeKeyword + returnTypeDefinition) | voidKeyword) + methodDefinition;
+
+            var ldstrInstruction = new NonTerminal("ldstrInstruction");
+            ldstrInstruction.Rule = ldstrKeyword + stringValue;
 
             var popInstruction = new NonTerminal("popInstruction");
             popInstruction.Rule = popKeyword;
@@ -73,7 +98,7 @@ namespace CILantro.Engine.Parser
             retInstruction.Rule = retKeyword;
 
             var instruction = new NonTerminal("instruction");
-            instruction.Rule = callInstruction | popInstruction | retInstruction;
+            instruction.Rule = callInstruction | ldstrInstruction | popInstruction | retInstruction;
 
             var instructionsSequence = new NonTerminal("instructionsSequence");
             instructionsSequence.Rule = instruction | (instruction + instructionsSequence);

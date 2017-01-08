@@ -2,7 +2,7 @@
 
 .assembly HelloWorld {}
 
-.class HelloWorld.Program extends [mscorlib]System.Object
+.class HelloWorld.Program
 {
 	.method static void Main() cil managed
 	{

@@ -49,6 +49,11 @@ namespace CILantro.Engine.Parser
             return node.Term.Name.Equals("callInstruction");
         }
 
+        public static bool IsLoadStringInstructionNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("ldstrInstruction");
+        }
+
         public static bool IsPopInstructionNode(this ParseTreeNode node)
         {
             return node.Term.Name.Equals("popInstruction");
