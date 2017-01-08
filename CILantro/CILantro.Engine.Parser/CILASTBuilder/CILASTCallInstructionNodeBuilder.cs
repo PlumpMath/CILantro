@@ -30,11 +30,15 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             var methodNameIdentifierParseNode = methodIdentifierParseNode.ChildNodes.First(cn => cn.IsIdentifierNode());
             var methodName = methodNameIdentifierParseNode.Token.ValueString;
 
+            var argumentTypesParseNode = methodIdentifierParseNode.ChildNodes.First(cn => cn.IsArgumentTypesNode());
+            var argumentsCount = argumentTypesParseNode.ChildNodes.Count;
+
             var resultNode = new CILCallInstruction
             {
                 MethodAssemblyName = methodAssemblyName,
                 MethodClassName = methodClassName,
-                MethodName = methodName
+                MethodName = methodName,
+                ArgumentsCount = argumentsCount
             };
 
             return resultNode;

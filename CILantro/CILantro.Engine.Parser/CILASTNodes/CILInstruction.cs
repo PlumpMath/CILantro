@@ -1,4 +1,6 @@
-﻿namespace CILantro.Engine.Parser.CILASTNodes
+﻿using CILantro.Shared;
+
+namespace CILantro.Engine.Parser.CILASTNodes
 {
     public abstract class CILInstruction : CILASTNode
     {
@@ -6,6 +8,6 @@
 
         public int Order { get; set; }
 
-        public abstract CILInstruction Execute(CILProgramRoot program);
+        public abstract CILInstruction Execute(CILProgramRoot program, CILProgramState state);
     }
 }

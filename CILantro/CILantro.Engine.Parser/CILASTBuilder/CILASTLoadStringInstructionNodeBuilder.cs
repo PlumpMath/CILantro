@@ -1,6 +1,7 @@
 ﻿using System;
 using CILantro.Engine.Parser.CILASTNodes;
 using Irony.Parsing;
+using System.Linq;
 
 namespace CILantro.Engine.Parser.CILASTBuilder
 {
@@ -8,7 +9,13 @@ namespace CILantro.Engine.Parser.CILASTBuilder
     {
         public CILLoadStringInstruction BuildNode(ParseTreeNode parseNode)
         {
-            return new CILLoadStringInstruction();
+            var stringValueParseNode = parseNode.ChildNodes.First(cn => cn.IsStringValueNode());
+            var stringValue = stringValueParseNode.Token.ValueString;
+
+            return new CILLoadStringInstruction
+            {
+                StringValue = stringValue
+            };
         }
     }
 }

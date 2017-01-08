@@ -103,5 +103,15 @@ namespace CILantro.Engine.Parser
         {
             return node.Term.Name.Equals("typeIdentifier");
         }
+
+        public static bool IsArgumentTypesNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("argumentTypes");
+        }
+
+        public static bool IsStringValueNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("stringValue");
+        }
     }
 }

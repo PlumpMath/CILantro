@@ -16,10 +16,6 @@ namespace CILantro.Engine.Parser.CILASTNodes
 
         public void Invoke(CILProgramRoot program)
         {
-            foreach(var instruction in Instructions)
-            {
-                instruction.Execute(program);
-            }
         }
     }
 }

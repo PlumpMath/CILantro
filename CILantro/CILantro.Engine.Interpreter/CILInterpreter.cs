@@ -1,5 +1,6 @@
 ﻿using CILantro.Engine.Parser;
 using CILantro.Engine.Parser.CILASTNodes;
+using CILantro.Shared;
 using System;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace CILantro.Engine.Interpreter
 
         private CILProgramRoot Program { get; set; }
 
+        private CILProgramState State { get; set; }
+
         private StreamReader StreamReader { get; set; }
 
         private StreamWriter StreamWriter { get; set; }
@@ -19,6 +22,7 @@ namespace CILantro.Engine.Interpreter
         public void StartInterpreter(CILProgram cilProgram, StreamReader reader, StreamWriter writer)
         {
             Program = cilProgram.Root;
+            State = new CILProgramState();
             StreamReader = reader;
             StreamWriter = writer;
             Interpret();
@@ -35,7 +39,7 @@ namespace CILantro.Engine.Interpreter
 
             while(currentInstruction != null)
             {
-                currentInstruction = currentInstruction.Execute(Program);
+                currentInstruction = currentInstruction.Execute(Program, State);
             }
         }
     }
