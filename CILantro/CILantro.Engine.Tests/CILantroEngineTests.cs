@@ -35,9 +35,23 @@ namespace CILantro.Engine.Tests
             var inputDataFileName = inputDataName + InputDataFileExtension;
             var inputDataPath = Path.Combine(inputDataDirectoryPath, inputDataFileName);
 
+            var outputDataDirectoryPath = Path.Combine(SourceCodesDirectoryPath, programName, OutputDataDirectoryName);
+            var outputDataFileName = outputDataName + OutputDataFileExtension;
+            var outputDataPath = Path.Combine(outputDataDirectoryPath, outputDataFileName);
+            var expectedOutputData = File.ReadAllText(outputDataPath);
+
             using (var inputDataStream = new StreamReader(inputDataPath))
             {
-                _engine.Process(sourceCode, inputDataStream, new StreamWriter(Console.OpenStandardOutput()));
+                using (var outputMemoryStream = new MemoryStream())
+                {
+                    _engine.Process(sourceCode, inputDataStream, new StreamWriter(outputMemoryStream));
+
+                    outputMemoryStream.Position = 0;
+                    var outputDataReader = new StreamReader(outputMemoryStream);
+                    var outputData = outputDataReader.ReadToEnd();
+
+                    Assert.Equal(expectedOutputData, outputData);
+                }
             }
         }
     }
