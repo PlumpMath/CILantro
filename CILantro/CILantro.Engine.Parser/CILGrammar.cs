@@ -18,11 +18,14 @@ namespace CILantro.Engine.Parser
             var callKeyword = ToTerm("call", "callKeyword");
             var cilKeyword = ToTerm("cil", "cilKeyword");
             var externKeyword = ToTerm("extern", "externKeyword");
+            var int32Keyword = ToTerm("int32", "int32Keyword");
+            var ldci40Keyword = ToTerm("ldc.i4.0", "ldci40Keyword");
             var ldstrKeyword = ToTerm("ldstr", "ldstrKeyword");
             var managedKeyword = ToTerm("managed", "managedKeyword");
             var popKeyword = ToTerm("pop", "popKeyword");
             var retKeyword = ToTerm("ret", "retKeyword");
             var staticKeyword = ToTerm("static", "staticKeyword");
+            var stringKeyword = ToTerm("string", "stringKeyword");
             var valuetypeKeyword = ToTerm("valuetype", "valuetypeKeyword");
             var voidKeyword = ToTerm("void", "voidKeyword");
 
@@ -45,10 +48,14 @@ namespace CILantro.Engine.Parser
 
             // simple types
 
-            var stringTypeIdentifier = ToTerm("string", "stringTypeIdentifier");
+            var int32TypeIdentifier = new NonTerminal("int32TypeIdentifier");
+            int32TypeIdentifier.Rule = int32Keyword;
+
+            var stringTypeIdentifier = new NonTerminal("stringTypeIdentifier");
+            stringTypeIdentifier.Rule = stringKeyword;
 
             var simpleTypeIdentifier = new NonTerminal("simpleTypeIdentifier");
-            simpleTypeIdentifier.Rule = stringTypeIdentifier;
+            simpleTypeIdentifier.Rule = int32TypeIdentifier | stringTypeIdentifier;
 
             // values
 
@@ -88,6 +95,9 @@ namespace CILantro.Engine.Parser
             var callInstruction = new NonTerminal("callInstruction");
             callInstruction.Rule = callKeyword + ((valuetypeKeyword + returnTypeDefinition) | voidKeyword) + methodDefinition;
 
+            var ldci40Instruction = new NonTerminal("ldci40Instruction");
+            ldci40Instruction.Rule = ldci40Keyword;
+
             var ldstrInstruction = new NonTerminal("ldstrInstruction");
             ldstrInstruction.Rule = ldstrKeyword + stringValue;
 
@@ -98,7 +108,12 @@ namespace CILantro.Engine.Parser
             retInstruction.Rule = retKeyword;
 
             var instruction = new NonTerminal("instruction");
-            instruction.Rule = callInstruction | ldstrInstruction | popInstruction | retInstruction;
+            instruction.Rule =
+                callInstruction |
+                ldci40Instruction |
+                ldstrInstruction |
+                popInstruction |
+                retInstruction;
 
             var instructionsSequence = new NonTerminal("instructionsSequence");
             instructionsSequence.Rule = instruction | (instruction + instructionsSequence);

@@ -14,7 +14,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
 
             return new CILLoadStringInstruction
             {
-                StringValue = stringValue
+                Value = stringValue
             };
         }
     }

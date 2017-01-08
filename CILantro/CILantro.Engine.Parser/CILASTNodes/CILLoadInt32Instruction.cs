@@ -1,11 +1,11 @@
-﻿using CILantro.Shared;
-using System;
+﻿using System;
+using CILantro.Shared;
 
 namespace CILantro.Engine.Parser.CILASTNodes
 {
-    public class CILLoadStringInstruction : CILInstruction
+    public class CILLoadInt32Instruction : CILInstruction
     {
-        public string Value { get; set; }
+        public int Value { get; set; }
 
         public override CILInstruction Execute(CILProgramRoot program, CILProgramState state)
         {

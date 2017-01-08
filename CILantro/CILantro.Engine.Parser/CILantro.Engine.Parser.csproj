@@ -49,6 +49,7 @@
     <Compile Include="CILASTBuilder\CILASTCallInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTClassNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTInstructionNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTLoadInt32InstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTLoadStringInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTMethodNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTPopInstructionNodeBuilder.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="CILASTNodes\CILCallInstruction.cs" />
     <Compile Include="CILASTNodes\CILClass.cs" />
     <Compile Include="CILASTNodes\CILInstruction.cs" />
+    <Compile Include="CILASTNodes\CILLoadInt32Instruction.cs" />
     <Compile Include="CILASTNodes\CILLoadStringInstruction.cs" />
     <Compile Include="CILASTNodes\CILMethod.cs" />
     <Compile Include="CILASTNodes\CILPopInstruction.cs" />
