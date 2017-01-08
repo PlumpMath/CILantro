@@ -22,6 +22,8 @@ namespace CILantro.Engine.Tests
 
         [Theory]
         [InlineData("empty", "empty", "empty")]
+        [InlineData("empty", "random_characters", "random_characters")]
+        [InlineData("empty", "random_number", "random_number")]
         [InlineData("hello_world", "empty", "empty")]
         [InlineData("hello_world", "hello_world", "hello_world")]
         [InlineData("hello_world", "random_characters", "random_characters")]
