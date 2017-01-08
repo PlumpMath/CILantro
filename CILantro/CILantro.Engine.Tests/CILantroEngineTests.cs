@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Xunit;
 
 namespace CILantro.Engine.Tests
@@ -21,27 +20,27 @@ namespace CILantro.Engine.Tests
         private readonly string OutputDataDirectoryName = "out";
 
         [Theory]
-        [InlineData("empty", "empty", "empty")]
-        [InlineData("empty", "random_characters", "random_characters")]
-        [InlineData("empty", "random_number", "random_number")]
-        [InlineData("hello_world", "empty", "empty")]
-        [InlineData("hello_world", "hello_world", "hello_world")]
-        [InlineData("hello_world", "random_characters", "random_characters")]
-        [InlineData("write_0", "empty", "empty")]
-        [InlineData("write_0", "random_characters", "random_characters")]
-        [InlineData("write_0", "random_number", "random_number")]
-        public void ShouldReturnCorrectResults(string programName, string inputDataName, string outputDataName)
+        [InlineData("empty", "empty")]
+        [InlineData("empty", "random_characters")]
+        [InlineData("empty", "random_number")]
+        [InlineData("hello_world", "empty")]
+        [InlineData("hello_world", "hello_world")]
+        [InlineData("hello_world", "random_characters")]
+        [InlineData("write_0", "empty")]
+        [InlineData("write_0", "random_characters")]
+        [InlineData("write_0", "random_number")]
+        public void ShouldReturnCorrectResults(string programName, string dataName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
             var sourceCodePath = Path.Combine(SourceCodesDirectoryPath, programName, sourceCodeFileName);
             var sourceCode = File.ReadAllText(sourceCodePath);
 
             var inputDataDirectoryPath = Path.Combine(SourceCodesDirectoryPath, programName, InputDataDirectoryName);
-            var inputDataFileName = inputDataName + InputDataFileExtension;
+            var inputDataFileName = dataName + InputDataFileExtension;
             var inputDataPath = Path.Combine(inputDataDirectoryPath, inputDataFileName);
 
             var outputDataDirectoryPath = Path.Combine(SourceCodesDirectoryPath, programName, OutputDataDirectoryName);
-            var outputDataFileName = outputDataName + OutputDataFileExtension;
+            var outputDataFileName = dataName + OutputDataFileExtension;
             var outputDataPath = Path.Combine(outputDataDirectoryPath, outputDataFileName);
             var expectedOutputData = File.ReadAllText(outputDataPath);
 
