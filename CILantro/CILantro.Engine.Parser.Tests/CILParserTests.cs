@@ -15,6 +15,7 @@ namespace CILantro.Engine.Parser.Tests
         [InlineData("empty")]
         [InlineData("read_key")]
         [InlineData("hello_world")]
+        [InlineData("write_0")]
         public void ShouldParseProgramWithoutErrors(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
