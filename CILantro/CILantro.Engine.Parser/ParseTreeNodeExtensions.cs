@@ -118,5 +118,20 @@ namespace CILantro.Engine.Parser
         {
             return node.Term.Name.Equals("ldci40Instruction");
         }
+
+        public static bool IsSimpleTypeIdentifierNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("simpleTypeIdentifier");
+        }
+
+        public static bool IsStringTypeIdentifierNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("stringTypeIdentifier");
+        }
+
+        public static bool IsInt32TypeIdentifierNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("int32TypeIdentifier");
+        }
     }
 }

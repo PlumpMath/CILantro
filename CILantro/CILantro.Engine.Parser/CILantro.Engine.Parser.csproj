@@ -54,6 +54,7 @@
     <Compile Include="CILASTBuilder\CILASTMethodNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTPopInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTRetInstructionNodeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILSimpleTypeBuilder.cs" />
     <Compile Include="CILASTBuilder\ICILASTNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTProgramRootNodeBuilder.cs" />
     <Compile Include="CILASTNodes\CILAssembly.cs" />
