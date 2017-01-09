@@ -11,6 +11,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             int? value = null;
 
             if (parseNode.IsLoadInt320InstructionNode()) value = 0;
+            if (parseNode.IsLoadInt321InstructionNode()) value = 1;
 
             return new CILLoadInt32Instruction
             {

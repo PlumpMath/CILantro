@@ -20,6 +20,7 @@ namespace CILantro.Engine.Parser
             var externKeyword = ToTerm("extern", "externKeyword");
             var int32Keyword = ToTerm("int32", "int32Keyword");
             var ldci40Keyword = ToTerm("ldc.i4.0", "ldci40Keyword");
+            var ldci41Keyword = ToTerm("ldc.i4.1", "ldci41Keyword");
             var ldstrKeyword = ToTerm("ldstr", "ldstrKeyword");
             var managedKeyword = ToTerm("managed", "managedKeyword");
             var popKeyword = ToTerm("pop", "popKeyword");
@@ -98,6 +99,9 @@ namespace CILantro.Engine.Parser
             var ldci40Instruction = new NonTerminal("ldci40Instruction");
             ldci40Instruction.Rule = ldci40Keyword;
 
+            var ldci41Instruction = new NonTerminal("ldci41Instruction");
+            ldci41Instruction.Rule = ldci41Keyword;
+
             var ldstrInstruction = new NonTerminal("ldstrInstruction");
             ldstrInstruction.Rule = ldstrKeyword + stringValue;
 
@@ -111,6 +115,7 @@ namespace CILantro.Engine.Parser
             instruction.Rule =
                 callInstruction |
                 ldci40Instruction |
+                ldci41Instruction |
                 ldstrInstruction |
                 popInstruction |
                 retInstruction;
