@@ -29,6 +29,9 @@ namespace CILantro.Engine.Tests
         [InlineData("write_0", "empty")]
         [InlineData("write_0", "random_characters")]
         [InlineData("write_0", "random_number")]
+        [InlineData("write_1", "empty")]
+        [InlineData("write_1", "random_characters")]
+        [InlineData("write_1", "random_number")]
         public void ShouldReturnCorrectResults(string programName, string dataName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
