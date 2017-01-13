@@ -18,6 +18,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             if (parseNode.IsLoadInt325InstructionNode()) value = 5;
             if (parseNode.IsLoadInt326InstructionNode()) value = 6;
             if (parseNode.IsLoadInt327InstructionNode()) value = 7;
+            if (parseNode.IsLoadInt328InstructionNode()) value = 8;
 
             return new CILLoadInt32Instruction
             {
