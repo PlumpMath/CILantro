@@ -23,6 +23,7 @@ namespace CILantro.Engine.Parser.Tests
         [InlineData("write_5")]
         [InlineData("write_6")]
         [InlineData("write_7")]
+        [InlineData("write_8")]
         public void ShouldParseProgramWithoutErrors(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
