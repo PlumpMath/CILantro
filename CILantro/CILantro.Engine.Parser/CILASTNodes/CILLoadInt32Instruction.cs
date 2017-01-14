@@ -1,5 +1,4 @@
-﻿using System;
-using CILantro.Shared;
+﻿using CILantro.Shared;
 
 namespace CILantro.Engine.Parser.CILASTNodes
 {
