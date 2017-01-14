@@ -173,5 +173,10 @@ namespace CILantro.Engine.Parser
         {
             return node.Term.Name.Equals("ldci48Instruction");
         }
+
+        public static bool IsLoadInt32M1InstructionNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("ldci4M1Instruction");
+        }
     }
 }
