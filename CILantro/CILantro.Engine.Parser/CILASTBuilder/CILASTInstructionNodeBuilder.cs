@@ -7,6 +7,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
 {
     public class CILASTInstructionNodeBuilder : ICILASTNodeBuilder<CILInstruction>
     {
+        private readonly CILASTAddInstructionNodeBuilder _addInstructionNodeBuilder;
         private readonly CILASTCallInstructionNodeBuilder _callInstructionNodeBuilder;
         private readonly CILASTLoadInt32InstructionNodeBuilder _loadInt32InstructionNodeBuilder;
         private readonly CILASTLoadStringInstructionNodeBuilder _loadStringInstructionNodeBuilder;
@@ -15,6 +16,7 @@ namespace CILantro.Engine.Parser.CILASTBuilder
 
         public CILASTInstructionNodeBuilder()
         {
+            _addInstructionNodeBuilder = new CILASTAddInstructionNodeBuilder();
             _callInstructionNodeBuilder = new CILASTCallInstructionNodeBuilder();
             _loadInt32InstructionNodeBuilder = new CILASTLoadInt32InstructionNodeBuilder();
             _loadStringInstructionNodeBuilder = new CILASTLoadStringInstructionNodeBuilder();
@@ -24,6 +26,10 @@ namespace CILantro.Engine.Parser.CILASTBuilder
 
         public CILInstruction BuildNode(ParseTreeNode parseNode)
         {
+            var addInstructionParseNode = parseNode.ChildNodes.FirstOrDefault(cn => cn.IsAddInstructionNode());
+            if (addInstructionParseNode != null)
+                return _addInstructionNodeBuilder.BuildNode(addInstructionParseNode);
+
             var callInstructionParseNode = parseNode.ChildNodes.FirstOrDefault(cn => cn.IsCallInstructionNode());
             if (callInstructionParseNode != null)
                 return _callInstructionNodeBuilder.BuildNode(callInstructionParseNode);

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CILASTBuilder\CILAbstractSyntaxTreeBuilder.cs" />
+    <Compile Include="CILASTBuilder\CILASTAddInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTAssemblyNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTCallInstructionNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTClassNodeBuilder.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="CILASTBuilder\CILSimpleTypeBuilder.cs" />
     <Compile Include="CILASTBuilder\ICILASTNodeBuilder.cs" />
     <Compile Include="CILASTBuilder\CILASTProgramRootNodeBuilder.cs" />
+    <Compile Include="CILASTNodes\CILAddInstruction.cs" />
     <Compile Include="CILASTNodes\CILAssembly.cs" />
     <Compile Include="CILASTNodes\CILASTNode.cs" />
     <Compile Include="CILASTNodes\CILCallInstruction.cs" />

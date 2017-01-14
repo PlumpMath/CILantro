@@ -15,6 +15,7 @@ namespace CILantro.Engine.Parser
 
             // keywords
 
+            var addKeyword = ToTerm("add", "addKeyword");
             var callKeyword = ToTerm("call", "callKeyword");
             var cilKeyword = ToTerm("cil", "cilKeyword");
             var externKeyword = ToTerm("extern", "externKeyword");
@@ -108,6 +109,9 @@ namespace CILantro.Engine.Parser
 
             // instructions
 
+            var addInstruction = new NonTerminal("addInstruction");
+            addInstruction.Rule = addKeyword;
+
             var callInstruction = new NonTerminal("callInstruction");
             callInstruction.Rule = callKeyword + ((valuetypeKeyword + returnTypeDefinition) | voidKeyword) + methodDefinition;
 
@@ -158,6 +162,7 @@ namespace CILantro.Engine.Parser
 
             var instruction = new NonTerminal("instruction");
             instruction.Rule =
+                addInstruction |
                 callInstruction |
                 ldci4Instruction |
                 ldci40Instruction |
