@@ -1,6 +1,7 @@
 ﻿using System;
 using CILantro.Engine.Parser.CILASTNodes;
 using Irony.Parsing;
+using System.Linq;
 
 namespace CILantro.Engine.Parser.CILASTBuilder
 {
@@ -20,6 +21,12 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             if (parseNode.IsLoadInt327InstructionNode()) value = 7;
             if (parseNode.IsLoadInt328InstructionNode()) value = 8;
             if (parseNode.IsLoadInt32M1InstructionNode()) value = -1;
+
+            if(parseNode.IsLoadInt32SInstructionNode())
+            {
+                var int8ValueParseNode = parseNode.ChildNodes.First(cn => cn.IsInt8ValueNode());
+                value = short.Parse(int8ValueParseNode.Token.ValueString);
+            }
 
             return new CILLoadInt32Instruction
             {
