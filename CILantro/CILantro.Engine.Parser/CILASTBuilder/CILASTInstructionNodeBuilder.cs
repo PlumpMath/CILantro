@@ -28,6 +28,10 @@ namespace CILantro.Engine.Parser.CILASTBuilder
             if (callInstructionParseNode != null)
                 return _callInstructionNodeBuilder.BuildNode(callInstructionParseNode);
 
+            var loadInt32InstructionParseNode = parseNode.ChildNodes.FirstOrDefault(cn => cn.IsLoadInt32InstructionNode());
+            if (loadInt32InstructionParseNode != null)
+                return _loadInt32InstructionNodeBuilder.BuildNode(loadInt32InstructionParseNode);
+
             var loadInt320InstructionParseNode = parseNode.ChildNodes.FirstOrDefault(cn => cn.IsLoadInt320InstructionNode());
             if (loadInt320InstructionParseNode != null)
                 return _loadInt32InstructionNodeBuilder.BuildNode(loadInt320InstructionParseNode);

@@ -188,5 +188,15 @@ namespace CILantro.Engine.Parser
         {
             return node.Term.Name.Equals("int8Value");
         }
+
+        public static bool IsInt32ValueNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("int32Value");
+        }
+
+        public static bool IsLoadInt32InstructionNode(this ParseTreeNode node)
+        {
+            return node.Term.Name.Equals("ldci4Instruction");
+        }
     }
 }

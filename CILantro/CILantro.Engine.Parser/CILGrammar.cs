@@ -19,6 +19,7 @@ namespace CILantro.Engine.Parser
             var cilKeyword = ToTerm("cil", "cilKeyword");
             var externKeyword = ToTerm("extern", "externKeyword");
             var int32Keyword = ToTerm("int32", "int32Keyword");
+            var ldci4Keyword = ToTerm("ldc.i4", "ldci4Keyword");
             var ldci40Keyword = ToTerm("ldc.i4.0", "ldci40Keyword");
             var ldci41Keyword = ToTerm("ldc.i4.1", "ldci41Keyword");
             var ldci42Keyword = ToTerm("ldc.i4.2", "ldci42Keyword");
@@ -72,6 +73,8 @@ namespace CILantro.Engine.Parser
 
             var int8Value = new NumberLiteral("int8Value", NumberOptions.AllowSign);
 
+            var int32Value = new NumberLiteral("int32Value", NumberOptions.AllowSign);
+
             var stringValue = new StringLiteral("stringValue", "\"");
 
             // arguments
@@ -107,6 +110,9 @@ namespace CILantro.Engine.Parser
 
             var callInstruction = new NonTerminal("callInstruction");
             callInstruction.Rule = callKeyword + ((valuetypeKeyword + returnTypeDefinition) | voidKeyword) + methodDefinition;
+
+            var ldci4Instruction = new NonTerminal("ldci4Instruction");
+            ldci4Instruction.Rule = ldci4Keyword + int32Value;
 
             var ldci40Instruction = new NonTerminal("ldci40Instruction");
             ldci40Instruction.Rule = ldci40Keyword;
@@ -153,6 +159,7 @@ namespace CILantro.Engine.Parser
             var instruction = new NonTerminal("instruction");
             instruction.Rule =
                 callInstruction |
+                ldci4Instruction |
                 ldci40Instruction |
                 ldci41Instruction |
                 ldci42Instruction |
