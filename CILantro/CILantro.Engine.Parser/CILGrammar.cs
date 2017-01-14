@@ -8,10 +8,10 @@ namespace CILantro.Engine.Parser
         {
             // declaration keywords
 
-            var assemblyDeclKeyword = ToTerm(".assembly");
-            var classDeclKeyword = ToTerm(".class");
-            var entryPointKeyword = ToTerm(".entrypoint");
-            var methodDeclKeyword = ToTerm(".method");
+            var assemblyDeclKeyword = ToTerm(".assembly", "assemblyDeclKeyword");
+            var classDeclKeyword = ToTerm(".class", "classDeclKeyword");
+            var entryPointKeyword = ToTerm(".entrypoint", "entryPointKeyword");
+            var methodDeclKeyword = ToTerm(".method", "methodDeclKeyword");
 
             // keywords
 
@@ -30,6 +30,7 @@ namespace CILantro.Engine.Parser
             var ldci48Keyword = ToTerm("ldc.i4.8", "ldci48Keyword");
             var ldci4m1Keyword = ToTerm("ldc.i4.m1", "ldci4m1Keyword");
             var ldci4M1Keyword = ToTerm("ldc.i4.M1", "ldci4M1Keyword");
+            var ldci4sKeyword = ToTerm("ldc.i4.s", "ldci4sKeyword");
             var ldstrKeyword = ToTerm("ldstr", "ldstrKeyword");
             var managedKeyword = ToTerm("managed", "managedKeyword");
             var popKeyword = ToTerm("pop", "popKeyword");
@@ -68,6 +69,8 @@ namespace CILantro.Engine.Parser
             simpleTypeIdentifier.Rule = int32TypeIdentifier | stringTypeIdentifier;
 
             // values
+
+            var int8Value = new NumberLiteral("int8Value", NumberOptions.AllowSign);
 
             var stringValue = new StringLiteral("stringValue", "\"");
 
@@ -132,8 +135,11 @@ namespace CILantro.Engine.Parser
             var ldci48Instruction = new NonTerminal("ldci48Instruction");
             ldci48Instruction.Rule = ldci48Keyword;
 
-            var ldci4M1Instruction = new NonTerminal("ldci4M1Instruction");
-            ldci4M1Instruction.Rule = ldci4m1Keyword | ldci4M1Keyword;
+            var ldci4m1Instruction = new NonTerminal("ldci4m1Instruction");
+            ldci4m1Instruction.Rule = ldci4m1Keyword | ldci4M1Keyword;
+
+            var ldci4sInstruction = new NonTerminal("ldci4sInstruction");
+            ldci4sInstruction.Rule = ldci4sKeyword + int8Value;
 
             var ldstrInstruction = new NonTerminal("ldstrInstruction");
             ldstrInstruction.Rule = ldstrKeyword + stringValue;
@@ -156,7 +162,8 @@ namespace CILantro.Engine.Parser
                 ldci46Instruction |
                 ldci47Instruction |
                 ldci48Instruction |
-                ldci4M1Instruction |
+                ldci4m1Instruction |
+                ldci4sInstruction |
                 ldstrInstruction |
                 popInstruction |
                 retInstruction;
