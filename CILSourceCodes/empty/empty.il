@@ -1,4 +1,6 @@
-﻿.assembly Empty {}
+﻿.assembly extern mscorlib {}
+
+.assembly Empty {}
 
 .class Empty.Program
 {
