@@ -1,74 +1,50 @@
 .assembly extern mscorlib {}
 
-.assembly WriteSomeNumbersInt8 {}
+.assembly WriteSomeNumbersInt32 {}
 
-.class WriteSomeNumbersInt8.Program
+.class WriteSomeNumbersInt32.Program
 {
 	.method static void Main() cil managed
 	{
 		.entrypoint
 		
-		ldc.i4.s 0
+		ldc.i4 0
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 1
+		ldc.i4 10
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 2
+		ldc.i4 100
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 3
+		ldc.i4 1000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 4
+		ldc.i4 10000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 5
+		ldc.i4 100000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 6
+		ldc.i4 1000000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 7
+		ldc.i4 -10
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 8
+		ldc.i4 -100
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 9
+		ldc.i4 -1000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s 10
+		ldc.i4 -10000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s -1
+		ldc.i4 -100000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
-		ldc.i4.s -2
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -3
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -4
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -5
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -6
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -7
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -8
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -9
-		call void [mscorlib]System.Console::WriteLine(int32)
-		
-		ldc.i4.s -10
+		ldc.i4 -1000000
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
 		ret
