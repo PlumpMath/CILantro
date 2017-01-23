@@ -61,6 +61,33 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AssemblyAttributes.
+        /// </summary>
+        internal static string AssemblyAttributes {
+            get {
+                return ResourceManager.GetString("AssemblyAttributes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AssemblyDeclarations.
+        /// </summary>
+        internal static string AssemblyDeclarations {
+            get {
+                return ResourceManager.GetString("AssemblyDeclarations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AssemblyHead.
+        /// </summary>
+        internal static string AssemblyHead {
+            get {
+                return ResourceManager.GetString("AssemblyHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AssemblyRefDeclarations.
         /// </summary>
         internal static string AssemblyRefDeclarations {
@@ -75,6 +102,69 @@ namespace CILantro.Engine.Parser {
         internal static string AssemblyRefHead {
             get {
                 return ResourceManager.GetString("AssemblyRefHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CallConventions.
+        /// </summary>
+        internal static string CallConventions {
+            get {
+                return ResourceManager.GetString("CallConventions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CallKind.
+        /// </summary>
+        internal static string CallKind {
+            get {
+                return ResourceManager.GetString("CallKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CilToken.
+        /// </summary>
+        internal static string CilToken {
+            get {
+                return ResourceManager.GetString("CilToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ClassAttributes.
+        /// </summary>
+        internal static string ClassAttributes {
+            get {
+                return ResourceManager.GetString("ClassAttributes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ClassDeclaration.
+        /// </summary>
+        internal static string ClassDeclaration {
+            get {
+                return ResourceManager.GetString("ClassDeclaration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ClassDeclarations.
+        /// </summary>
+        internal static string ClassDeclarations {
+            get {
+                return ResourceManager.GetString("ClassDeclarations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Classhead.
+        /// </summary>
+        internal static string ClassHead {
+            get {
+                return ResourceManager.GetString("ClassHead", resourceCulture);
             }
         }
         
@@ -97,11 +187,56 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dot.
+        /// </summary>
+        internal static string Dot {
+            get {
+                return ResourceManager.GetString("Dot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DotAssemblyToken.
         /// </summary>
         internal static string DotAssemblyToken {
             get {
                 return ResourceManager.GetString("DotAssemblyToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DotClassToken.
+        /// </summary>
+        internal static string DotClassToken {
+            get {
+                return ResourceManager.GetString("DotClassToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DotEntrypointToken.
+        /// </summary>
+        internal static string DotEntrypointToken {
+            get {
+                return ResourceManager.GetString("DotEntrypointToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DotMethodToken.
+        /// </summary>
+        internal static string DotMethodToken {
+            get {
+                return ResourceManager.GetString("DotMethodToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ExtendsClause.
+        /// </summary>
+        internal static string ExtendsClause {
+            get {
+                return ResourceManager.GetString("ExtendsClause", resourceCulture);
             }
         }
         
@@ -124,11 +259,119 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifier.
+        /// </summary>
+        internal static string Identifier {
+            get {
+                return ResourceManager.GetString("Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ImplementationAttributes.
+        /// </summary>
+        internal static string ImplementationAttributes {
+            get {
+                return ResourceManager.GetString("ImplementationAttributes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ImplementsClause.
+        /// </summary>
+        internal static string ImplementsClause {
+            get {
+                return ResourceManager.GetString("ImplementsClause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instruction.
+        /// </summary>
+        internal static string Instruction {
+            get {
+                return ResourceManager.GetString("Instruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InstructionNone.
+        /// </summary>
+        internal static string InstructionNone {
+            get {
+                return ResourceManager.GetString("InstructionNone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftBrace.
         /// </summary>
         internal static string LeftBrace {
             get {
                 return ResourceManager.GetString("LeftBrace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LeftParenthesis.
+        /// </summary>
+        internal static string LeftParenthesis {
+            get {
+                return ResourceManager.GetString("LeftParenthesis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ManagedToken.
+        /// </summary>
+        internal static string ManagedToken {
+            get {
+                return ResourceManager.GetString("ManagedToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MethodAttributes.
+        /// </summary>
+        internal static string MethodAttributes {
+            get {
+                return ResourceManager.GetString("MethodAttributes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MethodDeclaration.
+        /// </summary>
+        internal static string MethodDeclaration {
+            get {
+                return ResourceManager.GetString("MethodDeclaration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MethodDeclarations.
+        /// </summary>
+        internal static string MethodDeclarations {
+            get {
+                return ResourceManager.GetString("MethodDeclarations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MethodHead.
+        /// </summary>
+        internal static string MethodHead {
+            get {
+                return ResourceManager.GetString("MethodHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MethodName.
+        /// </summary>
+        internal static string MethodName {
+            get {
+                return ResourceManager.GetString("MethodName", resourceCulture);
             }
         }
         
@@ -142,11 +385,74 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ParamAttributes.
+        /// </summary>
+        internal static string ParamAttributes {
+            get {
+                return ResourceManager.GetString("ParamAttributes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RetToken.
+        /// </summary>
+        internal static string RetToken {
+            get {
+                return ResourceManager.GetString("RetToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RightBrace.
         /// </summary>
         internal static string RightBrace {
             get {
                 return ResourceManager.GetString("RightBrace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RightParenthesis.
+        /// </summary>
+        internal static string RightParenthesis {
+            get {
+                return ResourceManager.GetString("RightParenthesis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SignatureArguments0.
+        /// </summary>
+        internal static string SignatureArguments0 {
+            get {
+                return ResourceManager.GetString("SignatureArguments0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StaticToken.
+        /// </summary>
+        internal static string StaticToken {
+            get {
+                return ResourceManager.GetString("StaticToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        internal static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VoidToken.
+        /// </summary>
+        internal static string VoidToken {
+            get {
+                return ResourceManager.GetString("VoidToken", resourceCulture);
             }
         }
     }

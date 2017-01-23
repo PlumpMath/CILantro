@@ -117,11 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AssemblyAttributes" xml:space="preserve">
+    <value>AssemblyAttributes</value>
+  </data>
+  <data name="AssemblyDeclarations" xml:space="preserve">
+    <value>AssemblyDeclarations</value>
+  </data>
+  <data name="AssemblyHead" xml:space="preserve">
+    <value>AssemblyHead</value>
+  </data>
   <data name="AssemblyRefDeclarations" xml:space="preserve">
     <value>AssemblyRefDeclarations</value>
   </data>
   <data name="AssemblyRefHead" xml:space="preserve">
     <value>AssemblyRefHead</value>
+  </data>
+  <data name="CallConventions" xml:space="preserve">
+    <value>CallConventions</value>
+  </data>
+  <data name="CallKind" xml:space="preserve">
+    <value>CallKind</value>
+  </data>
+  <data name="CilToken" xml:space="preserve">
+    <value>CilToken</value>
+  </data>
+  <data name="ClassAttributes" xml:space="preserve">
+    <value>ClassAttributes</value>
+  </data>
+  <data name="ClassDeclaration" xml:space="preserve">
+    <value>ClassDeclaration</value>
+  </data>
+  <data name="ClassDeclarations" xml:space="preserve">
+    <value>ClassDeclarations</value>
+  </data>
+  <data name="ClassHead" xml:space="preserve">
+    <value>Classhead</value>
   </data>
   <data name="Declaration" xml:space="preserve">
     <value>Declaration</value>
@@ -129,8 +159,23 @@
   <data name="Declarations" xml:space="preserve">
     <value>Declarations</value>
   </data>
+  <data name="Dot" xml:space="preserve">
+    <value>Dot</value>
+  </data>
   <data name="DotAssemblyToken" xml:space="preserve">
     <value>DotAssemblyToken</value>
+  </data>
+  <data name="DotClassToken" xml:space="preserve">
+    <value>DotClassToken</value>
+  </data>
+  <data name="DotEntrypointToken" xml:space="preserve">
+    <value>DotEntrypointToken</value>
+  </data>
+  <data name="DotMethodToken" xml:space="preserve">
+    <value>DotMethodToken</value>
+  </data>
+  <data name="ExtendsClause" xml:space="preserve">
+    <value>ExtendsClause</value>
   </data>
   <data name="ExternToken" xml:space="preserve">
     <value>ExternToken</value>
@@ -138,13 +183,70 @@
   <data name="Id" xml:space="preserve">
     <value>Id</value>
   </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="ImplementationAttributes" xml:space="preserve">
+    <value>ImplementationAttributes</value>
+  </data>
+  <data name="ImplementsClause" xml:space="preserve">
+    <value>ImplementsClause</value>
+  </data>
+  <data name="Instruction" xml:space="preserve">
+    <value>Instruction</value>
+  </data>
+  <data name="InstructionNone" xml:space="preserve">
+    <value>InstructionNone</value>
+  </data>
   <data name="LeftBrace" xml:space="preserve">
     <value>LeftBrace</value>
+  </data>
+  <data name="LeftParenthesis" xml:space="preserve">
+    <value>LeftParenthesis</value>
+  </data>
+  <data name="ManagedToken" xml:space="preserve">
+    <value>ManagedToken</value>
+  </data>
+  <data name="MethodAttributes" xml:space="preserve">
+    <value>MethodAttributes</value>
+  </data>
+  <data name="MethodDeclaration" xml:space="preserve">
+    <value>MethodDeclaration</value>
+  </data>
+  <data name="MethodDeclarations" xml:space="preserve">
+    <value>MethodDeclarations</value>
+  </data>
+  <data name="MethodHead" xml:space="preserve">
+    <value>MethodHead</value>
+  </data>
+  <data name="MethodName" xml:space="preserve">
+    <value>MethodName</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="ParamAttributes" xml:space="preserve">
+    <value>ParamAttributes</value>
+  </data>
+  <data name="RetToken" xml:space="preserve">
+    <value>RetToken</value>
+  </data>
   <data name="RightBrace" xml:space="preserve">
     <value>RightBrace</value>
+  </data>
+  <data name="RightParenthesis" xml:space="preserve">
+    <value>RightParenthesis</value>
+  </data>
+  <data name="SignatureArguments0" xml:space="preserve">
+    <value>SignatureArguments0</value>
+  </data>
+  <data name="StaticToken" xml:space="preserve">
+    <value>StaticToken</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="VoidToken" xml:space="preserve">
+    <value>VoidToken</value>
   </data>
 </root>
