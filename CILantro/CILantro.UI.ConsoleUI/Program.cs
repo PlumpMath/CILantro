@@ -30,12 +30,8 @@ namespace CILantro.UI.ConsoleUI
                 var consoleReader = new StreamReader(Console.OpenStandardInput());
                 var consoleWriter = new StreamWriter(Console.OpenStandardOutput());
 
-                #region too doo
-
                 Console.WriteLine();
-                //_cilantroEngine.Process(sourceCode, consoleReader, consoleWriter);
-
-                #endregion
+                _cilantroEngine.Process(sourceCode, consoleReader, consoleWriter);
 
                 Console.WriteLine();
                 Console.WriteLine();

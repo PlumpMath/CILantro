@@ -45,6 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CILGrammar.cs" />
+    <Compile Include="CILGrammarTokenNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CILGrammarTokenNames.resx</DependentUpon>
+    </Compile>
     <Compile Include="CILParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +65,12 @@
       <Project>{97046BAC-BAC9-4B07-949C-EBD7CAF6E825}</Project>
       <Name>CILantro.Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CILGrammarTokenNames.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CILGrammarTokenNames.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,10 @@ namespace CILantro.Engine.Parser
     {
         public CILGrammar()
         {
-            
+            var declarations = new NonTerminal(CILGrammarTokenNames.Declarations);
+            declarations.Rule = "fewfw";
+
+            Root = declarations;
         }
     }
 }

@@ -1,10 +1,18 @@
 ﻿using CILantro.Engine.AST;
+using Irony;
+using System;
+using System.Linq;
 
 namespace CILantro.Engine.Parser
 {
     public class CILParser
     {
-        private readonly Irony.Parsing.Parser _parser = new Irony.Parsing.Parser(new CILGrammar());
+        private readonly Irony.Parsing.Parser _parser;
+
+        public CILParser()
+        {
+            _parser = new Irony.Parsing.Parser(new CILGrammar());
+        }
 
         public CILProgram Parse(string sourceCode)
         {
@@ -20,23 +28,14 @@ namespace CILantro.Engine.Parser
                 #endregion
             }
 
-            #region too doo
-
-            //var error = parseTree.ParserMessages.First();
-            //var errorMessage = BuildErrorMessage(error);
-            //throw new ArgumentException(errorMessage);
-            throw new System.Exception();
-
-            #endregion
+            var error = parseTree.ParserMessages.First();
+            var errorMessage = BuildErrorMessage(error);
+            throw new ArgumentException(errorMessage);
         }
 
-        #region too doo
-
-        //private string BuildErrorMessage(LogMessage logMessage)
-        //{
-        //    return $"Cannot parse the source code:\n{logMessage.Location}: {logMessage.Message}.";
-        //}
-
-        #endregion
+        private string BuildErrorMessage(LogMessage logMessage)
+        {
+            return $"Cannot parse the source code:\n{logMessage.Location}: {logMessage.Message}.";
+        }
     }
 }
