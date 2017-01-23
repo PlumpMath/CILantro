@@ -40,10 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CILProgramState.cs" />
-    <Compile Include="CILSimpleTypes\CILInt32Type.cs" />
-    <Compile Include="CILSimpleTypes\CILSimpleType.cs" />
-    <Compile Include="CILSimpleTypes\CILStringType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

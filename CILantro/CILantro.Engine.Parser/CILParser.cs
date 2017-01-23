@@ -1,6 +1,4 @@
-﻿using Irony;
-using System;
-using System.Linq;
+﻿using CILantro.Engine.AST;
 
 namespace CILantro.Engine.Parser
 {
@@ -8,25 +6,37 @@ namespace CILantro.Engine.Parser
     {
         private readonly Irony.Parsing.Parser _parser = new Irony.Parsing.Parser(new CILGrammar());
 
-        private readonly CILAbstractSyntaxTreeBuilder _astBuilder = new CILAbstractSyntaxTreeBuilder();
-
         public CILProgram Parse(string sourceCode)
         {
             var parseTree = _parser.Parse(sourceCode);
-            if(parseTree.Status == Irony.Parsing.ParseTreeStatus.Parsed)
+            if (parseTree.Status == Irony.Parsing.ParseTreeStatus.Parsed)
             {
-                var result = _astBuilder.BuildTree(parseTree);
-                return result;
+                #region too doo
+
+                //var result = _astBuilder.BuildTree(parseTree);
+                //return result;
+                return new CILProgram();
+
+                #endregion
             }
 
-            var error = parseTree.ParserMessages.First();
-            var errorMessage = BuildErrorMessage(error);
-            throw new ArgumentException(errorMessage);
+            #region too doo
+
+            //var error = parseTree.ParserMessages.First();
+            //var errorMessage = BuildErrorMessage(error);
+            //throw new ArgumentException(errorMessage);
+            throw new System.Exception();
+
+            #endregion
         }
 
-        private string BuildErrorMessage(LogMessage logMessage)
-        {
-            return $"Cannot parse the source code:\n{logMessage.Location}: {logMessage.Message}.";
-        }
+        #region too doo
+
+        //private string BuildErrorMessage(LogMessage logMessage)
+        //{
+        //    return $"Cannot parse the source code:\n{logMessage.Location}: {logMessage.Message}.";
+        //}
+
+        #endregion
     }
 }

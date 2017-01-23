@@ -6,14 +6,14 @@ namespace CILantro.Engine
 {
     public class CILantroEngine
     {
-        private readonly CILParser _cilParser = new CILParser();
+        private readonly CILParser _parser = new CILParser();
 
-        private readonly CILInterpreter _cilInterpreter = new CILInterpreter();
+        private readonly CILInterpreter _interpreter = new CILInterpreter();
 
         public void Process(string sourceCode, StreamReader reader, StreamWriter writer)
         {
-            var cilProgram = _cilParser.Parse(sourceCode);
-            _cilInterpreter.StartInterpreter(cilProgram, reader, writer);
+            var cilProgram = _parser.Parse(sourceCode);
+            _interpreter.StartInterpreter(cilProgram, reader, writer);
         }
     }
 }

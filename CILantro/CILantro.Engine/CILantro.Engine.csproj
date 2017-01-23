@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CILantro.Engine.AST\CILantro.Engine.AST.csproj">
+      <Project>{E8831F8E-F0E8-4953-85E1-E30C9A3ECEA6}</Project>
+      <Name>CILantro.Engine.AST</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CILantro.Engine.Interpreter\CILantro.Engine.Interpreter.csproj">
       <Project>{72E0F5A3-2BAA-44F2-9444-481DD1FE6E57}</Project>
       <Name>CILantro.Engine.Interpreter</Name>

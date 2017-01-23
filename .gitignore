@@ -9,6 +9,8 @@
 
 /CILantro/CILantro.Engine/bin
 /CILantro/CILantro.Engine/obj
+/CILantro/CILantro.Engine.AST/bin
+/CILantro/CILantro.Engine.AST/obj
 /CILantro/CILantro.Engine.Interpreter/bin
 /CILantro/CILantro.Engine.Interpreter/obj
 /CILantro/CILantro.Engine.Parser/bin
