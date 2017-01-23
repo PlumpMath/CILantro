@@ -113,7 +113,7 @@ namespace CILantro.Engine.Parser
             addInstruction.Rule = addKeyword;
 
             var callInstruction = new NonTerminal("callInstruction");
-            callInstruction.Rule = callKeyword + ((valuetypeKeyword + returnTypeDefinition) | voidKeyword) + methodDefinition;
+            callInstruction.Rule = callKeyword + ((valuetypeKeyword + returnTypeDefinition) | voidKeyword | simpleTypeIdentifier) + methodDefinition;
 
             var ldci4Instruction = new NonTerminal("ldci4Instruction");
             ldci4Instruction.Rule = ldci4Keyword + int32Value;
