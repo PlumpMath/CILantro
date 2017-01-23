@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AssemblyRefDeclarations" xml:space="preserve">
+    <value>AssemblyRefDeclarations</value>
+  </data>
+  <data name="AssemblyRefHead" xml:space="preserve">
+    <value>AssemblyRefHead</value>
+  </data>
+  <data name="Declaration" xml:space="preserve">
+    <value>Declaration</value>
+  </data>
   <data name="Declarations" xml:space="preserve">
     <value>Declarations</value>
+  </data>
+  <data name="DotAssemblyToken" xml:space="preserve">
+    <value>DotAssemblyToken</value>
+  </data>
+  <data name="ExternToken" xml:space="preserve">
+    <value>ExternToken</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="LeftBrace" xml:space="preserve">
+    <value>LeftBrace</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="RightBrace" xml:space="preserve">
+    <value>RightBrace</value>
   </data>
 </root>

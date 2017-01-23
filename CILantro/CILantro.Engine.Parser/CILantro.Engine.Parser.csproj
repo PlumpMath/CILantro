@@ -45,12 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CILGrammar.cs" />
-    <Compile Include="CILGrammarTokenNames.Designer.cs">
+    <Compile Include="CILParser.cs" />
+    <Compile Include="GrammarNames.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CILGrammarTokenNames.resx</DependentUpon>
+      <DependentUpon>GrammarNames.resx</DependentUpon>
     </Compile>
-    <Compile Include="CILParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,9 +67,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CILGrammarTokenNames.resx">
+    <EmbeddedResource Include="GrammarNames.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CILGrammarTokenNames.Designer.cs</LastGenOutput>
+      <LastGenOutput>GrammarNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
