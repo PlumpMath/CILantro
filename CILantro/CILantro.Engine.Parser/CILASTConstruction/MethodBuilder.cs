@@ -36,10 +36,17 @@ namespace CILantro.Engine.Parser.CILASTConstruction
 
             cilInstructions.Reverse();
 
-            return new CILMethod
+            var resultMethod = new CILMethod
             {
                 Instructions = cilInstructions
             };
+
+            foreach(var cilInstruction in cilInstructions)
+            {
+                cilInstruction.Method = resultMethod;
+            }
+
+            return resultMethod;
         }
     }
 }

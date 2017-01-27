@@ -2,5 +2,8 @@
 {
     public abstract class CILInstruction : CILASTNode
     {
+        public CILMethod Method { get; set; }
+
+        public abstract CILInstruction Execute(CILProgram program);
     }
 }
