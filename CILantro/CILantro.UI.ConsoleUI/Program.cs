@@ -23,7 +23,7 @@ namespace CILantro.UI.ConsoleUI
                 return;
             }
 
-            try
+            //try
             {
                 var sourceCode = File.ReadAllText(config.SourceCodeFilePath);
 
@@ -39,16 +39,16 @@ namespace CILantro.UI.ConsoleUI
                 Console.WriteLine(Messages.CloseProgramMessage);
                 Console.ReadKey();
             }
-            catch(Exception ex)
-            {
-                Console.WriteLine();
-                Console.WriteLine(Messages.ErrorMessage);
-                Console.WriteLine(ex.Message);
-                Console.WriteLine();
+            //catch(Exception ex)
+            //{
+            //    Console.WriteLine();
+            //    Console.WriteLine(Messages.ErrorMessage);
+            //    Console.WriteLine(ex.Message);
+            //    Console.WriteLine();
 
-                Console.WriteLine(Messages.CloseProgramMessage);
-                Console.ReadKey();
-            }
+            //    Console.WriteLine(Messages.CloseProgramMessage);
+            //    Console.ReadKey();
+            //}
         }
 
         private static ConsoleUIConfiguration CollectConfiguration(string[] args)

@@ -40,13 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASTNodes\CILClass.cs" />
+    <Compile Include="ASTNodes\CILInstruction.cs" />
+    <Compile Include="ASTNodes\CILMethod.cs" />
+    <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\InstructionMethod.cs" />
+    <Compile Include="ASTNodes\Instructions\InstructionNone.cs" />
+    <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
     <Compile Include="CILASTNode.cs" />
     <Compile Include="CILProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ASTNodes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

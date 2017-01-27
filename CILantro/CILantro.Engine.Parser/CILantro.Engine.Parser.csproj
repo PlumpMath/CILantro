@@ -45,9 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CILASTConstruction\CILASTNodeBuilder.cs" />
+    <Compile Include="CILASTConstruction\ClassBuilder.cs" />
+    <Compile Include="CILASTConstruction\InstructionBuilder.cs" />
+    <Compile Include="CILASTConstruction\Instructions\InstructionMethodBuilder.cs" />
+    <Compile Include="CILASTConstruction\Instructions\InstructionNoneBuilder.cs" />
+    <Compile Include="CILASTConstruction\MethodBuilder.cs" />
     <Compile Include="CILASTConstruction\ProgramBuilder.cs" />
     <Compile Include="CILGrammar.cs" />
     <Compile Include="CILParser.cs" />
+    <Compile Include="Extensions\ParseTreeNodeExtensions.cs" />
     <Compile Include="GrammarNames.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +80,7 @@
       <LastGenOutput>GrammarNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -169,7 +169,7 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Classhead.
+        ///   Looks up a localized string similar to ClassHead.
         /// </summary>
         internal static string ClassHead {
             get {
