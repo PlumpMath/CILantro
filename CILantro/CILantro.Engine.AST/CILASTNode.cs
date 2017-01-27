@@ -1,6 +1,6 @@
 ﻿namespace CILantro.Engine.AST
 {
-    public class CILProgram : CILASTNode
+    public abstract class CILASTNode
     {
     }
 }

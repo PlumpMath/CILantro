@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CILASTConstruction\CILASTNodeBuilder.cs" />
+    <Compile Include="CILASTConstruction\ProgramBuilder.cs" />
     <Compile Include="CILGrammar.cs" />
     <Compile Include="CILParser.cs" />
     <Compile Include="GrammarNames.Designer.cs">
