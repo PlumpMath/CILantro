@@ -8,14 +8,18 @@ namespace CILantro.Engine.Parser
         {
             // punctuation
 
+            var colon = ToTerm(":", GrammarNames.Colon);
             var dot = ToTerm(".", GrammarNames.Dot);
             var leftBrace = ToTerm("{", GrammarNames.LeftBrace);
             var rightBrace = ToTerm("}", GrammarNames.RightBrace);
             var leftParenthesis = ToTerm("(", GrammarNames.LeftParenthesis);
             var rightParenthesis = ToTerm(")", GrammarNames.RightParenthesis);
+            var leftSquareBracket = ToTerm("[", GrammarNames.LeftSquareBracket);
+            var rightSquareBracket = ToTerm("]", GrammarNames.RightSquareBracket);
 
             // tokens
 
+            var callToken = ToTerm("call", GrammarNames.CallToken);
             var cilToken = ToTerm("cil", GrammarNames.CilToken);
             var dotAssemblyToken = ToTerm(".assembly", GrammarNames.DotAssemblyToken);
             var dotClassToken = ToTerm(".class", GrammarNames.DotClassToken);
@@ -23,8 +27,10 @@ namespace CILantro.Engine.Parser
             var dotMethodToken = ToTerm(".method", GrammarNames.DotMethodToken);
             var externToken = ToTerm("extern", GrammarNames.ExternToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
+            var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
             var staticToken = ToTerm("static", GrammarNames.StaticToken);
+            var valuetypeToken = ToTerm("valuetype", GrammarNames.ValuetypeToken);
             var voidToken = ToTerm("void", GrammarNames.VoidToken);
 
             // lexical tokens
@@ -41,14 +47,24 @@ namespace CILantro.Engine.Parser
                 id |
                 name + dot + name;
 
+            var slashedName = new NonTerminal(GrammarNames.SlashedName);
+            slashedName.Rule = name;
+
+            var methodName = new NonTerminal(GrammarNames.MethodName);
+            methodName.Rule = name;
+
+            var className = new NonTerminal(GrammarNames.ClassName);
+            className.Rule = leftSquareBracket + name + rightSquareBracket + slashedName; 
+
             var type = new NonTerminal(GrammarNames.Type);
-            type.Rule = voidToken;
+            type.Rule =
+                valuetypeToken + className |
+                voidToken;
 
-            var instructionNone = new NonTerminal(GrammarNames.InstructionNone);
-            instructionNone.Rule = retToken;
-
-            var instruction = new NonTerminal(GrammarNames.Instruction);
-            instruction.Rule = instructionNone;
+            var typeSpecification = new NonTerminal(GrammarNames.TypeSpecification);
+            typeSpecification.Rule =
+                className |
+                leftSquareBracket + name + rightSquareBracket;
 
             var callKind = new NonTerminal(GrammarNames.CallKind);
             callKind.Rule = Empty;
@@ -62,14 +78,25 @@ namespace CILantro.Engine.Parser
             var signatureArguments0 = new NonTerminal(GrammarNames.SignatureArguments0);
             signatureArguments0.Rule = Empty;
 
+            var instructionNone = new NonTerminal(GrammarNames.InstructionNone);
+            instructionNone.Rule =
+                popToken |
+                retToken;
+
+            var instructionMethod = new NonTerminal(GrammarNames.InstructionMethod);
+            instructionMethod.Rule = callToken;
+
+            var instruction = new NonTerminal(GrammarNames.Instruction);
+            instruction.Rule =
+                instructionNone |
+                instructionMethod + callConventions + type + typeSpecification + colon + colon + methodName + leftParenthesis + signatureArguments0 + rightParenthesis |
+                instructionMethod + callConventions + type + methodName + leftParenthesis + signatureArguments0 + rightParenthesis;
+
             var implementationAttributes = new NonTerminal(GrammarNames.ImplementationAttributes);
             implementationAttributes.Rule =
                 Empty |
                 implementationAttributes + cilToken |
                 implementationAttributes + managedToken;
-
-            var methodName = new NonTerminal(GrammarNames.MethodName);
-            methodName.Rule = name;
 
             var methodAttributes = new NonTerminal(GrammarNames.MethodAttributes);
             methodAttributes.Rule =

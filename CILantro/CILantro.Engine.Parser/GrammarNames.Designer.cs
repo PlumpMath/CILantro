@@ -124,6 +124,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CallToken.
+        /// </summary>
+        internal static string CallToken {
+            get {
+                return ResourceManager.GetString("CallToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CilToken.
         /// </summary>
         internal static string CilToken {
@@ -165,6 +174,24 @@ namespace CILantro.Engine.Parser {
         internal static string ClassHead {
             get {
                 return ResourceManager.GetString("ClassHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ClassName.
+        /// </summary>
+        internal static string ClassName {
+            get {
+                return ResourceManager.GetString("ClassName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colon.
+        /// </summary>
+        internal static string Colon {
+            get {
+                return ResourceManager.GetString("Colon", resourceCulture);
             }
         }
         
@@ -295,6 +322,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to InstructionMethod.
+        /// </summary>
+        internal static string InstructionMethod {
+            get {
+                return ResourceManager.GetString("InstructionMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to InstructionNone.
         /// </summary>
         internal static string InstructionNone {
@@ -318,6 +354,15 @@ namespace CILantro.Engine.Parser {
         internal static string LeftParenthesis {
             get {
                 return ResourceManager.GetString("LeftParenthesis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LeftSquareBracket.
+        /// </summary>
+        internal static string LeftSquareBracket {
+            get {
+                return ResourceManager.GetString("LeftSquareBracket", resourceCulture);
             }
         }
         
@@ -394,6 +439,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PopToken.
+        /// </summary>
+        internal static string PopToken {
+            get {
+                return ResourceManager.GetString("PopToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RetToken.
         /// </summary>
         internal static string RetToken {
@@ -421,11 +475,29 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RightSquareBracket.
+        /// </summary>
+        internal static string RightSquareBracket {
+            get {
+                return ResourceManager.GetString("RightSquareBracket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SignatureArguments0.
         /// </summary>
         internal static string SignatureArguments0 {
             get {
                 return ResourceManager.GetString("SignatureArguments0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SlashedName.
+        /// </summary>
+        internal static string SlashedName {
+            get {
+                return ResourceManager.GetString("SlashedName", resourceCulture);
             }
         }
         
@@ -444,6 +516,24 @@ namespace CILantro.Engine.Parser {
         internal static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TypeSpecification.
+        /// </summary>
+        internal static string TypeSpecification {
+            get {
+                return ResourceManager.GetString("TypeSpecification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ValuetypeToken.
+        /// </summary>
+        internal static string ValuetypeToken {
+            get {
+                return ResourceManager.GetString("ValuetypeToken", resourceCulture);
             }
         }
         

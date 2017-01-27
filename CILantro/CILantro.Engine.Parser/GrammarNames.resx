@@ -138,6 +138,9 @@
   <data name="CallKind" xml:space="preserve">
     <value>CallKind</value>
   </data>
+  <data name="CallToken" xml:space="preserve">
+    <value>CallToken</value>
+  </data>
   <data name="CilToken" xml:space="preserve">
     <value>CilToken</value>
   </data>
@@ -152,6 +155,12 @@
   </data>
   <data name="ClassHead" xml:space="preserve">
     <value>Classhead</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>ClassName</value>
+  </data>
+  <data name="Colon" xml:space="preserve">
+    <value>Colon</value>
   </data>
   <data name="Declaration" xml:space="preserve">
     <value>Declaration</value>
@@ -195,6 +204,9 @@
   <data name="Instruction" xml:space="preserve">
     <value>Instruction</value>
   </data>
+  <data name="InstructionMethod" xml:space="preserve">
+    <value>InstructionMethod</value>
+  </data>
   <data name="InstructionNone" xml:space="preserve">
     <value>InstructionNone</value>
   </data>
@@ -203,6 +215,9 @@
   </data>
   <data name="LeftParenthesis" xml:space="preserve">
     <value>LeftParenthesis</value>
+  </data>
+  <data name="LeftSquareBracket" xml:space="preserve">
+    <value>LeftSquareBracket</value>
   </data>
   <data name="ManagedToken" xml:space="preserve">
     <value>ManagedToken</value>
@@ -228,6 +243,9 @@
   <data name="ParamAttributes" xml:space="preserve">
     <value>ParamAttributes</value>
   </data>
+  <data name="PopToken" xml:space="preserve">
+    <value>PopToken</value>
+  </data>
   <data name="RetToken" xml:space="preserve">
     <value>RetToken</value>
   </data>
@@ -237,14 +255,26 @@
   <data name="RightParenthesis" xml:space="preserve">
     <value>RightParenthesis</value>
   </data>
+  <data name="RightSquareBracket" xml:space="preserve">
+    <value>RightSquareBracket</value>
+  </data>
   <data name="SignatureArguments0" xml:space="preserve">
     <value>SignatureArguments0</value>
+  </data>
+  <data name="SlashedName" xml:space="preserve">
+    <value>SlashedName</value>
   </data>
   <data name="StaticToken" xml:space="preserve">
     <value>StaticToken</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
+  </data>
+  <data name="TypeSpecification" xml:space="preserve">
+    <value>TypeSpecification</value>
+  </data>
+  <data name="ValuetypeToken" xml:space="preserve">
+    <value>ValuetypeToken</value>
   </data>
   <data name="VoidToken" xml:space="preserve">
     <value>VoidToken</value>
