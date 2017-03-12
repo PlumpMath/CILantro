@@ -22,6 +22,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsLdci42TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci42Token);
         public static bool IsLdci43TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci43Token);
         public static bool IsLdci44TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci44Token);
+        public static bool IsLdci45TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci45Token);
         public static bool IsMethodDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodDeclaration);
         public static bool IsMethodDeclarationsNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodDeclarations);
         public static bool IsMethodNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodName);
@@ -52,6 +53,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildLdci42TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci42TokenNode());
         public static ParseTreeNode GetChildLdci43TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci43TokenNode());
         public static ParseTreeNode GetChildLdci44TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci44TokenNode());
+        public static ParseTreeNode GetChildLdci45TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci45TokenNode());
         public static ParseTreeNode GetChildMethodDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodDeclarationNode());
         public static ParseTreeNode GetChildMethodDeclarationsNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodDeclarationsNode());
         public static ParseTreeNode GetChildMethodNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodNameNode());
