@@ -10,6 +10,8 @@ namespace CILantro.Engine.Parser.Helper
             {
                 case "string":
                     return typeof(string);
+                case "int32":
+                    return typeof(int);
                 default:
                     throw new ArgumentException("Cannot recognize type name.");
             }

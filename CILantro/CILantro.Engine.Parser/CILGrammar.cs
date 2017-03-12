@@ -28,6 +28,8 @@ namespace CILantro.Engine.Parser
             var dotEntrypointToken = ToTerm(".entrypoint", GrammarNames.DotEntrypointToken);
             var dotMethodToken = ToTerm(".method", GrammarNames.DotMethodToken);
             var externToken = ToTerm("extern", GrammarNames.ExternToken);
+            var int32Token = ToTerm("int32", GrammarNames.Int32Token);
+            var ldci40Token = ToTerm("ldc.i4.0", GrammarNames.Ldci40Token);
             var ldstrToken = ToTerm("ldstr", GrammarNames.LdstrToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
@@ -71,7 +73,8 @@ namespace CILantro.Engine.Parser
             type.Rule =
                 stringToken |
                 valuetypeToken + className |
-                voidToken;
+                voidToken |
+                int32Token;
 
             var typeSpecification = new NonTerminal(GrammarNames.TypeSpecification);
             typeSpecification.Rule =
@@ -102,6 +105,7 @@ namespace CILantro.Engine.Parser
 
             var instructionNone = new NonTerminal(GrammarNames.InstructionNone);
             instructionNone.Rule =
+                ldci40Token |
                 popToken |
                 retToken;
 

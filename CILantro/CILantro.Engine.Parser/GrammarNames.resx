@@ -219,6 +219,12 @@
   <data name="InstructionString" xml:space="preserve">
     <value>InstructionString</value>
   </data>
+  <data name="Int32Token" xml:space="preserve">
+    <value>Int32Token</value>
+  </data>
+  <data name="Ldci40Token" xml:space="preserve">
+    <value>Ldci40Token</value>
+  </data>
   <data name="LdstrToken" xml:space="preserve">
     <value>LdstrToken</value>
   </data>
