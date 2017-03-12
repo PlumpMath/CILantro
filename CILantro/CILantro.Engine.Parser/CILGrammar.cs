@@ -38,6 +38,7 @@ namespace CILantro.Engine.Parser
             var ldci46Token = ToTerm("ldc.i4.6", GrammarNames.Ldci46Token);
             var ldci47Token = ToTerm("ldc.i4.7", GrammarNames.Ldci47Token);
             var ldci48Token = ToTerm("ldc.i4.8", GrammarNames.Ldci48Token);
+            var ldci4m1Token = ToTerm("ldc.i4.m1", GrammarNames.Ldci4m1Token);
             var ldstrToken = ToTerm("ldstr", GrammarNames.LdstrToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
@@ -122,6 +123,7 @@ namespace CILantro.Engine.Parser
                 ldci46Token |
                 ldci47Token |
                 ldci48Token |
+                ldci4m1Token |
                 popToken |
                 retToken;
 

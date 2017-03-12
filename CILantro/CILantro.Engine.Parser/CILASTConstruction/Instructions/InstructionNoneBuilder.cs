@@ -47,6 +47,10 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (ldci48Token != null)
                 return new LoadConstantInt8Instruction();
 
+            var ldci4m1Token = instructionNoneNode.GetChildLdci4m1TokenNode();
+            if (ldci4m1Token != null)
+                return new LoadConstantIntMinus1Instruction();
+
             var retTokenNode = instructionNoneNode.GetChildRetTokenNode();
             if (retTokenNode != null)
                 return new RetInstruction();
