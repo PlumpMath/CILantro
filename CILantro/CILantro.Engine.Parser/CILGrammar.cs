@@ -10,6 +10,8 @@ namespace CILantro.Engine.Parser
 
             var colon = ToTerm(":", GrammarNames.Colon);
             var dot = ToTerm(".", GrammarNames.Dot);
+            var comma = ToTerm(",", GrammarNames.Comma);
+            var plus = ToTerm("+", GrammarNames.Plus);
             var leftBrace = ToTerm("{", GrammarNames.LeftBrace);
             var rightBrace = ToTerm("}", GrammarNames.RightBrace);
             var leftParenthesis = ToTerm("(", GrammarNames.LeftParenthesis);
@@ -26,16 +28,20 @@ namespace CILantro.Engine.Parser
             var dotEntrypointToken = ToTerm(".entrypoint", GrammarNames.DotEntrypointToken);
             var dotMethodToken = ToTerm(".method", GrammarNames.DotMethodToken);
             var externToken = ToTerm("extern", GrammarNames.ExternToken);
+            var ldstrToken = ToTerm("ldstr", GrammarNames.LdstrToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
             var staticToken = ToTerm("static", GrammarNames.StaticToken);
+            var stringToken = ToTerm("string", GrammarNames.StringToken);
             var valuetypeToken = ToTerm("valuetype", GrammarNames.ValuetypeToken);
             var voidToken = ToTerm("void", GrammarNames.VoidToken);
 
             // lexical tokens
 
             var identifier = new IdentifierTerminal(GrammarNames.Identifier);
+
+            var quotedString = new StringLiteral(GrammarNames.QuotedString, "\"");
 
             // productions
 
@@ -46,6 +52,11 @@ namespace CILantro.Engine.Parser
             name.Rule =
                 id |
                 name + dot + name;
+
+            var complexQuotedString = new NonTerminal(GrammarNames.ComplexQuotedString);
+            complexQuotedString.Rule =
+                quotedString |
+                complexQuotedString + plus + quotedString;
 
             var slashedName = new NonTerminal(GrammarNames.SlashedName);
             slashedName.Rule = name;
@@ -58,6 +69,7 @@ namespace CILantro.Engine.Parser
 
             var type = new NonTerminal(GrammarNames.Type);
             type.Rule =
+                stringToken |
                 valuetypeToken + className |
                 voidToken;
 
@@ -75,8 +87,18 @@ namespace CILantro.Engine.Parser
             var paramAttributes = new NonTerminal(GrammarNames.ParamAttributes);
             paramAttributes.Rule = Empty;
 
+            var signatureArgument = new NonTerminal(GrammarNames.SignatureArgument);
+            signatureArgument.Rule = paramAttributes + type;
+
+            var signatureArguments1 = new NonTerminal(GrammarNames.SignatureArguments1);
+            signatureArguments1.Rule =
+                signatureArgument |
+                signatureArguments1 + comma + signatureArgument;
+
             var signatureArguments0 = new NonTerminal(GrammarNames.SignatureArguments0);
-            signatureArguments0.Rule = Empty;
+            signatureArguments0.Rule =
+                Empty |
+                signatureArguments1;
 
             var instructionNone = new NonTerminal(GrammarNames.InstructionNone);
             instructionNone.Rule =
@@ -86,11 +108,15 @@ namespace CILantro.Engine.Parser
             var instructionMethod = new NonTerminal(GrammarNames.InstructionMethod);
             instructionMethod.Rule = callToken;
 
+            var instructionString = new NonTerminal(GrammarNames.InstructionString);
+            instructionString.Rule = ldstrToken;
+
             var instruction = new NonTerminal(GrammarNames.Instruction);
             instruction.Rule =
                 instructionNone |
                 instructionMethod + callConventions + type + typeSpecification + colon + colon + methodName + leftParenthesis + signatureArguments0 + rightParenthesis |
-                instructionMethod + callConventions + type + methodName + leftParenthesis + signatureArguments0 + rightParenthesis;
+                instructionMethod + callConventions + type + methodName + leftParenthesis + signatureArguments0 + rightParenthesis |
+                instructionString + complexQuotedString;
 
             var implementationAttributes = new NonTerminal(GrammarNames.ImplementationAttributes);
             implementationAttributes.Rule =

@@ -2,6 +2,7 @@
 using CILantro.Engine.Parser.CILASTConstruction.Instructions;
 using CILantro.Engine.Parser.Extensions;
 using Irony.Parsing;
+using System;
 
 namespace CILantro.Engine.Parser.CILASTConstruction
 {
@@ -9,11 +10,13 @@ namespace CILantro.Engine.Parser.CILASTConstruction
     {
         private InstructionNoneBuilder _instructionNoneBuilder;
         private InstructionMethodBuilder _instructionMethodBuilder;
+        private InstructionStringBuilder _instructionStringBuilder;
 
         public InstructionBuilder()
         {
             _instructionNoneBuilder = new InstructionNoneBuilder();
             _instructionMethodBuilder = new InstructionMethodBuilder();
+            _instructionStringBuilder = new InstructionStringBuilder();
         }
 
         public override CILInstruction BuildNode(ParseTreeNode node)
@@ -26,7 +29,11 @@ namespace CILantro.Engine.Parser.CILASTConstruction
             if (instructionMethodNode != null)
                 return _instructionMethodBuilder.BuildNode(node);
 
-            return null;
+            var instructionStringNode = node.GetChildInstructionStringNode();
+            if (instructionStringNode != null)
+                return _instructionStringBuilder.BuildNode(node);
+
+            throw new ArgumentException("Cannot recognize instruction.");
         }
     }
 }

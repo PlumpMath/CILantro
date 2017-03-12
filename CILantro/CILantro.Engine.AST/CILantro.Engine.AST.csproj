@@ -46,6 +46,8 @@
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionMethod.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionNone.cs" />
+    <Compile Include="ASTNodes\Instructions\InstructionString.cs" />
+    <Compile Include="ASTNodes\Instructions\LoadStringInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
     <Compile Include="CILASTNode.cs" />

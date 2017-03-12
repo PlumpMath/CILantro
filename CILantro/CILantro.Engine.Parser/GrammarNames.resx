@@ -162,6 +162,12 @@
   <data name="Colon" xml:space="preserve">
     <value>Colon</value>
   </data>
+  <data name="Comma" xml:space="preserve">
+    <value>Comma</value>
+  </data>
+  <data name="ComplexQuotedString" xml:space="preserve">
+    <value>ComplexQuotedString</value>
+  </data>
   <data name="Declaration" xml:space="preserve">
     <value>Declaration</value>
   </data>
@@ -210,6 +216,12 @@
   <data name="InstructionNone" xml:space="preserve">
     <value>InstructionNone</value>
   </data>
+  <data name="InstructionString" xml:space="preserve">
+    <value>InstructionString</value>
+  </data>
+  <data name="LdstrToken" xml:space="preserve">
+    <value>LdstrToken</value>
+  </data>
   <data name="LeftBrace" xml:space="preserve">
     <value>LeftBrace</value>
   </data>
@@ -243,8 +255,14 @@
   <data name="ParamAttributes" xml:space="preserve">
     <value>ParamAttributes</value>
   </data>
+  <data name="Plus" xml:space="preserve">
+    <value>Plus</value>
+  </data>
   <data name="PopToken" xml:space="preserve">
     <value>PopToken</value>
+  </data>
+  <data name="QuotedString" xml:space="preserve">
+    <value>QuotedString</value>
   </data>
   <data name="RetToken" xml:space="preserve">
     <value>RetToken</value>
@@ -258,14 +276,23 @@
   <data name="RightSquareBracket" xml:space="preserve">
     <value>RightSquareBracket</value>
   </data>
+  <data name="SignatureArgument" xml:space="preserve">
+    <value>SignatureArgument</value>
+  </data>
   <data name="SignatureArguments0" xml:space="preserve">
     <value>SignatureArguments0</value>
+  </data>
+  <data name="SignatureArguments1" xml:space="preserve">
+    <value>SignatureArguments1</value>
   </data>
   <data name="SlashedName" xml:space="preserve">
     <value>SlashedName</value>
   </data>
   <data name="StaticToken" xml:space="preserve">
     <value>StaticToken</value>
+  </data>
+  <data name="StringToken" xml:space="preserve">
+    <value>StringToken</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
