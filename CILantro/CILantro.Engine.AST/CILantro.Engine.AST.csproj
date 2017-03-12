@@ -52,6 +52,7 @@
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
     <Compile Include="CILASTNode.cs" />
     <Compile Include="CILProgram.cs" />
+    <Compile Include="CILProgramState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

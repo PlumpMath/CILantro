@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GrammarNames.resx</DependentUpon>
     </Compile>
+    <Compile Include="Helper\TypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

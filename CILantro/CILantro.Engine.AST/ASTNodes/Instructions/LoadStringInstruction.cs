@@ -1,12 +1,11 @@
-﻿using System;
-
-namespace CILantro.Engine.AST.ASTNodes.Instructions
+﻿namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public class LoadStringInstruction : InstructionString
     {
-        public override CILInstruction Execute(CILProgram program)
+        public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            throw new NotImplementedException();
+            state.Stack.Push(StringArgument);
+            return Method.GetNextInstruction(this);
         }
     }
 }

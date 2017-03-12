@@ -1,4 +1,6 @@
-﻿namespace CILantro.Engine.AST.ASTNodes.Instructions
+﻿using System;
+
+namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public abstract class InstructionMethod : CILInstruction
     {
@@ -7,5 +9,7 @@
         public string ClassName { get; set; }
 
         public string MethodName { get; set; }
+
+        public Type[] ArgumentsTypes { get; set; }
     }
 }

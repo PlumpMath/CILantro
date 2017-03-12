@@ -9,7 +9,7 @@ namespace CILantro.Engine.Interpreter
     {
         private CILProgram Program { get; set; }
 
-        //private CILProgramState State { get; set; }
+        private CILProgramState State { get; set; }
 
         private StreamReader StreamReader { get; set; }
 
@@ -17,7 +17,7 @@ namespace CILantro.Engine.Interpreter
 
         public void StartInterpreter(CILProgram cilProgram, StreamReader reader, StreamWriter writer)
         {
-            //State = new CILProgramState();
+            State = new CILProgramState();
             Program = cilProgram;
             StreamReader = reader;
             StreamWriter = writer;
@@ -35,8 +35,7 @@ namespace CILantro.Engine.Interpreter
 
             while (currentInstruction != null)
             {
-                //currentInstruction = currentInstruction.Execute(Program, State);
-                currentInstruction = currentInstruction.Execute(Program);
+                currentInstruction = currentInstruction.Execute(Program, State);
             }
         }
     }

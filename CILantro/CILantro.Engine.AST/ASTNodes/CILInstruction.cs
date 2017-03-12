@@ -4,6 +4,6 @@
     {
         public CILMethod Method { get; set; }
 
-        public abstract CILInstruction Execute(CILProgram program);
+        public abstract CILInstruction Execute(CILProgram program, CILProgramState state);
     }
 }
