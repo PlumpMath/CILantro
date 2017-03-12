@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CILantro.Engine.AST.ASTNodes.Instructions
+﻿namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public class LoadConstantInt0Instruction : InstructionNone
     {

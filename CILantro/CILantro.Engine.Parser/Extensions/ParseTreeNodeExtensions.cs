@@ -18,6 +18,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsInstructionStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionString);
         public static bool IsInstructionNoneNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionNone);
         public static bool IsLdci40TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci40Token);
+        public static bool IsLdci41TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci41Token);
         public static bool IsMethodDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodDeclaration);
         public static bool IsMethodDeclarationsNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodDeclarations);
         public static bool IsMethodNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodName);
@@ -44,6 +45,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildInstructionStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionStringNode());
         public static ParseTreeNode GetChildInstructionNoneNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionNoneNode());
         public static ParseTreeNode GetChildLdci40TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci40TokenNode());
+        public static ParseTreeNode GetChildLdci41TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci41TokenNode());
         public static ParseTreeNode GetChildMethodDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodDeclarationNode());
         public static ParseTreeNode GetChildMethodDeclarationsNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodDeclarationsNode());
         public static ParseTreeNode GetChildMethodNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodNameNode());

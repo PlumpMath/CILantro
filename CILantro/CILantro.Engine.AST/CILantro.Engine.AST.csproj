@@ -48,6 +48,7 @@
     <Compile Include="ASTNodes\Instructions\InstructionNone.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionString.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt0Instruction.cs" />
+    <Compile Include="ASTNodes\Instructions\LoadConstantInt1Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadStringInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
