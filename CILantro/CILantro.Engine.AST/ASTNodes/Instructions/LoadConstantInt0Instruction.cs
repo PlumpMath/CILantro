@@ -6,7 +6,8 @@ namespace CILantro.Engine.AST.ASTNodes.Instructions
     {
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            throw new NotImplementedException();
+            state.Stack.Push(0);
+            return Method.GetNextInstruction(this);
         }
     }
 }
