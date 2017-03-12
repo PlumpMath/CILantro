@@ -403,6 +403,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ldci43Token.
+        /// </summary>
+        internal static string Ldci43Token {
+            get {
+                return ResourceManager.GetString("Ldci43Token", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LdstrToken.
         /// </summary>
         internal static string LdstrToken {
