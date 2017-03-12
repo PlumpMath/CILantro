@@ -1,12 +1,11 @@
-﻿using System;
-
-namespace CILantro.Engine.AST.ASTNodes.Instructions
+﻿namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public class LoadConstantIntMinus1Instruction : InstructionNone
     {
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            throw new NotImplementedException();
+            state.Stack.Push(-1);
+            return Method.GetNextInstruction(this);
         }
     }
 }
