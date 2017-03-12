@@ -53,6 +53,7 @@
     <Compile Include="ASTNodes\Instructions\LoadConstantInt3Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt4Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt5Instruction.cs" />
+    <Compile Include="ASTNodes\Instructions\LoadConstantInt6Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadStringInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
