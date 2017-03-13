@@ -357,4 +357,7 @@
   <data name="AddToken" xml:space="preserve">
     <value>AddToken</value>
   </data>
+  <data name="DupToken" xml:space="preserve">
+    <value>DupToken</value>
+  </data>
 </root>

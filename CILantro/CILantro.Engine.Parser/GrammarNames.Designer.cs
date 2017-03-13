@@ -286,6 +286,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DupToken.
+        /// </summary>
+        internal static string DupToken {
+            get {
+                return ResourceManager.GetString("DupToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ExtendsClause.
         /// </summary>
         internal static string ExtendsClause {

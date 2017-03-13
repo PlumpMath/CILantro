@@ -28,6 +28,7 @@ namespace CILantro.Engine.Parser
             var dotClassToken = ToTerm(".class", GrammarNames.DotClassToken);
             var dotEntrypointToken = ToTerm(".entrypoint", GrammarNames.DotEntrypointToken);
             var dotMethodToken = ToTerm(".method", GrammarNames.DotMethodToken);
+            var dupToken = ToTerm("dup", GrammarNames.DupToken);
             var externToken = ToTerm("extern", GrammarNames.ExternToken);
             var int32Token = ToTerm("int32", GrammarNames.Int32Token);
             var ldci4Token = ToTerm("ldc.i4", GrammarNames.Ldci4Token);
@@ -121,6 +122,7 @@ namespace CILantro.Engine.Parser
             var instructionNone = new NonTerminal(GrammarNames.InstructionNone);
             instructionNone.Rule =
                 addToken |
+                dupToken |
                 ldci40Token |
                 ldci41Token |
                 ldci42Token |

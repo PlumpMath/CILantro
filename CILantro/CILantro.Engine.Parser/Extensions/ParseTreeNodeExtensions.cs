@@ -13,6 +13,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsClassNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassName);
         public static bool IsComplexQuotedStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ComplexQuotedString);
         public static bool IsDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Declaration);
+        public static bool IsDupTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.DupToken);
         public static bool IsIdNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Id);
         public static bool IsInstructionNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Instruction);
         public static bool IsInstructionIntNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionInt);
@@ -54,6 +55,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildClassNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassNameNode());
         public static ParseTreeNode GetChildComplexQuotedStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsComplexQuotedStringNode());
         public static ParseTreeNode GetChildDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsDeclarationNode());
+        public static ParseTreeNode GetChildDupTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsDupTokenNode());
         public static ParseTreeNode GetChildIdNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsIdNode());
         public static ParseTreeNode GetChildInstructionNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionNode());
         public static ParseTreeNode GetChildInstructionIntNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionIntNode());
