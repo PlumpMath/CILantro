@@ -47,6 +47,7 @@
     <Compile Include="CILASTConstruction\CILASTNodeBuilder.cs" />
     <Compile Include="CILASTConstruction\ClassBuilder.cs" />
     <Compile Include="CILASTConstruction\InstructionBuilder.cs" />
+    <Compile Include="CILASTConstruction\Instructions\InstructionIntBuilder.cs" />
     <Compile Include="CILASTConstruction\Instructions\InstructionMethodBuilder.cs" />
     <Compile Include="CILASTConstruction\Instructions\InstructionNoneBuilder.cs" />
     <Compile Include="CILASTConstruction\Instructions\InstructionStringBuilder.cs" />

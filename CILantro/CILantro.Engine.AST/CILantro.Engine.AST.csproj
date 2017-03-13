@@ -44,6 +44,7 @@
     <Compile Include="ASTNodes\CILInstruction.cs" />
     <Compile Include="ASTNodes\CILMethod.cs" />
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\InstructionInt.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionMethod.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionNone.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionString.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="ASTNodes\Instructions\LoadConstantInt7Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt8Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantIntMinus1Instruction.cs" />
+    <Compile Include="ASTNodes\Instructions\LoadConstantIntShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadStringInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />

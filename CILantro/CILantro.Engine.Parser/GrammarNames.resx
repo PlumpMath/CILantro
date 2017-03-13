@@ -210,6 +210,9 @@
   <data name="Instruction" xml:space="preserve">
     <value>Instruction</value>
   </data>
+  <data name="InstructionInt" xml:space="preserve">
+    <value>InstructionInt</value>
+  </data>
   <data name="InstructionMethod" xml:space="preserve">
     <value>InstructionMethod</value>
   </data>
@@ -221,6 +224,9 @@
   </data>
   <data name="Int32Token" xml:space="preserve">
     <value>Int32Token</value>
+  </data>
+  <data name="Integer" xml:space="preserve">
+    <value>Integer</value>
   </data>
   <data name="Ldci40Token" xml:space="preserve">
     <value>Ldci40Token</value>
@@ -254,6 +260,9 @@
   </data>
   <data name="Ldci4m1Token" xml:space="preserve">
     <value>Ldci4m1Token</value>
+  </data>
+  <data name="Ldci4sToken" xml:space="preserve">
+    <value>Ldci4sToken</value>
   </data>
   <data name="LdstrToken" xml:space="preserve">
     <value>LdstrToken</value>

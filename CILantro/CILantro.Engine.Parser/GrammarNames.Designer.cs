@@ -340,6 +340,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to InstructionInt.
+        /// </summary>
+        internal static string InstructionInt {
+            get {
+                return ResourceManager.GetString("InstructionInt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to InstructionMethod.
         /// </summary>
         internal static string InstructionMethod {
@@ -372,6 +381,15 @@ namespace CILantro.Engine.Parser {
         internal static string Int32Token {
             get {
                 return ResourceManager.GetString("Int32Token", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Integer.
+        /// </summary>
+        internal static string Integer {
+            get {
+                return ResourceManager.GetString("Integer", resourceCulture);
             }
         }
         
@@ -471,6 +489,15 @@ namespace CILantro.Engine.Parser {
         internal static string Ldci4m1Token {
             get {
                 return ResourceManager.GetString("Ldci4m1Token", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ldci4sToken.
+        /// </summary>
+        internal static string Ldci4sToken {
+            get {
+                return ResourceManager.GetString("Ldci4sToken", resourceCulture);
             }
         }
         

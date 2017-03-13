@@ -40,6 +40,7 @@ namespace CILantro.Engine.Parser
             var ldci48Token = ToTerm("ldc.i4.8", GrammarNames.Ldci48Token);
             var ldci4m1Token = ToTerm("ldc.i4.m1", GrammarNames.Ldci4m1Token);
             var ldci4M1Token = ToTerm("ldc.i4.M1", GrammarNames.Ldci4m1AliasToken);
+            var ldci4sToken = ToTerm("ldc.i4.s", GrammarNames.Ldci4sToken);
             var ldstrToken = ToTerm("ldstr", GrammarNames.LdstrToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
@@ -54,6 +55,8 @@ namespace CILantro.Engine.Parser
             var identifier = new IdentifierTerminal(GrammarNames.Identifier);
 
             var quotedString = new StringLiteral(GrammarNames.QuotedString, "\"");
+
+            var integer = new NumberLiteral(GrammarNames.Integer, NumberOptions.IntOnly | NumberOptions.AllowSign);
 
             // productions
 
@@ -129,6 +132,9 @@ namespace CILantro.Engine.Parser
                 popToken |
                 retToken;
 
+            var instructionInt = new NonTerminal(GrammarNames.InstructionInt);
+            instructionInt.Rule = ldci4sToken;
+
             var instructionMethod = new NonTerminal(GrammarNames.InstructionMethod);
             instructionMethod.Rule = callToken;
 
@@ -137,6 +143,7 @@ namespace CILantro.Engine.Parser
 
             var instruction = new NonTerminal(GrammarNames.Instruction);
             instruction.Rule =
+                instructionInt + integer |
                 instructionNone |
                 instructionMethod + callConventions + type + typeSpecification + colon + colon + methodName + leftParenthesis + signatureArguments0 + rightParenthesis |
                 instructionMethod + callConventions + type + methodName + leftParenthesis + signatureArguments0 + rightParenthesis |
