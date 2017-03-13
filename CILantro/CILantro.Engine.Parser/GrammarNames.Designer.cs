@@ -61,6 +61,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AddToken.
+        /// </summary>
+        internal static string AddToken {
+            get {
+                return ResourceManager.GetString("AddToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AssemblyAttributes.
         /// </summary>
         internal static string AssemblyAttributes {

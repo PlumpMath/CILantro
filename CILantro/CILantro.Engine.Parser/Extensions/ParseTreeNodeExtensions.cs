@@ -6,6 +6,7 @@ namespace CILantro.Engine.Parser.Extensions
 {
     public static class ParseTreeNodeExtensions
     {
+        public static bool IsAddTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.AddToken);
         public static bool IsClassDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassDeclaration);
         public static bool IsClassDeclarationsNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassDeclarations);
         public static bool IsClassHeadDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassHead);
@@ -46,6 +47,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsTypeNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Type);
         public static bool IsTypeSpecificationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.TypeSpecification);
 
+        public static ParseTreeNode GetChildAddTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAddTokenNode());
         public static ParseTreeNode GetChildClassDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassDeclarationNode());
         public static ParseTreeNode GetChildClassDeclarationsNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassDeclarationsNode());
         public static ParseTreeNode GetChildClassHeadNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassHeadDeclarationNode());

@@ -21,6 +21,7 @@ namespace CILantro.Engine.Parser
 
             // tokens
 
+            var addToken = ToTerm("add", GrammarNames.AddToken);
             var callToken = ToTerm("call", GrammarNames.CallToken);
             var cilToken = ToTerm("cil", GrammarNames.CilToken);
             var dotAssemblyToken = ToTerm(".assembly", GrammarNames.DotAssemblyToken);
@@ -119,6 +120,7 @@ namespace CILantro.Engine.Parser
 
             var instructionNone = new NonTerminal(GrammarNames.InstructionNone);
             instructionNone.Rule =
+                addToken |
                 ldci40Token |
                 ldci41Token |
                 ldci42Token |

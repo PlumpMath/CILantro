@@ -43,6 +43,7 @@
     <Compile Include="ASTNodes\CILClass.cs" />
     <Compile Include="ASTNodes\CILInstruction.cs" />
     <Compile Include="ASTNodes\CILMethod.cs" />
+    <Compile Include="ASTNodes\Instructions\AddInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionInt.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionMethod.cs" />

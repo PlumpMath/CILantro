@@ -354,4 +354,7 @@
   <data name="VoidToken" xml:space="preserve">
     <value>VoidToken</value>
   </data>
+  <data name="AddToken" xml:space="preserve">
+    <value>AddToken</value>
+  </data>
 </root>
