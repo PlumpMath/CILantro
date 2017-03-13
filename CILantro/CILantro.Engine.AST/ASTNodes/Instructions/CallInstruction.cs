@@ -18,7 +18,11 @@ namespace CILantro.Engine.AST.ASTNodes.Instructions
                 argumentsList.Add(argument);
             }
 
-            reflectedMethod.Invoke(null, argumentsList.ToArray());
+            var result = reflectedMethod.Invoke(null, argumentsList.ToArray());
+            if (reflectedMethod.ReturnType != typeof(void))
+            {
+                state.Stack.Push(result);
+            }
 
             return Method.GetNextInstruction(this);
         }
