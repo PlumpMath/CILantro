@@ -4,7 +4,7 @@
     {
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            state.Stack.Push(StringArgument);
+            state.Stack.Push(Argument);
             return Method.GetNextInstruction(this);
         }
     }

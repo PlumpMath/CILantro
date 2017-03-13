@@ -18,6 +18,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsInstructionMethodNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionMethod);
         public static bool IsInstructionStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionString);
         public static bool IsInstructionNoneNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionNone);
+        public static bool IsIntegerNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Integer);
         public static bool IsLdci40TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci40Token);
         public static bool IsLdci41TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci41Token);
         public static bool IsLdci42TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci42Token);
@@ -55,6 +56,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildInstructionMethodNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionMethodNode());
         public static ParseTreeNode GetChildInstructionStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionStringNode());
         public static ParseTreeNode GetChildInstructionNoneNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionNoneNode());
+        public static ParseTreeNode GetChildIntegerNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsIntegerNode());
         public static ParseTreeNode GetChildLdci40TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci40TokenNode());
         public static ParseTreeNode GetChildLdci41TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci41TokenNode());
         public static ParseTreeNode GetChildLdci42TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci42TokenNode());

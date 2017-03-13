@@ -1,4 +1,5 @@
 ﻿using CILantro.Engine.AST.ASTNodes.Instructions;
+using CILantro.Engine.Parser.Extensions;
 using Irony.Parsing;
 
 namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
@@ -7,7 +8,15 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
     {
         public override InstructionInt BuildNode(ParseTreeNode node)
         {
-            return new LoadConstantIntShortInstruction();
+            var intArgument = 0;
+
+            var integerNode = node.GetChildIntegerNode();
+            intArgument = int.Parse(integerNode.Token.ValueString);
+
+            return new LoadConstantIntShortInstruction
+            {
+                Argument = intArgument
+            };
         }
     }
 }

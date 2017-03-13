@@ -16,7 +16,7 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
 
             return new LoadStringInstruction
             {
-                StringArgument = stringArgument
+                Argument = stringArgument
             };
         }
     }

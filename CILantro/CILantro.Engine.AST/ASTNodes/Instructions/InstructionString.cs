@@ -2,6 +2,6 @@
 {
     public abstract class InstructionString : CILInstruction
     {
-        public string StringArgument { get; set; }
+        public string Argument { get; set; }
     }
 }
