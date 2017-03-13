@@ -19,6 +19,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsInstructionStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionString);
         public static bool IsInstructionNoneNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.InstructionNone);
         public static bool IsIntegerNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Integer);
+        public static bool IsLdci4TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci4Token);
         public static bool IsLdci40TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci40Token);
         public static bool IsLdci41TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci41Token);
         public static bool IsLdci42TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci42Token);
@@ -30,6 +31,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsLdci48TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci48Token);
         public static bool IsLdci4m1TokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci4m1Token);
         public static bool IsLdci4m1AliasTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci4m1AliasToken);
+        public static bool IsLdci4sTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Ldci4sToken);
         public static bool IsMethodDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodDeclaration);
         public static bool IsMethodDeclarationsNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodDeclarations);
         public static bool IsMethodNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MethodName);
@@ -57,6 +59,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildInstructionStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionStringNode());
         public static ParseTreeNode GetChildInstructionNoneNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsInstructionNoneNode());
         public static ParseTreeNode GetChildIntegerNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsIntegerNode());
+        public static ParseTreeNode GetChildLdci4TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci4TokenNode());
         public static ParseTreeNode GetChildLdci40TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci40TokenNode());
         public static ParseTreeNode GetChildLdci41TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci41TokenNode());
         public static ParseTreeNode GetChildLdci42TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci42TokenNode());
@@ -68,6 +71,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildLdci48TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci48TokenNode());
         public static ParseTreeNode GetChildLdci4m1TokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci4m1TokenNode());
         public static ParseTreeNode GetChildLdci4m1AliasTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci4m1AliasTokenNode());
+        public static ParseTreeNode GetChildLdci4sTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsLdci4sTokenNode());
         public static ParseTreeNode GetChildMethodDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodDeclarationNode());
         public static ParseTreeNode GetChildMethodDeclarationsNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodDeclarationsNode());
         public static ParseTreeNode GetChildMethodNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMethodNameNode());

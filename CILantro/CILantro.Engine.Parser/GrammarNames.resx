@@ -264,6 +264,9 @@
   <data name="Ldci4sToken" xml:space="preserve">
     <value>Ldci4sToken</value>
   </data>
+  <data name="Ldci4Token" xml:space="preserve">
+    <value>Ldci4Token</value>
+  </data>
   <data name="LdstrToken" xml:space="preserve">
     <value>LdstrToken</value>
   </data>

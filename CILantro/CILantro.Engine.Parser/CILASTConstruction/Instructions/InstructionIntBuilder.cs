@@ -1,6 +1,7 @@
 ﻿using CILantro.Engine.AST.ASTNodes.Instructions;
 using CILantro.Engine.Parser.Extensions;
 using Irony.Parsing;
+using System;
 
 namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
 {
@@ -13,10 +14,27 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             var integerNode = node.GetChildIntegerNode();
             intArgument = int.Parse(integerNode.Token.ValueString);
 
-            return new LoadConstantIntShortInstruction
+            var instructionIntNode = node.GetChildInstructionIntNode();
+
+            var ldci4Token = instructionIntNode.GetChildLdci4TokenNode();
+            if(ldci4Token != null)
             {
-                Argument = intArgument
-            };
+                return new LoadConstantIntInstruction
+                {
+                    Argument = intArgument
+                };
+            }
+
+            var ldci4sToken = instructionIntNode.GetChildLdci4sTokenNode();
+            if(ldci4sToken != null)
+            {
+                return new LoadConstantIntShortInstruction
+                {
+                    Argument = intArgument
+                };
+            }
+
+            throw new ArgumentException("Cannot recognize instruction int.");
         }
     }
 }
