@@ -381,4 +381,10 @@
   <data name="BrfalsesToken" xml:space="preserve">
     <value>BrfalsesToken</value>
   </data>
+  <data name="BeqsToken" xml:space="preserve">
+    <value>BeqsToken</value>
+  </data>
+  <data name="BeqToken" xml:space="preserve">
+    <value>BeqToken</value>
+  </data>
 </root>

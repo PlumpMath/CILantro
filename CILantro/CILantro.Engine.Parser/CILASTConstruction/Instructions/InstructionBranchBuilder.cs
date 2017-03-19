@@ -16,6 +16,24 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
 
             var instructionBranchNode = node.GetChildInstructionBranchNode();
 
+            var beqToken = instructionBranchNode.GetChildBeqTokenNode();
+            if(beqToken != null)
+            {
+                return new BranchIfEqualInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var beqsToken = instructionBranchNode.GetChildBeqsTokenNode();
+            if(beqsToken != null)
+            {
+                return new BranchIfEqualShortInstruction
+                {
+                    Target = target
+                };
+            }
+
             var brToken = instructionBranchNode.GetChildBrTokenNode();
             if(brToken != null)
             {

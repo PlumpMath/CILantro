@@ -22,6 +22,8 @@ namespace CILantro.Engine.Parser
             // tokens
 
             var addToken = ToTerm("add", GrammarNames.AddToken);
+            var beqToken = ToTerm("beq", GrammarNames.BeqToken);
+            var beqsToken = ToTerm("beq.s", GrammarNames.BeqsToken);
             var brToken = ToTerm("br", GrammarNames.BrToken);
             var brsToken = ToTerm("br.s", GrammarNames.BrsToken);
             var brfalseToken = ToTerm("brfalse", GrammarNames.BrfalseToken);
@@ -145,6 +147,8 @@ namespace CILantro.Engine.Parser
 
             var instructionBranch = new NonTerminal(GrammarNames.InstructionBranch);
             instructionBranch.Rule =
+                beqToken |
+                beqsToken |
                 brToken |
                 brsToken |
                 brfalseToken |
