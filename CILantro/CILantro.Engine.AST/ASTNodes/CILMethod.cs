@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CILantro.Engine.AST.ASTNodes
 {
@@ -15,6 +17,25 @@ namespace CILantro.Engine.AST.ASTNodes
                 return null;
 
             return Instructions[currentIndex + 1];
+        }
+
+        public int GetBytesPosition(CILInstruction instruction)
+        {
+            var index = Instructions.IndexOf(instruction);
+            var previousInstructions = Instructions.Take(index);
+            return previousInstructions.Sum(i => i.BytesLength);
+        }
+
+        public CILInstruction GetInstructionByBytesPosition(int bytesPosition)
+        {
+            var currentPosition = 0;
+            foreach(var instruction in Instructions)
+            {
+                if (currentPosition == bytesPosition) return instruction;
+                currentPosition += instruction.BytesLength;
+            }
+
+            throw new ArgumentException("Cannot find instruction with specified bytesPosition.");
         }
     }
 }

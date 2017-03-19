@@ -4,6 +4,8 @@
     {
         public CILMethod Method { get; set; }
 
+        public abstract int BytesLength { get; }
+
         public abstract CILInstruction Execute(CILProgram program, CILProgramState state);
     }
 }

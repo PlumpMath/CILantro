@@ -2,6 +2,8 @@
 {
     public class AddInstruction : InstructionNone
     {
+        public override int BytesLength => 1;
+
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
             var argument1 = (int)state.Stack.Pop();

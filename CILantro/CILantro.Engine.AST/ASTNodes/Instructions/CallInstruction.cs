@@ -5,6 +5,8 @@ namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public class CallInstruction : InstructionMethod
     {
+        public override int BytesLength => 5;
+
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
             var reflectedAssembly = Assembly.Load(AssemblyName);
