@@ -33,6 +33,7 @@ namespace CILantro.Engine.Parser.Tests
         [InlineData("duplicate")]
         [InlineData("unconditional_branch")]
         [InlineData("branch_if_true")]
+        [InlineData("branch_if_false")]
         public void ShouldParseProgramWithoutErrors(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
