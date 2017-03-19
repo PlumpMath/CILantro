@@ -6,9 +6,7 @@
 
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            var bytesPosition = Method.GetBytesPosition(Method.GetNextInstruction(this));
-            var newBytesPosition = bytesPosition + Target;
-            return Method.GetInstructionByBytesPosition(newBytesPosition);
+            return Method.GetInstructionByBranchTarget(this, Target);
         }
     }
 }
