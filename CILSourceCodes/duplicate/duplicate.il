@@ -13,8 +13,8 @@
 		
 		dup
 		
-		call void[mscorlib]System.Console::WriteLine(int32)
-		call void[mscorlib]System.Console::WriteLine(int32)
+		call void [mscorlib]System.Console::WriteLine(int32)
+		call void [mscorlib]System.Console::WriteLine(int32)
 		
 		ret
 	}

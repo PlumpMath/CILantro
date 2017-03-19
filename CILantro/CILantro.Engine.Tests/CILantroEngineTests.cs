@@ -39,6 +39,7 @@ namespace CILantro.Engine.Tests
         [InlineData("add_some_numbers")]
         [InlineData("add_two_numbers")]
         [InlineData("duplicate")]
+        [InlineData("unconditional_branch")]
         public void ShouldReturnCorrectResults(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
