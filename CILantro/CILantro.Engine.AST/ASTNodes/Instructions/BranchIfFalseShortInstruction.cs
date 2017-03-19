@@ -1,20 +1,15 @@
-﻿using System;
-
-namespace CILantro.Engine.AST.ASTNodes.Instructions
+﻿namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public class BranchIfFalseShortInstruction : InstructionBranch
     {
-        public override int BytesLength
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public override int BytesLength => 2;
 
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            throw new NotImplementedException();
+            var value = (int)state.Stack.Pop();
+
+            if (value == 0) return Method.GetInstructionByBranchTarget(this, Target);
+            return Method.GetNextInstruction(this);
         }
     }
 }
