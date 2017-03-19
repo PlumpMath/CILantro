@@ -42,6 +42,7 @@ namespace CILantro.Engine.Tests
         [InlineData("unconditional_branch")]
         [InlineData("branch_if_true")]
         [InlineData("branch_if_false")]
+        [InlineData("unconditional_branch_short")]
         public void ShouldReturnCorrectResults(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
