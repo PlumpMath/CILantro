@@ -25,6 +25,7 @@ namespace CILantro.Engine.Parser
             var brToken = ToTerm("br", GrammarNames.BrToken);
             var brsToken = ToTerm("br.s", GrammarNames.BrsToken);
             var brfalseToken = ToTerm("brfalse", GrammarNames.BrfalseToken);
+            var brfalsesToken = ToTerm("brfalse.s", GrammarNames.BrfalsesToken);
             var brtrueToken = ToTerm("brtrue", GrammarNames.BrtrueToken);
             var brtruesToken = ToTerm("brtrue.s", GrammarNames.BrtruesToken);
             var callToken = ToTerm("call", GrammarNames.CallToken);
@@ -147,6 +148,7 @@ namespace CILantro.Engine.Parser
                 brToken |
                 brsToken |
                 brfalseToken |
+                brfalsesToken |
                 brtrueToken |
                 brtruesToken;
 

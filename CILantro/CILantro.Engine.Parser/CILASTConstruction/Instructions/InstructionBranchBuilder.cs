@@ -43,6 +43,15 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
                 };
             }
 
+            var brfalsesToken = instructionBranchNode.GetChildBrfalsesTokenNode();
+            if(brfalsesToken != null)
+            {
+                return new BranchIfFalseShortInstruction
+                {
+                    Target = target
+                };
+            }
+
             var brtrueToken = instructionBranchNode.GetChildBrtrueTokenNode();
             if(brtrueToken != null)
             {

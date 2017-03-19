@@ -10,6 +10,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsBrTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrToken);
         public static bool IsBrsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrsToken);
         public static bool IsBrfalseTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrfalseToken);
+        public static bool IsBrfalsesTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrfalsesToken);
         public static bool IsBrtrueTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrtrueToken);
         public static bool IsBrtruesTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrtruesToken);
         public static bool IsClassDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassDeclaration);
@@ -58,6 +59,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildBrTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrTokenNode());
         public static ParseTreeNode GetChildBrsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrsTokenNode());
         public static ParseTreeNode GetChildBrfalseTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrfalseTokenNode());
+        public static ParseTreeNode GetChildBrfalsesTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrfalsesTokenNode());
         public static ParseTreeNode GetChildBrtrueTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrtrueTokenNode());
         public static ParseTreeNode GetChildBrtruesTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrtruesTokenNode());
         public static ParseTreeNode GetChildClassDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassDeclarationNode());

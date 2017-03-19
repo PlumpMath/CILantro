@@ -45,6 +45,7 @@
     <Compile Include="ASTNodes\CILMethod.cs" />
     <Compile Include="ASTNodes\Instructions\AddInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfFalseInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfFalseShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />

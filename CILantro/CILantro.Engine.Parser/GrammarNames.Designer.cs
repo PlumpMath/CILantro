@@ -115,6 +115,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BrfalsesToken.
+        /// </summary>
+        internal static string BrfalsesToken {
+            get {
+                return ResourceManager.GetString("BrfalsesToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BrfalseToken.
         /// </summary>
         internal static string BrfalseToken {
