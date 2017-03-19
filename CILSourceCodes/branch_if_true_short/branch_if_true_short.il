@@ -1,22 +1,23 @@
 .assembly extern mscorlib {}
 
-.assembly UnconditionalBranchShort {}
+.assembly BranchIfTrueShort {}
 
-.class UnconditionalBranchShort.Program
+.class BranchIfTrueShort.Program
 {
 	.method static void Main() cil managed
 	{
 		.entrypoint
 		
-		br.s 2
-		br.s 2
-		br.s -4
-		br.s 10
-		
-		ldstr "This text shouldn't be written out."
-		call void [mscorlib]System.Console::WriteLine(string)
+		ldc.i4.0
+		brtrue.s 10
 		
 		ldstr "This text should be written out."
+		call void [mscorlib]System.Console::WriteLine(string)
+		
+		ldc.i4.1
+		brtrue.s 10
+		
+		ldstr "This text shouldn't be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ret
