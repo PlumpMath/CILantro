@@ -360,4 +360,10 @@
   <data name="DupToken" xml:space="preserve">
     <value>DupToken</value>
   </data>
+  <data name="BrToken" xml:space="preserve">
+    <value>BrToken</value>
+  </data>
+  <data name="InstructionBranch" xml:space="preserve">
+    <value>InstructionBranch</value>
+  </data>
 </root>

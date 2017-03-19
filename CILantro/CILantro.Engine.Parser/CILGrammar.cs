@@ -22,6 +22,7 @@ namespace CILantro.Engine.Parser
             // tokens
 
             var addToken = ToTerm("add", GrammarNames.AddToken);
+            var brToken = ToTerm("br", GrammarNames.BrToken);
             var callToken = ToTerm("call", GrammarNames.CallToken);
             var cilToken = ToTerm("cil", GrammarNames.CilToken);
             var dotAssemblyToken = ToTerm(".assembly", GrammarNames.DotAssemblyToken);
@@ -137,6 +138,9 @@ namespace CILantro.Engine.Parser
                 popToken |
                 retToken;
 
+            var instructionBranch = new NonTerminal(GrammarNames.InstructionBranch);
+            instructionBranch.Rule = brToken;
+
             var instructionInt = new NonTerminal(GrammarNames.InstructionInt);
             instructionInt.Rule =
                 ldci4Token |
@@ -150,6 +154,7 @@ namespace CILantro.Engine.Parser
 
             var instruction = new NonTerminal(GrammarNames.Instruction);
             instruction.Rule =
+                instructionBranch + integer |
                 instructionInt + integer |
                 instructionNone |
                 instructionMethod + callConventions + type + typeSpecification + colon + colon + methodName + leftParenthesis + signatureArguments0 + rightParenthesis |

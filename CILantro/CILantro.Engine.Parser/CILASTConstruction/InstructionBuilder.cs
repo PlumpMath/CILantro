@@ -12,6 +12,7 @@ namespace CILantro.Engine.Parser.CILASTConstruction
         private InstructionMethodBuilder _instructionMethodBuilder;
         private InstructionStringBuilder _instructionStringBuilder;
         private InstructionIntBuilder _instructionIntBuilder;
+        private InstructionBranchBuilder _instructionBranchBuilder;
 
         public InstructionBuilder()
         {
@@ -19,6 +20,7 @@ namespace CILantro.Engine.Parser.CILASTConstruction
             _instructionMethodBuilder = new InstructionMethodBuilder();
             _instructionStringBuilder = new InstructionStringBuilder();
             _instructionIntBuilder = new InstructionIntBuilder();
+            _instructionBranchBuilder = new InstructionBranchBuilder();
         }
 
         public override CILInstruction BuildNode(ParseTreeNode node)
@@ -38,6 +40,10 @@ namespace CILantro.Engine.Parser.CILASTConstruction
             var instructionIntNode = node.GetChildInstructionIntNode();
             if (instructionIntNode != null)
                 return _instructionIntBuilder.BuildNode(node);
+
+            var instructionBranchNode = node.GetChildInstructionBranchNode();
+            if (instructionBranchNode != null)
+                return _instructionBranchBuilder.BuildNode(node);
 
             throw new ArgumentException("Cannot recognize instruction.");
         }

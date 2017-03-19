@@ -115,6 +115,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BrToken.
+        /// </summary>
+        internal static string BrToken {
+            get {
+                return ResourceManager.GetString("BrToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CallConventions.
         /// </summary>
         internal static string CallConventions {
@@ -354,6 +363,15 @@ namespace CILantro.Engine.Parser {
         internal static string Instruction {
             get {
                 return ResourceManager.GetString("Instruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InstructionBranch.
+        /// </summary>
+        internal static string InstructionBranch {
+            get {
+                return ResourceManager.GetString("InstructionBranch", resourceCulture);
             }
         }
         
