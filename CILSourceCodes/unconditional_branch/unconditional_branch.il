@@ -8,6 +8,9 @@
 	{
 		.entrypoint
 		
+		br 5
+		br 5
+		br -10
 		br 10
 		
 		ldstr "This text shouldn't be written out."
