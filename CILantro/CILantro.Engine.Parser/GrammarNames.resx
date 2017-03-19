@@ -372,4 +372,7 @@
   <data name="BrfalseToken" xml:space="preserve">
     <value>BrfalseToken</value>
   </data>
+  <data name="BrsToken" xml:space="preserve">
+    <value>BrsToken</value>
+  </data>
 </root>
