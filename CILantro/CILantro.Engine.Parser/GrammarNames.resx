@@ -369,4 +369,7 @@
   <data name="BrtrueToken" xml:space="preserve">
     <value>BrtrueToken</value>
   </data>
+  <data name="BrfalseToken" xml:space="preserve">
+    <value>BrfalseToken</value>
+  </data>
 </root>
