@@ -48,6 +48,10 @@
     <Compile Include="ASTNodes\Instructions\BranchIfEqualShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfFalseInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfFalseShortInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfGreaterOrEqualInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfGreaterOrEqualShortInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfGreaterOrEqualUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfGreaterOrEqualUnsignedShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />

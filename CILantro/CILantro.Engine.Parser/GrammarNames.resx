@@ -387,4 +387,16 @@
   <data name="BeqToken" xml:space="preserve">
     <value>BeqToken</value>
   </data>
+  <data name="BgesToken" xml:space="preserve">
+    <value>BgesToken</value>
+  </data>
+  <data name="BgeToken" xml:space="preserve">
+    <value>BgeToken</value>
+  </data>
+  <data name="BgeunsToken" xml:space="preserve">
+    <value>BgeunsToken</value>
+  </data>
+  <data name="BgeunToken" xml:space="preserve">
+    <value>BgeunToken</value>
+  </data>
 </root>
