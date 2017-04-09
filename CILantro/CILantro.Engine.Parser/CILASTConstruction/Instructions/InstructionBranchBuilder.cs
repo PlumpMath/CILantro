@@ -250,6 +250,24 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
                 };
             }
 
+            var leaveToken = instructionBranchNode.GetChildLeaveTokenNode();
+            if(leaveToken != null)
+            {
+                return new LeaveInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var leavesToken = instructionBranchNode.GetChildLeavesTokenNode();
+            if(leavesToken != null)
+            {
+                return new LeaveShortInstruction
+                {
+                    Target = target
+                };
+            }
+
             throw new ArgumentException("Cannot recognize instruction branch.");
         }
     }

@@ -781,6 +781,24 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LeavesToken.
+        /// </summary>
+        internal static string LeavesToken {
+            get {
+                return ResourceManager.GetString("LeavesToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LeaveToken.
+        /// </summary>
+        internal static string LeaveToken {
+            get {
+                return ResourceManager.GetString("LeaveToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftBrace.
         /// </summary>
         internal static string LeftBrace {

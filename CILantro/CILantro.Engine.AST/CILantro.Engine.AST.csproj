@@ -77,6 +77,8 @@
     <Compile Include="ASTNodes\Instructions\InstructionMethod.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionNone.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionString.cs" />
+    <Compile Include="ASTNodes\Instructions\LeaveInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\LeaveShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt0Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt1Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantInt2Instruction.cs" />

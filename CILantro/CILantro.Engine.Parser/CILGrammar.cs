@@ -71,6 +71,8 @@ namespace CILantro.Engine.Parser
             var ldci4M1Token = ToTerm("ldc.i4.M1", GrammarNames.Ldci4m1AliasToken);
             var ldci4sToken = ToTerm("ldc.i4.s", GrammarNames.Ldci4sToken);
             var ldstrToken = ToTerm("ldstr", GrammarNames.LdstrToken);
+            var leaveToken = ToTerm("leave", GrammarNames.LeaveToken);
+            var leavesToken = ToTerm("leave.s", GrammarNames.LeavesToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
@@ -190,7 +192,9 @@ namespace CILantro.Engine.Parser
                 brfalseToken |
                 brfalsesToken |
                 brtrueToken |
-                brtruesToken;
+                brtruesToken |
+                leaveToken |
+                leavesToken;
 
             var instructionInt = new NonTerminal(GrammarNames.InstructionInt);
             instructionInt.Rule =
