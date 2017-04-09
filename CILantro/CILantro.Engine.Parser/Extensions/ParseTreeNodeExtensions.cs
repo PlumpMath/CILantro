@@ -13,6 +13,10 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsBgesTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgesToken);
         public static bool IsBgeunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgeunToken);
         public static bool IsBgeunsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgeunsToken);
+        public static bool IsBgtTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgtToken);
+        public static bool IsBgtsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgtsToken);
+        public static bool IsBgtunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgtunToken);
+        public static bool IsBgtunsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgtunsToken);
         public static bool IsBrTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrToken);
         public static bool IsBrsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrsToken);
         public static bool IsBrfalseTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrfalseToken);
@@ -68,6 +72,10 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildBgesTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgesTokenNode());
         public static ParseTreeNode GetChildBgeunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgeunTokenNode());
         public static ParseTreeNode GetChildBgeunsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgeunsTokenNode());
+        public static ParseTreeNode GetChildBgtTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgtTokenNode());
+        public static ParseTreeNode GetChildBgtsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgtsTokenNode());
+        public static ParseTreeNode GetChildBgtunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgtunTokenNode());
+        public static ParseTreeNode GetChildBgtunsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgtunsTokenNode());
         public static ParseTreeNode GetChildBrTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrTokenNode());
         public static ParseTreeNode GetChildBrsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrsTokenNode());
         public static ParseTreeNode GetChildBrfalseTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrfalseTokenNode());

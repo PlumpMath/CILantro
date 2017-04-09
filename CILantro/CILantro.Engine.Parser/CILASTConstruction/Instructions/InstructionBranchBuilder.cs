@@ -70,6 +70,42 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
                 };
             }
 
+            var bgtToken = instructionBranchNode.GetChildBgtTokenNode();
+            if(bgtToken != null)
+            {
+                return new BranchIfGreaterInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var bgtsToken = instructionBranchNode.GetChildBgtsTokenNode();
+            if(bgtsToken != null)
+            {
+                return new BranchIfGreaterShortInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var bgtunToken = instructionBranchNode.GetChildBgtunTokenNode();
+            if(bgtunToken != null)
+            {
+                return new BranchIfGreaterUnsignedInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var bgtunsToken = instructionBranchNode.GetChildBgtunsTokenNode();
+            if(bgtunsToken != null)
+            {
+                return new BranchIfGreaterUnsignedShortInstruction
+                {
+                    Target = target
+                };
+            }
+
             var brToken = instructionBranchNode.GetChildBrTokenNode();
             if(brToken != null)
             {

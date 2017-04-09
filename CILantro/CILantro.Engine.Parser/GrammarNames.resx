@@ -399,4 +399,16 @@
   <data name="BgeunToken" xml:space="preserve">
     <value>BgeunToken</value>
   </data>
+  <data name="BgtsToken" xml:space="preserve">
+    <value>BgtsToken</value>
+  </data>
+  <data name="BgtToken" xml:space="preserve">
+    <value>BgtToken</value>
+  </data>
+  <data name="BgtunsToken" xml:space="preserve">
+    <value>BgtunsToken</value>
+  </data>
+  <data name="BgtunToken" xml:space="preserve">
+    <value>BgtunToken</value>
+  </data>
 </root>

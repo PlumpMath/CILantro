@@ -28,6 +28,10 @@ namespace CILantro.Engine.Parser
             var bgesToken = ToTerm("bge.s", GrammarNames.BgesToken);
             var bgeunToken = ToTerm("bge.un", GrammarNames.BgeunToken);
             var bgeunsToken = ToTerm("bge.un.s", GrammarNames.BgeunsToken);
+            var bgtToken = ToTerm("bgt", GrammarNames.BgtToken);
+            var bgtsToken = ToTerm("bgt.s", GrammarNames.BgtsToken);
+            var bgtunToken = ToTerm("bgt.un", GrammarNames.BgtunToken);
+            var bgtunsToken = ToTerm("bgt.un.s", GrammarNames.BgtunsToken);
             var brToken = ToTerm("br", GrammarNames.BrToken);
             var brsToken = ToTerm("br.s", GrammarNames.BrsToken);
             var brfalseToken = ToTerm("brfalse", GrammarNames.BrfalseToken);
@@ -95,7 +99,7 @@ namespace CILantro.Engine.Parser
             methodName.Rule = name;
 
             var className = new NonTerminal(GrammarNames.ClassName);
-            className.Rule = leftSquareBracket + name + rightSquareBracket + slashedName; 
+            className.Rule = leftSquareBracket + name + rightSquareBracket + slashedName;
 
             var type = new NonTerminal(GrammarNames.Type);
             type.Rule =
@@ -157,6 +161,10 @@ namespace CILantro.Engine.Parser
                 bgesToken |
                 bgeunToken |
                 bgeunsToken |
+                bgtToken |
+                bgtsToken |
+                bgtunToken |
+                bgtunsToken |
                 brToken |
                 brsToken |
                 brfalseToken |
