@@ -39,6 +39,7 @@ namespace CILantro.Engine.Parser.Tests
         [InlineData("SP_branch_if_false_short")]
         [InlineData("SP_branch_if_equal")]
         [InlineData("SP_branch_if_greater_or_equal")]
+        [InlineData("SP_branch_if_greater")]
         public void ShouldParseProgramWithoutErrors(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;

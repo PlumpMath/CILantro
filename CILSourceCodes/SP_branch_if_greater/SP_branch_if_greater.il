@@ -10,84 +10,84 @@
 		
 		ldc.i4.2
 		ldc.i4.1
-		bge 10
+		bgt 10
 		
 		ldstr "This text shouldn't be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.1
-		bge 10
+		bgt 10
 		
-		ldstr "This text shouldn't be written out."
+		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.2
-		bge 10
+		bgt 10
 		
 		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.2
 		ldc.i4.1
-		bge.s 10
+		bgt.s 10
 		
 		ldstr "This text shouldn't be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.1
-		bge.s 10
+		bgt.s 10
 		
-		ldstr "This text shouldn't be written out."
+		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.2
-		bge.s 10
+		bgt.s 10
 		
 		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.2
 		ldc.i4.1
-		bge.un 10
+		bgt.un 10
 		
 		ldstr "This text shouldn't be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.1
-		bge.un 10
+		bgt.un 10
 		
-		ldstr "This text shouldn't be written out."
+		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.2
-		bge.un 10
+		bgt.un 10
 		
 		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.2
 		ldc.i4.1
-		bge.un.s 10
+		bgt.un.s 10
 		
 		ldstr "This text shouldn't be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.1
-		bge.un.s 10
+		bgt.un.s 10
 		
-		ldstr "This text shouldn't be written out."
+		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
 		
 		ldc.i4.1
 		ldc.i4.2
-		bge.un.s 10
+		bgt.un.s 10
 		
 		ldstr "This text should be written out."
 		call void [mscorlib]System.Console::WriteLine(string)
