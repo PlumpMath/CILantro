@@ -411,4 +411,16 @@
   <data name="BgtunToken" xml:space="preserve">
     <value>BgtunToken</value>
   </data>
+  <data name="BlesToken" xml:space="preserve">
+    <value>BlesToken</value>
+  </data>
+  <data name="BleToken" xml:space="preserve">
+    <value>BleToken</value>
+  </data>
+  <data name="BleunsToken" xml:space="preserve">
+    <value>BleunsToken</value>
+  </data>
+  <data name="BleunToken" xml:space="preserve">
+    <value>BleunToken</value>
+  </data>
 </root>

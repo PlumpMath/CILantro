@@ -32,6 +32,10 @@ namespace CILantro.Engine.Parser
             var bgtsToken = ToTerm("bgt.s", GrammarNames.BgtsToken);
             var bgtunToken = ToTerm("bgt.un", GrammarNames.BgtunToken);
             var bgtunsToken = ToTerm("bgt.un.s", GrammarNames.BgtunsToken);
+            var bleToken = ToTerm("ble", GrammarNames.BleToken);
+            var blesToken = ToTerm("ble.s", GrammarNames.BlesToken);
+            var bleunToken = ToTerm("ble.un", GrammarNames.BleunToken);
+            var bleunsToken = ToTerm("ble.un.s", GrammarNames.BleunsToken);
             var brToken = ToTerm("br", GrammarNames.BrToken);
             var brsToken = ToTerm("br.s", GrammarNames.BrsToken);
             var brfalseToken = ToTerm("brfalse", GrammarNames.BrfalseToken);
@@ -165,6 +169,10 @@ namespace CILantro.Engine.Parser
                 bgtsToken |
                 bgtunToken |
                 bgtunsToken |
+                bleToken |
+                blesToken |
+                bleunToken |
+                bleunsToken |
                 brToken |
                 brsToken |
                 brfalseToken |
