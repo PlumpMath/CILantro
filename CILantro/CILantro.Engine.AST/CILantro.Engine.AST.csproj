@@ -56,10 +56,14 @@
     <Compile Include="ASTNodes\Instructions\BranchIfGreaterShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfGreaterUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfGreaterUnsignedShortInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfLessInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfLessOrEqualInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfLessOrEqualShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfLessOrEqualUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfLessOrEqualUnsignedShortInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfLessShortInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfLessUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfLessUnsignedShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />

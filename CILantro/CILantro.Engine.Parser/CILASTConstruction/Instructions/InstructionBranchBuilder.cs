@@ -142,6 +142,42 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
                 };
             }
 
+            var bltToken = instructionBranchNode.GetChildBltTokenNode();
+            if(bltToken != null)
+            {
+                return new BranchIfLessInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var bltsToken = instructionBranchNode.GetChildBltsTokenNode();
+            if(bltsToken != null)
+            {
+                return new BranchIfLessShortInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var bltunToken = instructionBranchNode.GetChildBltunTokenNode();
+            if(bltunToken != null)
+            {
+                return new BranchIfLessUnsignedInstruction
+                {
+                    Target = target
+                };
+            }
+
+            var bltunsToken = instructionBranchNode.GetChildBltunsTokenNode();
+            if(bltunsToken != null)
+            {
+                return new BranchIfLessUnsignedShortInstruction
+                {
+                    Target = target
+                };
+            }
+
             var brToken = instructionBranchNode.GetChildBrTokenNode();
             if(brToken != null)
             {

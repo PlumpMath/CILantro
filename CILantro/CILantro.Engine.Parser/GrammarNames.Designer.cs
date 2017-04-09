@@ -241,6 +241,42 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BltsToken.
+        /// </summary>
+        internal static string BltsToken {
+            get {
+                return ResourceManager.GetString("BltsToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BltToken.
+        /// </summary>
+        internal static string BltToken {
+            get {
+                return ResourceManager.GetString("BltToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BltunsToken.
+        /// </summary>
+        internal static string BltunsToken {
+            get {
+                return ResourceManager.GetString("BltunsToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BltunToken.
+        /// </summary>
+        internal static string BltunToken {
+            get {
+                return ResourceManager.GetString("BltunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BrfalsesToken.
         /// </summary>
         internal static string BrfalsesToken {
