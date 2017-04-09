@@ -435,4 +435,10 @@
   <data name="BltunToken" xml:space="preserve">
     <value>BltunToken</value>
   </data>
+  <data name="BneunsToken" xml:space="preserve">
+    <value>BneunsToken</value>
+  </data>
+  <data name="BneunToken" xml:space="preserve">
+    <value>BneunToken</value>
+  </data>
 </root>

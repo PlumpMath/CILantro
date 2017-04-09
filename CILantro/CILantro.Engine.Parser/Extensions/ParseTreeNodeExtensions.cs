@@ -25,6 +25,8 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsBltsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BltsToken);
         public static bool IsBltunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BltunToken);
         public static bool IsBltunsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BltunsToken);
+        public static bool IsBneunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BneunToken);
+        public static bool IsBneunsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BneunsToken);
         public static bool IsBrTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrToken);
         public static bool IsBrsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrsToken);
         public static bool IsBrfalseTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BrfalseToken);
@@ -92,6 +94,8 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildBltsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBltsTokenNode());
         public static ParseTreeNode GetChildBltunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBltunTokenNode());
         public static ParseTreeNode GetChildBltunsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBltunsTokenNode());
+        public static ParseTreeNode GetChildBneunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBneunTokenNode());
+        public static ParseTreeNode GetChildBneunsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBneunsTokenNode());
         public static ParseTreeNode GetChildBrTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrTokenNode());
         public static ParseTreeNode GetChildBrsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrsTokenNode());
         public static ParseTreeNode GetChildBrfalseTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBrfalseTokenNode());

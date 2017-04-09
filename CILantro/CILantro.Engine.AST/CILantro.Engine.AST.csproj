@@ -64,6 +64,8 @@
     <Compile Include="ASTNodes\Instructions\BranchIfLessShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfLessUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfLessUnsignedShortInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfNotEqualUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\BranchIfNotEqualUnsignedShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfTrueShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />
