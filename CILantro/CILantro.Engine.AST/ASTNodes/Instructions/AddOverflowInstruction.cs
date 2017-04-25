@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CILantro.Engine.AST.ASTNodes.Instructions
+﻿namespace CILantro.Engine.AST.ASTNodes.Instructions
 {
     public class AddOverflowInstruction : InstructionNone
     {
@@ -8,12 +6,13 @@ namespace CILantro.Engine.AST.ASTNodes.Instructions
 
         public override CILInstruction Execute(CILProgram program, CILProgramState state)
         {
-            //var argument1 = (int)state.Stack.Pop();
-            //var argument2 = (int)state.Stack.Pop();
+            var argument1 = (int)state.Stack.Pop();
+            var argument2 = (int)state.Stack.Pop();
 
-            //var result = argument1 + argument2;
-            //state.Sta
-            throw new NotImplementedException();
+            var result = argument1 + argument2;
+            state.Stack.Push(result);
+
+            return Method.GetNextInstruction(this);
         }
     }
 }
