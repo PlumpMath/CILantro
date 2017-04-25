@@ -51,6 +51,7 @@ namespace CILantro.Engine.Parser.Tests
         [InlineData("SP_mul")]
         [InlineData("SP_or")]
         [InlineData("SP_shifts")]
+        [InlineData("SP_ns")]
         public void ShouldParseProgramWithoutErrors(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
