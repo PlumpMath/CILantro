@@ -103,6 +103,8 @@
     <Compile Include="ASTNodes\Instructions\OrInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\ShiftLeftInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\ShiftRightInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractOverflowInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractOverflowUnsignedInstruction.cs" />

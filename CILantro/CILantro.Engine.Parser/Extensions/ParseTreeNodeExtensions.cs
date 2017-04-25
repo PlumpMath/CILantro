@@ -79,6 +79,8 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsPopTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.PopToken);
         public static bool IsQuotedStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.QuotedString);
         public static bool IsRetTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.RetToken);
+        public static bool IsShlTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ShlToken);
+        public static bool IsShrTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ShrToken);
         public static bool IsSignatureArgumentNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SignatureArgument);
         public static bool IsSignatureArguments0Node(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SignatureArguments0);
         public static bool IsSignatureArguments1Node(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SignatureArguments1);
@@ -163,6 +165,8 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildPopTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsPopTokenNode());
         public static ParseTreeNode GetChildQuotedStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsQuotedStringNode());
         public static ParseTreeNode GetChildRetTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsRetTokenNode());
+        public static ParseTreeNode GetChildShlTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsShlTokenNode());
+        public static ParseTreeNode GetChildShrTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsShrTokenNode());
         public static ParseTreeNode GetChildSignatureArgumentNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSignatureArgumentNode());
         public static ParseTreeNode GetChildSignatureArguments0Node(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSignatureArguments0Node());
         public static ParseTreeNode GetChildSignatureArguments1Node(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSignatureArguments1Node());

@@ -58,6 +58,7 @@ namespace CILantro.Engine.Tests
         [InlineData("SP_sub")]
         [InlineData("SP_mul")]
         [InlineData("SP_or")]
+        [InlineData("SP_shifts")]
         public void ShouldReturnCorrectResults(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;

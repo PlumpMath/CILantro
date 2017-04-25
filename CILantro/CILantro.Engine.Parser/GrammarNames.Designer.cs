@@ -1042,6 +1042,24 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ShlToken.
+        /// </summary>
+        internal static string ShlToken {
+            get {
+                return ResourceManager.GetString("ShlToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ShrToken.
+        /// </summary>
+        internal static string ShrToken {
+            get {
+                return ResourceManager.GetString("ShrToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SignatureArgument.
         /// </summary>
         internal static string SignatureArgument {

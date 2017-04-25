@@ -85,6 +85,8 @@ namespace CILantro.Engine.Parser
             var orToken = ToTerm("or", GrammarNames.OrToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
+            var shlToken = ToTerm("shl", GrammarNames.ShlToken);
+            var shrToken = ToTerm("shr", GrammarNames.ShrToken);
             var staticToken = ToTerm("static", GrammarNames.StaticToken);
             var stringToken = ToTerm("string", GrammarNames.StringToken);
             var subToken = ToTerm("sub", GrammarNames.SubToken);
@@ -186,6 +188,8 @@ namespace CILantro.Engine.Parser
                 orToken |
                 popToken |
                 retToken |
+                shlToken |
+                shrToken |
                 subToken |
                 subovfToken |
                 subovfunToken |

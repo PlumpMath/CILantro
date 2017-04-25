@@ -104,6 +104,14 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (retTokenNode != null)
                 return new RetInstruction();
 
+            var shlTokenNode = instructionNoneNode.GetChildShlTokenNode();
+            if (shlTokenNode != null)
+                return new ShiftLeftInstruction();
+
+            var shrTokenNode = instructionNoneNode.GetChildShrTokenNode();
+            if (shrTokenNode != null)
+                return new ShiftRightInstruction();
+
             var subTokenNode = instructionNoneNode.GetChildSubTokenNode();
             if (subTokenNode != null)
                 return new SubtractInstruction();
