@@ -403,6 +403,24 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CgtToken.
+        /// </summary>
+        internal static string CgtToken {
+            get {
+                return ResourceManager.GetString("CgtToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CgtunToken.
+        /// </summary>
+        internal static string CgtunToken {
+            get {
+                return ResourceManager.GetString("CgtunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CilToken.
         /// </summary>
         internal static string CilToken {

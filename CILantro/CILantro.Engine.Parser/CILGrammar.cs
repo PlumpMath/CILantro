@@ -52,6 +52,8 @@ namespace CILantro.Engine.Parser
             var brtrueToken = ToTerm("brtrue", GrammarNames.BrtrueToken);
             var brtruesToken = ToTerm("brtrue.s", GrammarNames.BrtruesToken);
             var callToken = ToTerm("call", GrammarNames.CallToken);
+            var cgtToken = ToTerm("cgt", GrammarNames.CgtToken);
+            var cgtunToken = ToTerm("cgt.un", GrammarNames.CgtunToken);
             var cilToken = ToTerm("cil", GrammarNames.CilToken);
             var divToken = ToTerm("div", GrammarNames.DivToken);
             var divunToken = ToTerm("div.un", GrammarNames.DivunToken);
@@ -171,6 +173,8 @@ namespace CILantro.Engine.Parser
                 addovfToken |
                 addovfunToken |
                 andToken |
+                cgtToken |
+                cgtunToken |
                 divToken |
                 divunToken |
                 dupToken |

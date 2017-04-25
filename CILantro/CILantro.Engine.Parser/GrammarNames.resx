@@ -501,4 +501,10 @@
   <data name="NotToken" xml:space="preserve">
     <value>NotToken</value>
   </data>
+  <data name="CgtToken" xml:space="preserve">
+    <value>CgtToken</value>
+  </data>
+  <data name="CgtunToken" xml:space="preserve">
+    <value>CgtunToken</value>
+  </data>
 </root>

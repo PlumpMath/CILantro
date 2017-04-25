@@ -27,6 +27,14 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (andToken != null)
                 return new AndInstruction();
 
+            var cgtToken = instructionNoneNode.GetChildCgtTokenNode();
+            if (cgtToken != null)
+                return new CheckIfGreaterInstruction();
+
+            var cgtunToken = instructionNoneNode.GetChildCgtunTokenNode();
+            if (cgtunToken != null)
+                return new CheckIfGreaterUnsignedInstruction();
+
             var divToken = instructionNoneNode.GetChildDivTokenNode();
             if (divToken != null)
                 return new DivideInstruction();
