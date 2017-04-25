@@ -462,4 +462,13 @@
   <data name="DivunToken" xml:space="preserve">
     <value>DivunToken</value>
   </data>
+  <data name="SubovfunToken" xml:space="preserve">
+    <value>SubovfunToken</value>
+  </data>
+  <data name="SubovfToken" xml:space="preserve">
+    <value>SubovfToken</value>
+  </data>
+  <data name="SubToken" xml:space="preserve">
+    <value>SubToken</value>
+  </data>
 </root>

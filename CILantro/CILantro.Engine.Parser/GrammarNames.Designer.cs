@@ -1060,6 +1060,33 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SubovfToken.
+        /// </summary>
+        internal static string SubovfToken {
+            get {
+                return ResourceManager.GetString("SubovfToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubovfunToken.
+        /// </summary>
+        internal static string SubovfunToken {
+            get {
+                return ResourceManager.GetString("SubovfunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubToken.
+        /// </summary>
+        internal static string SubToken {
+            get {
+                return ResourceManager.GetString("SubToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Type.
         /// </summary>
         internal static string Type {

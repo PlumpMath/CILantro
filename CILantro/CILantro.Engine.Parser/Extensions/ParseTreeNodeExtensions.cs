@@ -79,6 +79,9 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsSignatureArguments0Node(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SignatureArguments0);
         public static bool IsSignatureArguments1Node(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SignatureArguments1);
         public static bool IsSlashedNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SlashedName);
+        public static bool IsSubTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SubToken);
+        public static bool IsSubovfTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SubovfToken);
+        public static bool IsSubovfunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SubovfunToken);
         public static bool IsTypeNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Type);
         public static bool IsTypeSpecificationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.TypeSpecification);
 
@@ -155,6 +158,9 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildSignatureArguments0Node(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSignatureArguments0Node());
         public static ParseTreeNode GetChildSignatureArguments1Node(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSignatureArguments1Node());
         public static ParseTreeNode GetChildSlashedNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSlashedNameNode());
+        public static ParseTreeNode GetChildSubTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSubTokenNode());
+        public static ParseTreeNode GetChildSubovfTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSubovfTokenNode());
+        public static ParseTreeNode GetChildSubovfunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSubovfunTokenNode());
         public static ParseTreeNode GetChildTypeNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsTypeNode());
         public static ParseTreeNode GetChildTypeSpecificationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsTypeSpecificationNode());
 

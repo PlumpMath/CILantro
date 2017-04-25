@@ -83,6 +83,9 @@ namespace CILantro.Engine.Parser
             var retToken = ToTerm("ret", GrammarNames.RetToken);
             var staticToken = ToTerm("static", GrammarNames.StaticToken);
             var stringToken = ToTerm("string", GrammarNames.StringToken);
+            var subToken = ToTerm("sub", GrammarNames.SubToken);
+            var subovfToken = ToTerm("sub.ovf", GrammarNames.SubovfToken);
+            var subovfunToken = ToTerm("sub.ovf.un", GrammarNames.SubovfunToken);
             var valuetypeToken = ToTerm("valuetype", GrammarNames.ValuetypeToken);
             var voidToken = ToTerm("void", GrammarNames.VoidToken);
 
@@ -173,7 +176,10 @@ namespace CILantro.Engine.Parser
                 ldci4m1Token |
                 ldci4M1Token |
                 popToken |
-                retToken;
+                retToken |
+                subToken |
+                subovfToken |
+                subovfunToken;
 
             var instructionBranch = new NonTerminal(GrammarNames.InstructionBranch);
             instructionBranch.Rule =

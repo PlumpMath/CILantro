@@ -80,13 +80,25 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (ldci4m1Token != null || ldci4m1AliasToken != null)
                 return new LoadConstantIntMinus1Instruction();
 
+            var popTokenNode = instructionNoneNode.GetChildPopTokenNode();
+            if (popTokenNode != null)
+                return new PopInstruction();
+
             var retTokenNode = instructionNoneNode.GetChildRetTokenNode();
             if (retTokenNode != null)
                 return new RetInstruction();
 
-            var popTokenNode = instructionNoneNode.GetChildPopTokenNode();
-            if (popTokenNode != null)
-                return new PopInstruction();
+            var subTokenNode = instructionNoneNode.GetChildSubTokenNode();
+            if (subTokenNode != null)
+                return new SubtractInstruction();
+
+            var subovfTokenNode = instructionNoneNode.GetChildSubovfTokenNode();
+            if (subovfTokenNode != null)
+                return new SubtractOverflowInstruction();
+
+            var subovfunTokenNode = instructionNoneNode.GetChildSubovfunTokenNode();
+            if (subovfunTokenNode != null)
+                return new SubtractOverflowUnsignedInstruction();
 
             throw new ArgumentException("Cannot recognize instruction none.");
         }
