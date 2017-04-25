@@ -403,6 +403,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CeqToken.
+        /// </summary>
+        internal static string CeqToken {
+            get {
+                return ResourceManager.GetString("CeqToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CgtToken.
         /// </summary>
         internal static string CgtToken {

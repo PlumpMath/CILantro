@@ -513,4 +513,7 @@
   <data name="CltunToken" xml:space="preserve">
     <value>CltunToken</value>
   </data>
+  <data name="CeqToken" xml:space="preserve">
+    <value>CeqToken</value>
+  </data>
 </root>

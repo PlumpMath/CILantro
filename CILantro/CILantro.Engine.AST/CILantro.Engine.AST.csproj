@@ -74,6 +74,7 @@
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\CheckIfEqualInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CheckIfGreaterInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CheckIfGreaterUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CheckIfLessInstruction.cs" />
