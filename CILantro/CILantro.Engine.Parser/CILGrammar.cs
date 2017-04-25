@@ -24,6 +24,7 @@ namespace CILantro.Engine.Parser
             var addToken = ToTerm("add", GrammarNames.AddToken);
             var addovfToken = ToTerm("add.ovf", GrammarNames.AddovfToken);
             var addovfunToken = ToTerm("add.ovf.un", GrammarNames.AddovfunToken);
+            var andToken = ToTerm("and", GrammarNames.AndToken);
             var beqToken = ToTerm("beq", GrammarNames.BeqToken);
             var beqsToken = ToTerm("beq.s", GrammarNames.BeqsToken);
             var bgeToken = ToTerm("bge", GrammarNames.BgeToken);
@@ -154,6 +155,7 @@ namespace CILantro.Engine.Parser
                 addToken |
                 addovfToken |
                 addovfunToken |
+                andToken |
                 dupToken |
                 ldci40Token |
                 ldci41Token |

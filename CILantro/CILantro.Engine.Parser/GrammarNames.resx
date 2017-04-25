@@ -453,4 +453,7 @@
   <data name="AddovfunToken" xml:space="preserve">
     <value>AddovfunToken</value>
   </data>
+  <data name="AndToken" xml:space="preserve">
+    <value>AndToken</value>
+  </data>
 </root>

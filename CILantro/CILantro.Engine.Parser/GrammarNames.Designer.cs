@@ -88,6 +88,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AndToken.
+        /// </summary>
+        internal static string AndToken {
+            get {
+                return ResourceManager.GetString("AndToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AssemblyAttributes.
         /// </summary>
         internal static string AssemblyAttributes {

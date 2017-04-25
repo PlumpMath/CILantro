@@ -46,6 +46,7 @@
     <Compile Include="ASTNodes\Instructions\AddInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\AddOverflowInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\AddOverflowUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\AndInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfEqualInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfEqualShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchIfFalseInstruction.cs" />

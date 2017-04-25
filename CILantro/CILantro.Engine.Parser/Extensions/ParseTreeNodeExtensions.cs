@@ -9,6 +9,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsAddTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.AddToken);
         public static bool IsAddovfTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.AddovfToken);
         public static bool IsAddovfunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.AddovfunToken);
+        public static bool IsAndTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.AndToken);
         public static bool IsBeqTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BeqToken);
         public static bool IsBeqsTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BeqsToken);
         public static bool IsBgeTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.BgeToken);
@@ -82,6 +83,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildAddTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAddTokenNode());
         public static ParseTreeNode GetChildAddovfTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAddovfTokenNode());
         public static ParseTreeNode GetChildAddovfunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAddovfunTokenNode());
+        public static ParseTreeNode GetChildAndTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAndTokenNode());
         public static ParseTreeNode GetChildBeqTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBeqTokenNode());
         public static ParseTreeNode GetChildBeqsTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBeqsTokenNode());
         public static ParseTreeNode GetChildBgeTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsBgeTokenNode());
