@@ -15,6 +15,14 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (addToken != null)
                 return new AddInstruction();
 
+            var addovfToken = instructionNoneNode.GetChildAddovfTokenNode();
+            if (addovfToken != null)
+                return new AddOverflowInstruction();
+
+            var addovfunToken = instructionNoneNode.GetChildAddovfunTokenNode();
+            if (addovfunToken != null)
+                return new AddOverflowUnsignedInstruction();
+
             var dupToken = instructionNoneNode.GetChildDupTokenNode();
             if (dupToken != null)
                 return new DuplicateInstruction();

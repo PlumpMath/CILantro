@@ -61,6 +61,24 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AddovfToken.
+        /// </summary>
+        internal static string AddovfToken {
+            get {
+                return ResourceManager.GetString("AddovfToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AddovfunToken.
+        /// </summary>
+        internal static string AddovfunToken {
+            get {
+                return ResourceManager.GetString("AddovfunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AddToken.
         /// </summary>
         internal static string AddToken {
