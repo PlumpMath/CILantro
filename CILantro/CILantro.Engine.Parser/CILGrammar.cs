@@ -79,6 +79,9 @@ namespace CILantro.Engine.Parser
             var leaveToken = ToTerm("leave", GrammarNames.LeaveToken);
             var leavesToken = ToTerm("leave.s", GrammarNames.LeavesToken);
             var managedToken = ToTerm("managed", GrammarNames.ManagedToken);
+            var mulToken = ToTerm("mul", GrammarNames.MulToken);
+            var mulovfToken = ToTerm("mul.ovf", GrammarNames.MulovfToken);
+            var mulovfunToken = ToTerm("mul.ovf.un", GrammarNames.MulovfunToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
             var staticToken = ToTerm("static", GrammarNames.StaticToken);
@@ -175,6 +178,9 @@ namespace CILantro.Engine.Parser
                 ldci48Token |
                 ldci4m1Token |
                 ldci4M1Token |
+                mulToken |
+                mulovfToken |
+                mulovfunToken |
                 popToken |
                 retToken |
                 subToken |

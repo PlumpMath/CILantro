@@ -97,6 +97,9 @@
     <Compile Include="ASTNodes\Instructions\LoadConstantIntMinus1Instruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadConstantIntShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\LoadStringInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\MultipleInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\MultipleOverflowInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\MultipleOverflowUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractInstruction.cs" />

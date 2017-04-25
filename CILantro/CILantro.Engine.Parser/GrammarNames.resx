@@ -471,4 +471,13 @@
   <data name="SubToken" xml:space="preserve">
     <value>SubToken</value>
   </data>
+  <data name="MulovfToken" xml:space="preserve">
+    <value>MulovfToken</value>
+  </data>
+  <data name="MulovfunToken" xml:space="preserve">
+    <value>MulovfunToken</value>
+  </data>
+  <data name="MulToken" xml:space="preserve">
+    <value>MulToken</value>
+  </data>
 </root>

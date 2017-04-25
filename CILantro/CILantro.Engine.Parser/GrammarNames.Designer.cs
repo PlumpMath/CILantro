@@ -925,6 +925,33 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MulovfToken.
+        /// </summary>
+        internal static string MulovfToken {
+            get {
+                return ResourceManager.GetString("MulovfToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MulovfunToken.
+        /// </summary>
+        internal static string MulovfunToken {
+            get {
+                return ResourceManager.GetString("MulovfunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MulToken.
+        /// </summary>
+        internal static string MulToken {
+            get {
+                return ResourceManager.GetString("MulToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         internal static string Name {

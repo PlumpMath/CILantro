@@ -80,6 +80,18 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (ldci4m1Token != null || ldci4m1AliasToken != null)
                 return new LoadConstantIntMinus1Instruction();
 
+            var mulTokenNode = instructionNoneNode.GetChildMulTokenNode();
+            if (mulTokenNode != null)
+                return new MultipleInstruction();
+
+            var mulovfTokenNode = instructionNoneNode.GetChildMulovfTokenNode();
+            if (mulovfTokenNode != null)
+                return new MultipleOverflowInstruction();
+
+            var mulovfunTokenNode = instructionNoneNode.GetChildMulovfunTokenNode();
+            if (mulovfunTokenNode != null)
+                return new MultipleOverflowUnsignedInstruction();
+
             var popTokenNode = instructionNoneNode.GetChildPopTokenNode();
             if (popTokenNode != null)
                 return new PopInstruction();
