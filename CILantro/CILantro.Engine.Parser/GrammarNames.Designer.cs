@@ -475,6 +475,24 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CltToken.
+        /// </summary>
+        internal static string CltToken {
+            get {
+                return ResourceManager.GetString("CltToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CltunToken.
+        /// </summary>
+        internal static string CltunToken {
+            get {
+                return ResourceManager.GetString("CltunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Colon.
         /// </summary>
         internal static string Colon {

@@ -42,6 +42,8 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsClassDeclarationsNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassDeclarations);
         public static bool IsClassHeadDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassHead);
         public static bool IsClassNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ClassName);
+        public static bool IsCltTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.CltToken);
+        public static bool IsCltunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.CltunToken);
         public static bool IsComplexQuotedStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.ComplexQuotedString);
         public static bool IsDeclarationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Declaration);
         public static bool IsDivTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.DivToken);
@@ -133,6 +135,8 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildClassDeclarationsNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassDeclarationsNode());
         public static ParseTreeNode GetChildClassHeadNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassHeadDeclarationNode());
         public static ParseTreeNode GetChildClassNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsClassNameNode());
+        public static ParseTreeNode GetChildCltTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsCltTokenNode());
+        public static ParseTreeNode GetChildCltunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsCltunTokenNode());
         public static ParseTreeNode GetChildComplexQuotedStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsComplexQuotedStringNode());
         public static ParseTreeNode GetChildDeclarationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsDeclarationNode());
         public static ParseTreeNode GetChildDivTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsDivTokenNode());

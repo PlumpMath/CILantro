@@ -76,6 +76,8 @@
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CheckIfGreaterInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CheckIfGreaterUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\CheckIfLessInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\CheckIfLessUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\ComplementInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\DivideInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\DivideUnsignedInstruction.cs" />

@@ -507,4 +507,10 @@
   <data name="CgtunToken" xml:space="preserve">
     <value>CgtunToken</value>
   </data>
+  <data name="CltToken" xml:space="preserve">
+    <value>CltToken</value>
+  </data>
+  <data name="CltunToken" xml:space="preserve">
+    <value>CltunToken</value>
+  </data>
 </root>

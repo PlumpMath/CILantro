@@ -55,6 +55,8 @@ namespace CILantro.Engine.Parser
             var cgtToken = ToTerm("cgt", GrammarNames.CgtToken);
             var cgtunToken = ToTerm("cgt.un", GrammarNames.CgtunToken);
             var cilToken = ToTerm("cil", GrammarNames.CilToken);
+            var cltToken = ToTerm("clt", GrammarNames.CltToken);
+            var cltunToken = ToTerm("clt.un", GrammarNames.CltunToken);
             var divToken = ToTerm("div", GrammarNames.DivToken);
             var divunToken = ToTerm("div.un", GrammarNames.DivunToken);
             var dotAssemblyToken = ToTerm(".assembly", GrammarNames.DotAssemblyToken);
@@ -175,6 +177,8 @@ namespace CILantro.Engine.Parser
                 andToken |
                 cgtToken |
                 cgtunToken |
+                cltToken |
+                cltunToken |
                 divToken |
                 divunToken |
                 dupToken |
