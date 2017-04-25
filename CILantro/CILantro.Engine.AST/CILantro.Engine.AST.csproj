@@ -74,6 +74,8 @@
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\DivideInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\DivideUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\DuplicateInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionBranch.cs" />
     <Compile Include="ASTNodes\Instructions\InstructionInt.cs" />

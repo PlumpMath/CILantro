@@ -456,4 +456,10 @@
   <data name="AndToken" xml:space="preserve">
     <value>AndToken</value>
   </data>
+  <data name="DivToken" xml:space="preserve">
+    <value>DivToken</value>
+  </data>
+  <data name="DivunToken" xml:space="preserve">
+    <value>DivunToken</value>
+  </data>
 </root>

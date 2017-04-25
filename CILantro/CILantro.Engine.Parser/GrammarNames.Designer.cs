@@ -502,6 +502,24 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DivToken.
+        /// </summary>
+        internal static string DivToken {
+            get {
+                return ResourceManager.GetString("DivToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DivunToken.
+        /// </summary>
+        internal static string DivunToken {
+            get {
+                return ResourceManager.GetString("DivunToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dot.
         /// </summary>
         internal static string Dot {
