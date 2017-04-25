@@ -961,6 +961,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OrToken.
+        /// </summary>
+        internal static string OrToken {
+            get {
+                return ResourceManager.GetString("OrToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ParamAttributes.
         /// </summary>
         internal static string ParamAttributes {
@@ -1146,6 +1155,15 @@ namespace CILantro.Engine.Parser {
         internal static string VoidToken {
             get {
                 return ResourceManager.GetString("VoidToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XorToken.
+        /// </summary>
+        internal static string XorToken {
+            get {
+                return ResourceManager.GetString("XorToken", resourceCulture);
             }
         }
     }

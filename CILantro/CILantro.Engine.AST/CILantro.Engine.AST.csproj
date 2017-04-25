@@ -100,11 +100,13 @@
     <Compile Include="ASTNodes\Instructions\MultipleInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\MultipleOverflowInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\MultipleOverflowUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\OrInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractOverflowInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\SubtractOverflowUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\XorInstruction.cs" />
     <Compile Include="CILASTNode.cs" />
     <Compile Include="CILProgram.cs" />
     <Compile Include="CILProgramState.cs" />

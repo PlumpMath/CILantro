@@ -82,6 +82,7 @@ namespace CILantro.Engine.Parser
             var mulToken = ToTerm("mul", GrammarNames.MulToken);
             var mulovfToken = ToTerm("mul.ovf", GrammarNames.MulovfToken);
             var mulovfunToken = ToTerm("mul.ovf.un", GrammarNames.MulovfunToken);
+            var orToken = ToTerm("or", GrammarNames.OrToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
             var staticToken = ToTerm("static", GrammarNames.StaticToken);
@@ -91,6 +92,7 @@ namespace CILantro.Engine.Parser
             var subovfunToken = ToTerm("sub.ovf.un", GrammarNames.SubovfunToken);
             var valuetypeToken = ToTerm("valuetype", GrammarNames.ValuetypeToken);
             var voidToken = ToTerm("void", GrammarNames.VoidToken);
+            var xorToken = ToTerm("xor", GrammarNames.XorToken);
 
             // lexical tokens
 
@@ -181,11 +183,13 @@ namespace CILantro.Engine.Parser
                 mulToken |
                 mulovfToken |
                 mulovfunToken |
+                orToken |
                 popToken |
                 retToken |
                 subToken |
                 subovfToken |
-                subovfunToken;
+                subovfunToken |
+                xorToken;
 
             var instructionBranch = new NonTerminal(GrammarNames.InstructionBranch);
             instructionBranch.Rule =

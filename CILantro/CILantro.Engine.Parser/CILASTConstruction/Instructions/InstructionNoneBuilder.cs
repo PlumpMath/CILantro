@@ -92,6 +92,10 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (mulovfunTokenNode != null)
                 return new MultipleOverflowUnsignedInstruction();
 
+            var orTokenNode = instructionNoneNode.GetChildOrTokenNode();
+            if (orTokenNode != null)
+                return new OrInstruction();
+
             var popTokenNode = instructionNoneNode.GetChildPopTokenNode();
             if (popTokenNode != null)
                 return new PopInstruction();
@@ -111,6 +115,10 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             var subovfunTokenNode = instructionNoneNode.GetChildSubovfunTokenNode();
             if (subovfunTokenNode != null)
                 return new SubtractOverflowUnsignedInstruction();
+
+            var xorTokenNode = instructionNoneNode.GetChildXorTokenNode();
+            if (xorTokenNode != null)
+                return new XorInstruction();
 
             throw new ArgumentException("Cannot recognize instruction none.");
         }

@@ -480,4 +480,10 @@
   <data name="MulToken" xml:space="preserve">
     <value>MulToken</value>
   </data>
+  <data name="OrToken" xml:space="preserve">
+    <value>OrToken</value>
+  </data>
+  <data name="XorToken" xml:space="preserve">
+    <value>XorToken</value>
+  </data>
 </root>

@@ -75,6 +75,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsMulovfTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MulovfToken);
         public static bool IsMulovfunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MulovfunToken);
         public static bool IsNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Name);
+        public static bool IsOrTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.OrToken);
         public static bool IsPopTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.PopToken);
         public static bool IsQuotedStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.QuotedString);
         public static bool IsRetTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.RetToken);
@@ -87,6 +88,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsSubovfunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.SubovfunToken);
         public static bool IsTypeNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Type);
         public static bool IsTypeSpecificationNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.TypeSpecification);
+        public static bool IsXorTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.XorToken);
 
         public static ParseTreeNode GetChildAddTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAddTokenNode());
         public static ParseTreeNode GetChildAddovfTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsAddovfTokenNode());
@@ -157,6 +159,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildMulovfTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMulovfTokenNode());
         public static ParseTreeNode GetChildMulovfunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMulovfunTokenNode());
         public static ParseTreeNode GetChildNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsNameNode());
+        public static ParseTreeNode GetChildOrTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsOrTokenNode());
         public static ParseTreeNode GetChildPopTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsPopTokenNode());
         public static ParseTreeNode GetChildQuotedStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsQuotedStringNode());
         public static ParseTreeNode GetChildRetTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsRetTokenNode());
@@ -169,6 +172,7 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildSubovfunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsSubovfunTokenNode());
         public static ParseTreeNode GetChildTypeNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsTypeNode());
         public static ParseTreeNode GetChildTypeSpecificationNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsTypeSpecificationNode());
+        public static ParseTreeNode GetChildXorTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsXorTokenNode());
 
         public static IEnumerable<ParseTreeNode> GetAllChildNameNodes(this ParseTreeNode node) => node.ChildNodes.Where(cn => cn.IsNameNode());
     }
