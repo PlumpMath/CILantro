@@ -6,6 +6,11 @@ namespace CILantro.Engine.Parser
     {
         public CILGrammar()
         {
+            // comments
+            var lineComment = new CommentTerminal(GrammarNames.LineComment, "//", "\n");
+
+            NonGrammarTerminals.Add(lineComment);
+
             // punctuation
 
             var colon = ToTerm(":", GrammarNames.Colon);

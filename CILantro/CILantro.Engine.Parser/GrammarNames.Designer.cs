@@ -916,6 +916,15 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LineComment.
+        /// </summary>
+        internal static string LineComment {
+            get {
+                return ResourceManager.GetString("LineComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ManagedToken.
         /// </summary>
         internal static string ManagedToken {

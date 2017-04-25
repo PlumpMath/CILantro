@@ -516,4 +516,7 @@
   <data name="CeqToken" xml:space="preserve">
     <value>CeqToken</value>
   </data>
+  <data name="LineComment" xml:space="preserve">
+    <value>LineComment</value>
+  </data>
 </root>
