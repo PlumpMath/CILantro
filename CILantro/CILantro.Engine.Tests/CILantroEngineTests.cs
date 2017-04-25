@@ -52,6 +52,7 @@ namespace CILantro.Engine.Tests
         [InlineData("SP_branch_if_less")]
         [InlineData("SP_branch_if_not_equal")]
         [InlineData("SP_leave")]
+        [InlineData("SP_add_overflow")]
         public void ShouldReturnCorrectResults(string programName)
         {
             var sourceCodeFileName = programName + SourceCodeFileExtension;
