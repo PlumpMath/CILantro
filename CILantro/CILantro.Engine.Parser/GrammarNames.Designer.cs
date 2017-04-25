@@ -961,6 +961,33 @@ namespace CILantro.Engine.Parser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NegToken.
+        /// </summary>
+        internal static string NegToken {
+            get {
+                return ResourceManager.GetString("NegToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NopToken.
+        /// </summary>
+        internal static string NopToken {
+            get {
+                return ResourceManager.GetString("NopToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NotToken.
+        /// </summary>
+        internal static string NotToken {
+            get {
+                return ResourceManager.GetString("NotToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OrToken.
         /// </summary>
         internal static string OrToken {

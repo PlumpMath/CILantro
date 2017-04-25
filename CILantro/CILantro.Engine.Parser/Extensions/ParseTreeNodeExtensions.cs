@@ -75,6 +75,9 @@ namespace CILantro.Engine.Parser.Extensions
         public static bool IsMulovfTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MulovfToken);
         public static bool IsMulovfunTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.MulovfunToken);
         public static bool IsNameNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.Name);
+        public static bool IsNegTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.NegToken);
+        public static bool IsNopTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.NopToken);
+        public static bool IsNotTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.NotToken);
         public static bool IsOrTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.OrToken);
         public static bool IsPopTokenNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.PopToken);
         public static bool IsQuotedStringNode(this ParseTreeNode node) => node.Term.Name.Equals(GrammarNames.QuotedString);
@@ -161,6 +164,9 @@ namespace CILantro.Engine.Parser.Extensions
         public static ParseTreeNode GetChildMulovfTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMulovfTokenNode());
         public static ParseTreeNode GetChildMulovfunTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsMulovfunTokenNode());
         public static ParseTreeNode GetChildNameNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsNameNode());
+        public static ParseTreeNode GetChildNegTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsNegTokenNode());
+        public static ParseTreeNode GetChildNopTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsNopTokenNode());
+        public static ParseTreeNode GetChildNotTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsNotTokenNode());
         public static ParseTreeNode GetChildOrTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsOrTokenNode());
         public static ParseTreeNode GetChildPopTokenNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsPopTokenNode());
         public static ParseTreeNode GetChildQuotedStringNode(this ParseTreeNode node) => node.ChildNodes.FirstOrDefault(cn => cn.IsQuotedStringNode());

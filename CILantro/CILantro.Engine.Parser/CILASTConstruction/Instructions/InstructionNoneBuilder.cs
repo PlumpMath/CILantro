@@ -92,6 +92,18 @@ namespace CILantro.Engine.Parser.CILASTConstruction.Instructions
             if (mulovfunTokenNode != null)
                 return new MultipleOverflowUnsignedInstruction();
 
+            var negTokenNode = instructionNoneNode.GetChildNegTokenNode();
+            if (negTokenNode != null)
+                return new NegateInstruction();
+
+            var nopTokenNode = instructionNoneNode.GetChildNopTokenNode();
+            if (nopTokenNode != null)
+                return new NoOperationInstruction();
+
+            var notTokenNode = instructionNoneNode.GetChildNotTokenNode();
+            if (notTokenNode != null)
+                return new ComplementInstruction();
+
             var orTokenNode = instructionNoneNode.GetChildOrTokenNode();
             if (orTokenNode != null)
                 return new OrInstruction();

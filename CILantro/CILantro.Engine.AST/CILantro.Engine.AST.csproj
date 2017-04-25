@@ -74,6 +74,7 @@
     <Compile Include="ASTNodes\Instructions\BranchInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\BranchShortInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\CallInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\ComplementInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\DivideInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\DivideUnsignedInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\DuplicateInstruction.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="ASTNodes\Instructions\MultipleInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\MultipleOverflowInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\MultipleOverflowUnsignedInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\NegateInstruction.cs" />
+    <Compile Include="ASTNodes\Instructions\NoOperationInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\OrInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\PopInstruction.cs" />
     <Compile Include="ASTNodes\Instructions\RetInstruction.cs" />

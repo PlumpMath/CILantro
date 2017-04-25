@@ -82,6 +82,9 @@ namespace CILantro.Engine.Parser
             var mulToken = ToTerm("mul", GrammarNames.MulToken);
             var mulovfToken = ToTerm("mul.ovf", GrammarNames.MulovfToken);
             var mulovfunToken = ToTerm("mul.ovf.un", GrammarNames.MulovfunToken);
+            var negToken = ToTerm("neg", GrammarNames.NegToken);
+            var nopToken = ToTerm("nop", GrammarNames.NopToken);
+            var notToken = ToTerm("not", GrammarNames.NotToken);
             var orToken = ToTerm("or", GrammarNames.OrToken);
             var popToken = ToTerm("pop", GrammarNames.PopToken);
             var retToken = ToTerm("ret", GrammarNames.RetToken);
@@ -185,6 +188,9 @@ namespace CILantro.Engine.Parser
                 mulToken |
                 mulovfToken |
                 mulovfunToken |
+                negToken |
+                nopToken |
+                notToken |
                 orToken |
                 popToken |
                 retToken |

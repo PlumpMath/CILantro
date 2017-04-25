@@ -492,4 +492,13 @@
   <data name="ShrToken" xml:space="preserve">
     <value>ShrToken</value>
   </data>
+  <data name="NegToken" xml:space="preserve">
+    <value>NegToken</value>
+  </data>
+  <data name="NopToken" xml:space="preserve">
+    <value>NopToken</value>
+  </data>
+  <data name="NotToken" xml:space="preserve">
+    <value>NotToken</value>
+  </data>
 </root>
