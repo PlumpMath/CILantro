@@ -9,7 +9,7 @@
             var argument1 = (int)state.Stack.Pop();
             var argument2 = (int)state.Stack.Pop();
 
-            var result = argument1 == 1 && argument2 == 1 ? 1 : 0;
+            var result = argument1 & argument2;
             state.Stack.Push(result);
 
             return Method.GetNextInstruction(this);

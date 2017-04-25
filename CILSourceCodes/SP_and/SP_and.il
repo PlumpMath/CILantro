@@ -23,6 +23,16 @@
 		and
 		call void [mscorlib]System.Console::WriteLine(int32)
 		
+		ldc.i4.1
+		ldc.i4.3
+		and
+		call void [mscorlib]System.Console::WriteLine(int32)
+		
+		ldc.i4.2
+		ldc.i4.2
+		and
+		call void [mscorlib]System.Console::WriteLine(int32)
+		
 		ret
 	}
 }
